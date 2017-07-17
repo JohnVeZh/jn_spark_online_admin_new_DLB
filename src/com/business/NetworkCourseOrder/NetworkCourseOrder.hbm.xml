@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.business.NetworkCourseOrder.NetworkCourseOrder" table="product_order">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="userId">
+            <column name="user_id" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="price">
+            <column name="price" sql-type="double" />
+        </property>
+        <property name="provinceId">
+            <column name="province_id" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="cityId">
+            <column name="city_id" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="areaId">
+            <column name="area_id" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="zipCode">
+            <column name="zipcode" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="consignee">
+            <column name="consignee" sql-type="varchar(50)" length="50" />
+        </property>
+        <property name="telephone">
+            <column name="telephone" sql-type="varchar(50)" length="50" />
+        </property>
+        <property name="address">
+            <column name="address" sql-type="varchar(500)" length="500" />
+        </property>
+        <property name="createTime">
+            <column name="createtime" sql-type="varchar(50)" length="50" />
+        </property>
+        <property name="orderState">
+            <column name="order_state" sql-type="varchar(50)" length="50" />
+        </property>
+        <property name="logisticsCode">
+            <column name="logisticsCode" sql-type="varchar(50)" length="50" />
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(2000)" length="2000" />
+        </property>
+        <property name="userDel">
+            <column name="user_del" sql-type="int(11)" />
+        </property>
+        <property name="adminDel">
+            <column name="admin_del" sql-type="int(11)" />
+        </property>
+        <property name="orderCode">
+            <column name="order_code" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="postage">
+            <column name="postage" sql-type="double" />
+        </property>
+        <property name="isPostage">
+            <column name="is_postage" sql-type="int(11)" />
+        </property>
+        <property name="type">
+            <column name="type" sql-type="int(11)" />
+        </property>
+        <property name="districtCn">
+            <column name="district_cn" sql-type="varchar(200)" length="200" />
+        </property>
+        <property name="payType">
+            <column name="payType" sql-type="int(11)" />
+        </property>
+        <property name="payPrice">
+            <column name="pay_price" sql-type="decimal(11,2)" />
+        </property>
+        <property name="formType">
+            <column name="from_type" sql-type="tinyint(4)" />
+        </property>
+        <property name="payTime">
+            <column name="pay_time" sql-type="datetime" />
+        </property>
+        <property name="autoRewardTime">
+            <column name="auto_reward_time" sql-type="datetime" />
+        </property>
+    </class>
+</hibernate-mapping>

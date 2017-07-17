@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.News.NewsActionForm" name="NewsActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NewsActionForm" input="/business/News_add.jsp"	
+		name="NewsActionForm" parameter="act" path="/business/News"
+			scope="request" type="com.business.News.NewsAction">
+			<forward name="update" path="/business/News_edit.jsp" />
+			<forward name="list" path="/business/News_list.jsp" />
+			<forward name="view" path="/business/News_view.jsp" />
+			<forward name="add" path="/business/News_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/News/News.hbm.xml" />
+
+
+<!-- menu   -->
+News_add	/business/News.do?act=preAdd
+News_list	/business/News.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.JQrStudyMaterialsWriting.JQrStudyMaterialsWritingActionForm" name="JQrStudyMaterialsWritingActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="JQrStudyMaterialsWritingActionForm" input="/business/JQrStudyMaterialsWriting_add.jsp"	
+		name="JQrStudyMaterialsWritingActionForm" parameter="act" path="/business/JQrStudyMaterialsWriting"
+			scope="request" type="com.business.JQrStudyMaterialsWriting.JQrStudyMaterialsWritingAction">
+			<forward name="update" path="/business/JQrStudyMaterialsWriting_edit.jsp" />
+			<forward name="list" path="/business/JQrStudyMaterialsWriting_list.jsp" />
+			<forward name="view" path="/business/JQrStudyMaterialsWriting_view.jsp" />
+			<forward name="add" path="/business/JQrStudyMaterialsWriting_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/JQrStudyMaterialsWriting/JQrStudyMaterialsWriting.hbm.xml" />
+
+
+<!-- menu   -->
+JQrStudyMaterialsWriting_add	/business/JQrStudyMaterialsWriting.do?act=preAdd
+JQrStudyMaterialsWriting_list	/business/JQrStudyMaterialsWriting.do?act=list

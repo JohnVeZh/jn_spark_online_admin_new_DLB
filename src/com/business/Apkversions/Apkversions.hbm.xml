@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.business.Apkversions.Apkversions" table="apkversions" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="apkname">
+            <column name="apkname" sql-type="varchar(32)" length="32" not-null="false"/>
+        </property>
+        <property name="apkversion">
+            <column name="apkversion" sql-type="varchar(32)" length="32" not-null="false"/>
+        </property>
+        <property name="apkurl">
+            <column name="apkurl" sql-type="varchar(200)" length="200" not-null="false"/>
+        </property>
+        <property name="isnew">
+            <column name="isnew" sql-type="varchar(32)" length="32" not-null="false"/>
+        </property>
+        <property name="filesize">
+            <column name="filesize" sql-type="varchar(32)" length="32" not-null="false"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(2048)" length="2048" not-null="false"/>
+        </property>
+        <property name="updatetime">
+            <column name="updatetime" sql-type="varchar(100)" length="100" not-null="false"/>
+        </property>
+        <property name="clienttype">
+            <column name="clienttype" sql-type="varchar(32)" length="32" not-null="false"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(1)" length="1" not-null="false"/>
+        </property>
+        <property name="twoCode">
+            <column name="two_code" sql-type="varchar(200)" length="200" not-null="false"/>
+        </property>
+        <property name="versionName">
+            <column name="versionName" sql-type="varchar(32)"/>
+        </property>
+        <property name="downloadUrl">
+            <column name="downloadUrl" sql-type="varchar(255)"/>
+        </property>
+    </class>
+</hibernate-mapping>

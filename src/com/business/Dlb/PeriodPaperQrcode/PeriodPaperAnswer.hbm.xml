@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+     <class name="com.business.Dlb.PeriodPaperQrcode.PeriodPaperAnswer" table="dlb_period_paper_answer" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="paperQrcodeId">
+            <column name="paper_qrcode_id" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="section">
+            <column name="section" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="period">
+            <column name="period" sql-type="tinyint(4)" length="4" not-null="true"/>
+        </property>
+        <property name="questionType">
+            <column name="question_type" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="questionNo">
+            <column name="question_no" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="answer">
+            <column name="answer" sql-type="longtext" not-null="true"/>
+        </property>
+        <property name="score">
+            <column name="score" sql-type="decimal(5,2)" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="create_date" sql-type="datetime" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

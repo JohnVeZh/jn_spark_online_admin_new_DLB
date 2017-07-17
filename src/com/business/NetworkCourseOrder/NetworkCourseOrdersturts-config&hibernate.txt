@@ -1,0 +1,14 @@
+<!--新网课订单-->
+<form-bean name="NetworkCourseOrderActionForm" type="com.business.NetworkCourseOrder.NetworkCourseOrderActionForm"/>
+
+<!--新网课订单-->
+	<action attribute="NetworkCourseOrderActionForm" input="/business/NetworkCourseOrder_add.jsp"
+    			path="/business/NetworkCourseOrder" name="NetworkCourseOrderActionForm"	parameter="act" scope="request"
+    			type="com.business.NetworkCourseOrder.NetworkCourseOrderAction">
+    		<forward name="list" path="/system/NetworkCourseOrder/NetworkCourseOrder_list.jsp"/>
+    		<forward name="view" path="/system/NetworkCourseOrder/NetworkCourseOrder_view.jsp"/>
+    		<forward name="update" path="/system/NetworkCourseOrder/NetworkCourseOrder_edit.jsp"/>
+    	</action>
+
+<!--新网课订单-->
+<mapping resource="com/business/NetworkCourseOrder/NetworkCourseOrder.hbm.xml"/>

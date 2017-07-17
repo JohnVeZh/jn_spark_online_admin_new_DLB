@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.ProductOrderRefund.ProductOrderRefundActionForm" name="ProductOrderRefundActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="ProductOrderRefundActionForm" input="/business/ProductOrderRefund_add.jsp"	
+		name="ProductOrderRefundActionForm" parameter="act" path="/business/ProductOrderRefund"
+			scope="request" type="com.business.ProductOrderRefund.ProductOrderRefundAction">
+			<forward name="update" path="/business/ProductOrderRefund_edit.jsp" />
+			<forward name="list" path="/business/ProductOrderRefund_list.jsp" />
+			<forward name="view" path="/business/ProductOrderRefund_view.jsp" />
+			<forward name="add" path="/business/ProductOrderRefund_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/ProductOrderRefund/ProductOrderRefund.hbm.xml" />
+
+
+<!-- menu   -->
+ProductOrderRefund_add	/business/ProductOrderRefund.do?act=preAdd
+ProductOrderRefund_list	/business/ProductOrderRefund.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.MatchedPapersTopicWriting.MatchedPapersTopicWritingActionForm" name="MatchedPapersTopicWritingActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="MatchedPapersTopicWritingActionForm" input="/business/MatchedPapersTopicWriting_add.jsp"	
+		name="MatchedPapersTopicWritingActionForm" parameter="act" path="/business/MatchedPapersTopicWriting"
+			scope="request" type="com.business.MatchedPapersTopicWriting.MatchedPapersTopicWritingAction">
+			<forward name="update" path="/business/MatchedPapersTopicWriting_edit.jsp" />
+			<forward name="list" path="/business/MatchedPapersTopicWriting_list.jsp" />
+			<forward name="view" path="/business/MatchedPapersTopicWriting_view.jsp" />
+			<forward name="add" path="/business/MatchedPapersTopicWriting_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/MatchedPapersTopicWriting/MatchedPapersTopicWriting.hbm.xml" />
+
+
+<!-- menu   -->
+MatchedPapersTopicWriting_add	/business/MatchedPapersTopicWriting.do?act=preAdd
+MatchedPapersTopicWriting_list	/business/MatchedPapersTopicWriting.do?act=list

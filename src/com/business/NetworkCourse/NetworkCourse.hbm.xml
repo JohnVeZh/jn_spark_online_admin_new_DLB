@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+     <class name="com.business.NetworkCourse.NetworkCourse" table="network_course" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="ncName">
+            <column name="nc_name" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="ncBrief">
+            <column name="nc_brief" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="ncIntroduce">
+            <column name="nc_introduce" sql-type="longtext" not-null="true"/>
+        </property>
+        <property name="teacherId">
+            <column name="teacher_id" sql-type="varchar(500)" not-null="true"/>
+        </property>
+        <property name="ncTeacher">
+            <column name="nc_teacher" sql-type="varchar(500)" not-null="true"/>
+        </property>
+        <property name="teacherIntroduce">
+            <column name="teacher_introduce" sql-type="longtext" not-null="true"/>
+        </property>
+        <property name="catalogIntroduce">
+            <column name="catalog_introduce" sql-type="longtext" not-null="true"/>
+        </property>
+        <property name="catalogNumber">
+            <column name="catalog_number" sql-type="smallint(6)" not-null="true"/>
+        </property>
+        <property name="ncLogo">
+            <column name="nc_logo" sql-type="varchar(500)" not-null="true"/>
+        </property>
+        <property name="ncImg">
+            <column name="nc_img" sql-type="varchar(500)" not-null="true"/>
+        </property>
+        <property name="originalPrice">
+            <column name="original_price" sql-type="java.lang.Double" not-null="true"/>
+        </property>
+        <property name="currentPrice">
+            <column name="current_price" sql-type="java.lang.Double" not-null="true"/>
+        </property>
+        <property name="ncType">
+            <column name="nc_type" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="ncLiveLink">
+            <column name="nc_live_link" sql-type="varchar(200)" not-null="true"/>
+        </property>
+        <property name="ncLiveTime">
+            <column name="nc_live_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="ncEndTime">
+            <column name="nc_end_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="ncPreviewLink">
+            <column name="nc_preview_link" sql-type="varchar(200)" not-null="true"/>
+        </property>
+        <property name="ncRecordLink">
+            <column name="nc_record_link" sql-type="varchar(200)" not-null="true"/>
+        </property>
+        <property name="reserveTime">
+            <column name="reserve_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="saleTime">
+            <column name="sale_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="saleEndTime">
+            <column name="sale_end_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="onShelfTime">
+            <column name="on_shelf_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="offShelfTime">
+            <column name="off_shelf_time" sql-type="datetime" not-null="true"/>
+        </property>
+         <property name="ncQqGroup">
+            <column name="nc_qq_group" sql-type="varchar(32)" not-null="true"/>
+        </property>
+        <property name="limitNumber">
+            <column name="limit_number" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="reserveNumber">
+            <column name="reserve_number" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="saleNumber">
+            <column name="sale_number" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="ncState">
+            <column name="nc_state" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="ncLiveRome">
+            <column name="nc_live_rome" sql-type="varchar(64)" not-null="true"/>
+        </property>
+        <property name="ncLevel">
+            <column name="nc_level" sql-type="varchar(64)" not-null="true"/>
+        </property>
+        <property name="ncLevelType">
+            <column name="nc_level_type" sql-type="varchar(64)" not-null="true"/>
+        </property>
+        <property name="sort">
+            <column name="sort" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isFree">
+            <column name="is_free" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="isLimitFree">
+            <column name="is_limit_free" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="limitStartTime">
+            <column name="limit_start_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="limitEndTime">
+            <column name="limit_end_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="isIndex">
+            <column name="is_index" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="isDelete">
+            <column name="is_delete" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="evaluateCount">
+            <column name="evaluate_count" sql-type="tinyint(11)" not-null="true"/>
+        </property>
+        <property name="isTeacher">
+            <column name="is_teacher" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="isCatalog">
+            <column name="is_catalog" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="isPublic">
+            <column name="is_public" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="isGiftBook">
+            <column name="is_gift_book" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="giftBookPrice">
+            <column name="gift_book_price" sql-type="java.lang.Double" not-null="true"/>
+        </property>
+        <property name="createTime">
+            <column name="create_time" sql-type="datetime" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

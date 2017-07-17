@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.business.NetworkCourseComment.NetworkCourseComment" table="network_course_comment" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="ncId">
+            <column name="nc_id" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="longtext" not-null="true"/>
+        </property>
+        <property name="voteUp">
+            <column name="vote_up" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="voteDown">
+            <column name="vote_down" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isHide">
+            <column name="is_hide" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="createTime">
+            <column name="create_time" sql-type="datetime" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.NewWords.NewWordsActionForm" name="NewWordsActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NewWordsActionForm" input="/business/NewWords_add.jsp"	
+		name="NewWordsActionForm" parameter="act" path="/business/NewWords"
+			scope="request" type="com.business.NewWords.NewWordsAction">
+			<forward name="update" path="/business/NewWords_edit.jsp" />
+			<forward name="list" path="/business/NewWords_list.jsp" />
+			<forward name="view" path="/business/NewWords_view.jsp" />
+			<forward name="add" path="/business/NewWords_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/NewWords/NewWords.hbm.xml" />
+
+
+<!-- menu   -->
+NewWords_add	/business/NewWords.do?act=preAdd
+NewWords_list	/business/NewWords.do?act=list

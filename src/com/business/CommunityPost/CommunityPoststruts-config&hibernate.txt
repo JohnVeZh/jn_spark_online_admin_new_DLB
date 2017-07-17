@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.CommunityPost.CommunityPostActionForm" name="CommunityPostActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="CommunityPostActionForm" input="/business/CommunityPost_add.jsp"	
+		name="CommunityPostActionForm" parameter="act" path="/business/CommunityPost"
+			scope="request" type="com.business.CommunityPost.CommunityPostAction">
+			<forward name="update" path="/business/CommunityPost_edit.jsp" />
+			<forward name="list" path="/business/CommunityPost_list.jsp" />
+			<forward name="view" path="/business/CommunityPost_view.jsp" />
+			<forward name="add" path="/business/CommunityPost_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/CommunityPost/CommunityPost.hbm.xml" />
+
+
+<!-- menu   -->
+CommunityPost_add	/business/CommunityPost.do?act=preAdd
+CommunityPost_list	/business/CommunityPost.do?act=list

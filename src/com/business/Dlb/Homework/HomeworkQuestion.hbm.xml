@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.business.Dlb.Homework.HomeworkQuestion" table="dlb_execrise_question">
+        
+        <id name="id" >
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="homeworkId">
+            <column name="execrise_id" sql-type="varchar(32)" length="32">
+                <comment>作业Id</comment>
+            </column>
+        </property>
+        <property name="questionId">
+            <column name="question_id" sql-type="varchar(32)" length="32">
+                <comment>题目Id</comment>
+            </column>
+        </property>
+        <property name="questionName">
+            <column name="question_name" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="sort">
+            <column name="sort" sql-type="int(11)" length="11"/>
+        </property>
+    </class>
+</hibernate-mapping>

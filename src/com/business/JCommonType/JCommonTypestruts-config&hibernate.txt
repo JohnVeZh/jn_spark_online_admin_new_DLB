@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.JCommonType.JCommonTypeActionForm" name="JCommonTypeActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="JCommonTypeActionForm" input="/business/JCommonType_add.jsp"	
+		name="JCommonTypeActionForm" parameter="act" path="/business/JCommonType"
+			scope="request" type="com.business.JCommonType.JCommonTypeAction">
+			<forward name="update" path="/business/JCommonType_edit.jsp" />
+			<forward name="list" path="/business/JCommonType_list.jsp" />
+			<forward name="view" path="/business/JCommonType_view.jsp" />
+			<forward name="add" path="/business/JCommonType_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/JCommonType/JCommonType.hbm.xml" />
+
+
+<!-- menu   -->
+JCommonType_add	/business/JCommonType.do?act=preAdd
+JCommonType_list	/business/JCommonType.do?act=list

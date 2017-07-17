@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.OnlineUser.OnlineUserActionForm" name="OnlineUserActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="OnlineUserActionForm" input="/business/OnlineUser_add.jsp"	
+		name="OnlineUserActionForm" parameter="act" path="/business/OnlineUser"
+			scope="request" type="com.business.OnlineUser.OnlineUserAction">
+			<forward name="update" path="/business/OnlineUser_edit.jsp" />
+			<forward name="list" path="/business/OnlineUser_list.jsp" />
+			<forward name="view" path="/business/OnlineUser_view.jsp" />
+			<forward name="add" path="/business/OnlineUser_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/OnlineUser/OnlineUser.hbm.xml" />
+
+
+<!-- menu   -->
+OnlineUser_add	/business/OnlineUser.do?act=preAdd
+OnlineUser_list	/business/OnlineUser.do?act=list

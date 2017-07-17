@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.business.Dlb.Popup.TbPopup" table="tb_popup" schema="jn_spark_online">
+        <id name="id" >
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="title" column="title"/>
+        <property name="img" column="img"/>
+        <property name="jumpType" column="jump_type"/>
+        <property name="contentId" column="content_id"/>
+        <property name="startTime" column="start_time"/>
+        <property name="endTime" column="end_time"/>
+        <property name="module" column="module"/>
+        <property name="status" column="status"/>
+        <property name="createDate" column="create_date"/>
+        <property name="createBy" column="create_by"/>
+        <property name="updateDate" column="update_date"/>
+        <property name="updateBy" column="update_by"/>
+        <property name="sort" column="sort"/>
+        <property name="delFlag" column="del_flag"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.MatchedPapersTopicLyric.MatchedPapersTopicLyricActionForm" name="MatchedPapersTopicLyricActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="MatchedPapersTopicLyricActionForm" input="/business/MatchedPapersTopicLyric_add.jsp"	
+		name="MatchedPapersTopicLyricActionForm" parameter="act" path="/business/MatchedPapersTopicLyric"
+			scope="request" type="com.business.MatchedPapersTopicLyric.MatchedPapersTopicLyricAction">
+			<forward name="update" path="/business/MatchedPapersTopicLyric_edit.jsp" />
+			<forward name="list" path="/business/MatchedPapersTopicLyric_list.jsp" />
+			<forward name="view" path="/business/MatchedPapersTopicLyric_view.jsp" />
+			<forward name="add" path="/business/MatchedPapersTopicLyric_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/MatchedPapersTopicLyric/MatchedPapersTopicLyric.hbm.xml" />
+
+
+<!-- menu   -->
+MatchedPapersTopicLyric_add	/business/MatchedPapersTopicLyric.do?act=preAdd
+MatchedPapersTopicLyric_list	/business/MatchedPapersTopicLyric.do?act=list

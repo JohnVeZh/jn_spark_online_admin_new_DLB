@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.business.Dlb.Message.TbMessage" table="tb_message" catalog="jn_spark_online">
+        
+        <id name="id" >
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="title">
+            <column name="title" sql-type="varchar(32)" length="32">
+                <comment>标题</comment>
+            </column>
+        </property>
+
+        <property name="img">
+            <column name="img" sql-type="varchar(256)" length="256">
+                <comment>图片</comment>
+            </column>
+        </property>
+        <property name="intro">
+            <column name="intro" sql-type="varchar(128)" length="128">
+                <comment>简介</comment>
+            </column>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="longtext" >
+                <comment>富文本</comment>
+            </column>
+        </property>
+        <property name="targetType">
+            <column name="target_type" sql-type="tinyint(4)" length="4">
+                <comment>目标类型(1.个人 2.全体)</comment>
+            </column>
+        </property>
+
+        <property name="jumpType">
+            <column name="jump_type" sql-type="tinyint(4)" length="4" default="1">
+                <comment>跳转类型(1.富文本 2.外部链接 3.活动 4.资讯 5.图书，6网课 )</comment>
+            </column>
+        </property>
+        <property name="contentId">
+            <column name="content_id" sql-type="varchar(32)" length="32">
+                <comment>内容id(详情)</comment>
+            </column>
+        </property>
+
+        <property name="pushTime">
+            <column name="push_time" sql-type="datetime" >
+                <comment>发送时间</comment>
+            </column>
+        </property>
+        <property name="pushStatus">
+            <column name="push_status" sql-type="tinyint(4)" length="4" default="0">
+                <comment>推送状态（0.未推送 1.已推送）</comment>
+            </column>
+        </property>
+        <property name="createDate">
+            <column name="create_date" sql-type="datetime" >
+            </column>
+        </property>
+        <property name="createBy">
+            <column name="create_by" sql-type="varchar(32)" length="32">
+                <comment>创建人</comment>
+            </column>
+        </property>
+        <property name="updateDate">
+            <column name="update_date" sql-type="datetime" >
+            </column>
+        </property>
+
+
+        <property name="sort">
+            <column name="sort" sql-type="int(11)" length="11"/>
+        </property>
+
+        <property name="delFlag">
+            <column name="del_flag" sql-type="tinyint(4)" length="4" default="0"/>
+        </property>
+    </class>
+    <class name="com.business.Dlb.Message.TbMessageUser" table="tb_message_user_operate"
+           schema="jn_spark_online">
+        <id name="id" >
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="userId" column="user_id"/>
+        <property name="msgId" column="msg_id"/>
+        <property name="type" column="type"/>
+        <property name="createDate" column="create_date"/>
+        <property name="updteDate" column="updte_date"/>
+    </class>
+
+</hibernate-mapping>    

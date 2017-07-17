@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.business.NetworkCourseOrderRefund.NetworkCourseOrderRefund" table="product_order_refund">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="productOrderDetailsId">
+            <column name="product_order_details_id" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="createTime">
+            <column name="createtime" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="orderCode">
+            <column name="order_code" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="refundReasonId">
+            <column name="refund_reason_id" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(2000)" length="2000" />
+        </property>
+        <property name="fee">
+            <column name="fee" sql-type="double"  />
+        </property>
+        <property name="type">
+            <column name="type" sql-type="int(11)" default="0" />
+        </property>
+        <property name="checkStatus">
+            <column name="check_status" sql-type="varchar(64)" length="64" />
+        </property>
+        <property name="returnSid">
+            <column name="return_sid" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="eCode">
+            <column name="e_code" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="eName">
+            <column name="e_name" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="productStatus">
+            <column name="product_status" sql-type="int(11)" default="0" />
+        </property>
+        <property name="img">
+            <column name="img" sql-type="varchar(2000)" length="2000" />
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="productType">
+            <column name="product_type" sql-type="int(11)" />
+        </property>
+        <property name="timelyRefund">
+            <column name="timely_refund" sql-type="int(11)" default="0" />
+        </property>
+        <property name="bookPrice">
+            <column name="book_price" sql-type="double" default="0" />
+        </property>
+        <property name="playCount">
+            <column name="play_count" sql-type="int(11)" default="0"/>
+        </property>
+        <property name="applyCreatTime">
+            <column name="create_time" sql-type="datetime" />
+        </property>
+    </class>
+</hibernate-mapping>

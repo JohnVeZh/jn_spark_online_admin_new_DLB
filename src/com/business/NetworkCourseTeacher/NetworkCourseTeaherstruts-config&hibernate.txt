@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.NetworkCourseTeacher.NetworkCourseTeacherActionForm" name="NetworkCourseTeacherActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NetworkCourseTeacherActionForm" input="/business/NetworkCourseTeacher_add.jsp"	
+		name="NetworkCourseTeacherActionForm" parameter="act" path="/business/NetworkCourseTeacher"
+			scope="request" type="com.business.NetworkCourseTeacher.NetworkCourseTeacherAction">
+			<forward name="update" path="/system/NetworkCourse/NetworkCourseTeacher/NetworkCourseTeacher_edit.jsp" />
+			<forward name="list" path="/system/NetworkCourse/NetworkCourseTeacher/NetworkCourseTeacher_list.jsp" />
+			<forward name="view" path="/system/NetworkCourse/NetworkCourseTeacher/NetworkCourseTeacher_view.jsp" />
+			<forward name="add" path="/system/NetworkNetworkCourse/NetworkCourseTeacher/CourseTeacher_add.jsp" />
+	</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/NetworkCourseTeacher/NetworkCourseTeacher.hbm.xml" />
+
+
+<!-- menu   -->
+NetworkCourseTeacher_add	/business/NetworkCourseTeacher.do?act=preAdd
+NetworkCourseTeacher_list	/business/NetworkCourseTeacher.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.CommunityPostLikeRecord.CommunityPostLikeRecordActionForm" name="CommunityPostLikeRecordActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="CommunityPostLikeRecordActionForm" input="/business/CommunityPostLikeRecord_add.jsp"	
+		name="CommunityPostLikeRecordActionForm" parameter="act" path="/business/CommunityPostLikeRecord"
+			scope="request" type="com.business.CommunityPostLikeRecord.CommunityPostLikeRecordAction">
+			<forward name="update" path="/business/CommunityPostLikeRecord_edit.jsp" />
+			<forward name="list" path="/business/CommunityPostLikeRecord_list.jsp" />
+			<forward name="view" path="/business/CommunityPostLikeRecord_view.jsp" />
+			<forward name="add" path="/business/CommunityPostLikeRecord_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/CommunityPostLikeRecord/CommunityPostLikeRecord.hbm.xml" />
+
+
+<!-- menu   -->
+CommunityPostLikeRecord_add	/business/CommunityPostLikeRecord.do?act=preAdd
+CommunityPostLikeRecord_list	/business/CommunityPostLikeRecord.do?act=list

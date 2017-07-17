@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.PreferentialCodeGenerate.PreferentialCodeGenerateActionForm" name="PreferentialCodeGenerateActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="PreferentialCodeGenerateActionForm" input="/business/PreferentialCodeGenerate_add.jsp"	
+		name="PreferentialCodeGenerateActionForm" parameter="act" path="/business/PreferentialCodeGenerate"
+			scope="request" type="com.business.PreferentialCodeGenerate.PreferentialCodeGenerateAction">
+			<forward name="update" path="/business/PreferentialCodeGenerate_edit.jsp" />
+			<forward name="list" path="/business/PreferentialCodeGenerate_list.jsp" />
+			<forward name="view" path="/business/PreferentialCodeGenerate_view.jsp" />
+			<forward name="add" path="/business/PreferentialCodeGenerate_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/PreferentialCodeGenerate/PreferentialCodeGenerate.hbm.xml" />
+
+
+<!-- menu   -->
+PreferentialCodeGenerate_add	/business/PreferentialCodeGenerate.do?act=preAdd
+PreferentialCodeGenerate_list	/business/PreferentialCodeGenerate.do?act=list

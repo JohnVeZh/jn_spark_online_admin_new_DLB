@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.business.NetworkVideo.NetworkVideo" table="network_video" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="networkName">
+            <column name="network_name" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="brief">
+            <column name="brief" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="networkIntroduce">
+            <column name="network_introduce" sql-type="text" not-null="true"/>
+        </property>
+        <property name="teacherIntroduce">
+            <column name="teacher_introduce" sql-type="text" not-null="true"/>
+        </property>
+        <property name="catalogIntroduce">
+            <column name="catalog_introduce" sql-type="text" not-null="true"/>
+        </property>
+        <property name="networkImgpath">
+            <column name="network_imgpath" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="originalPrice">
+            <column name="original_price" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="networkMoney">
+            <column name="network_money" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="networkType">
+            <column name="network_type" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="networkLiveLink">
+            <column name="network_live_link" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="networkLiveTime">
+            <column name="network_live_time" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="networkRecordLink">
+            <column name="network_record_link" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="saleNum">
+            <column name="sale_num" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="createtime">
+            <column name="createtime" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="sort">
+            <column name="sort" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isFree">
+            <column name="is_free" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isLimitFree">
+            <column name="is_limit_free" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="limitStartTime">
+            <column name="limit_start_time" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="limitEndTime">
+            <column name="limit_end_time" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="teacherId">
+            <column name="teacher_id" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="state">
+            <column name="state" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="levelType">
+            <column name="level_type" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="catalogNum">
+            <column name="catalog_num" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isIndex">
+            <column name="is_index" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isDel">
+            <column name="is_del" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="evaluateNum">
+            <column name="evaluate_num" sql-type="int(11)" />
+        </property>
+        <property name="isTeacher">
+            <column name="is_teacher" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isCatalog">
+            <column name="is_catalog" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="isPublic">
+            <column name="is_public" sql-type="int(4)" not-null="true"/>
+        </property>
+        <property name="isBook">
+            <column name="is_book" sql-type="int(4)" not-null="true"/>
+        </property>
+        <property name="bookPrice" type="java.lang.Double">
+            <column name="book_price" precision="22" scale="0">
+                <comment>礼包（附赠图书）费用</comment>
+            </column>
+        </property>
+        <property name="limitCount">
+            <column name="limit_count" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="enrolEndTime">
+            <column name="enrol_end_time" sql-type="varchar(200)" length="200" not-null="true">
+                <comment>报名截止时间</comment>
+            </column>
+        </property>
+        <property name="teachStartTime">
+            <column name="teach_start_time" sql-type="varchar(200)" length="200" not-null="true">
+                <comment>开课时间</comment>
+            </column>
+        </property>
+        <property name="teachEndTime">
+            <column name="teach_end_time" sql-type="varchar(200)" length="200" not-null="true">
+                <comment>结课时间</comment>
+            </column>
+        </property>
+        <property name="qrcode">
+            <column name="qrcode" sql-type="varchar(30)" length="30" not-null="true">
+                <comment>二维码ID</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.CommunityPostFollowRecord.CommunityPostFollowRecordActionForm" name="CommunityPostFollowRecordActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="CommunityPostFollowRecordActionForm" input="/business/CommunityPostFollowRecord_add.jsp"	
+		name="CommunityPostFollowRecordActionForm" parameter="act" path="/business/CommunityPostFollowRecord"
+			scope="request" type="com.business.CommunityPostFollowRecord.CommunityPostFollowRecordAction">
+			<forward name="update" path="/business/CommunityPostFollowRecord_edit.jsp" />
+			<forward name="list" path="/business/CommunityPostFollowRecord_list.jsp" />
+			<forward name="view" path="/business/CommunityPostFollowRecord_view.jsp" />
+			<forward name="add" path="/business/CommunityPostFollowRecord_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/CommunityPostFollowRecord/CommunityPostFollowRecord.hbm.xml" />
+
+
+<!-- menu   -->
+CommunityPostFollowRecord_add	/business/CommunityPostFollowRecord.do?act=preAdd
+CommunityPostFollowRecord_list	/business/CommunityPostFollowRecord.do?act=list

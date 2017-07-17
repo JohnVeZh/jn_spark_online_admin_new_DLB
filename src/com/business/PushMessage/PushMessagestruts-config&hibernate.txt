@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.PushMessage.PushMessageActionForm" name="PushMessageActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="PushMessageActionForm" input="/business/PushMessage_add.jsp"	
+		name="PushMessageActionForm" parameter="act" path="/business/PushMessage"
+			scope="request" type="com.business.PushMessage.PushMessageAction">
+			<forward name="update" path="/business/PushMessage_edit.jsp" />
+			<forward name="list" path="/business/PushMessage_list.jsp" />
+			<forward name="view" path="/business/PushMessage_view.jsp" />
+			<forward name="add" path="/business/PushMessage_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/PushMessage/PushMessage.hbm.xml" />
+
+
+<!-- menu   -->
+PushMessage_add	/business/PushMessage.do?act=preAdd
+PushMessage_list	/business/PushMessage.do?act=list

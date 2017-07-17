@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.NetworkVideoTeaher.NetworkVideoTeaherActionForm" name="NetworkVideoTeaherActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NetworkVideoTeaherActionForm" input="/business/NetworkVideoTeaher_add.jsp"	
+		name="NetworkVideoTeaherActionForm" parameter="act" path="/business/NetworkVideoTeaher"
+			scope="request" type="com.business.NetworkVideoTeaher.NetworkVideoTeaherAction">
+			<forward name="update" path="/business/NetworkVideoTeaher_edit.jsp" />
+			<forward name="list" path="/business/NetworkVideoTeaher_list.jsp" />
+			<forward name="view" path="/business/NetworkVideoTeaher_view.jsp" />
+			<forward name="add" path="/business/NetworkVideoTeaher_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/NetworkVideoTeaher/NetworkVideoTeaher.hbm.xml" />
+
+
+<!-- menu   -->
+NetworkVideoTeaher_add	/business/NetworkVideoTeaher.do?act=preAdd
+NetworkVideoTeaher_list	/business/NetworkVideoTeaher.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.MatchedPapersTopicHearingType.MatchedPapersTopicHearingTypeActionForm" name="MatchedPapersTopicHearingTypeActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="MatchedPapersTopicHearingTypeActionForm" input="/business/MatchedPapersTopicHearingType_add.jsp"	
+		name="MatchedPapersTopicHearingTypeActionForm" parameter="act" path="/business/MatchedPapersTopicHearingType"
+			scope="request" type="com.business.MatchedPapersTopicHearingType.MatchedPapersTopicHearingTypeAction">
+			<forward name="update" path="/business/MatchedPapersTopicHearingType_edit.jsp" />
+			<forward name="list" path="/business/MatchedPapersTopicHearingType_list.jsp" />
+			<forward name="view" path="/business/MatchedPapersTopicHearingType_view.jsp" />
+			<forward name="add" path="/business/MatchedPapersTopicHearingType_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/MatchedPapersTopicHearingType/MatchedPapersTopicHearingType.hbm.xml" />
+
+
+<!-- menu   -->
+MatchedPapersTopicHearingType_add	/business/MatchedPapersTopicHearingType.do?act=preAdd
+MatchedPapersTopicHearingType_list	/business/MatchedPapersTopicHearingType.do?act=list

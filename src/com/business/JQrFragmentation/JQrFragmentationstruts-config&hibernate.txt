@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.JQrFragmentation.JQrFragmentationActionForm" name="JQrFragmentationActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="JQrFragmentationActionForm" input="/business/JQrFragmentation_add.jsp"	
+		name="JQrFragmentationActionForm" parameter="act" path="/business/JQrFragmentation"
+			scope="request" type="com.business.JQrFragmentation.JQrFragmentationAction">
+			<forward name="update" path="/business/JQrFragmentation_edit.jsp" />
+			<forward name="list" path="/business/JQrFragmentation_list.jsp" />
+			<forward name="view" path="/business/JQrFragmentation_view.jsp" />
+			<forward name="add" path="/business/JQrFragmentation_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/JQrFragmentation/JQrFragmentation.hbm.xml" />
+
+
+<!-- menu   -->
+JQrFragmentation_add	/business/JQrFragmentation.do?act=preAdd
+JQrFragmentation_list	/business/JQrFragmentation.do?act=list

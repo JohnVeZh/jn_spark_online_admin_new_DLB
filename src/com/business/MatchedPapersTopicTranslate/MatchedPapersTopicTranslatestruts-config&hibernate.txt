@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.MatchedPapersTopicTranslate.MatchedPapersTopicTranslateActionForm" name="MatchedPapersTopicTranslateActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="MatchedPapersTopicTranslateActionForm" input="/business/MatchedPapersTopicTranslate_add.jsp"	
+		name="MatchedPapersTopicTranslateActionForm" parameter="act" path="/business/MatchedPapersTopicTranslate"
+			scope="request" type="com.business.MatchedPapersTopicTranslate.MatchedPapersTopicTranslateAction">
+			<forward name="update" path="/business/MatchedPapersTopicTranslate_edit.jsp" />
+			<forward name="list" path="/business/MatchedPapersTopicTranslate_list.jsp" />
+			<forward name="view" path="/business/MatchedPapersTopicTranslate_view.jsp" />
+			<forward name="add" path="/business/MatchedPapersTopicTranslate_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/MatchedPapersTopicTranslate/MatchedPapersTopicTranslate.hbm.xml" />
+
+
+<!-- menu   -->
+MatchedPapersTopicTranslate_add	/business/MatchedPapersTopicTranslate.do?act=preAdd
+MatchedPapersTopicTranslate_list	/business/MatchedPapersTopicTranslate.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.TopSearchQueries.TopSearchQueriesActionForm" name="TopSearchQueriesActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="TopSearchQueriesActionForm" input="/business/TopSearchQueries_add.jsp"	
+		name="TopSearchQueriesActionForm" parameter="act" path="/business/TopSearchQueries"
+			scope="request" type="com.business.TopSearchQueries.TopSearchQueriesAction">
+			<forward name="update" path="/business/TopSearchQueries_edit.jsp" />
+			<forward name="list" path="/business/TopSearchQueries_list.jsp" />
+			<forward name="view" path="/business/TopSearchQueries_view.jsp" />
+			<forward name="add" path="/business/TopSearchQueries_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/TopSearchQueries/TopSearchQueries.hbm.xml" />
+
+
+<!-- menu   -->
+TopSearchQueries_add	/business/TopSearchQueries.do?act=preAdd
+TopSearchQueries_list	/business/TopSearchQueries.do?act=list

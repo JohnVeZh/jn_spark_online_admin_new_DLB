@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.business.TbCouponRecord.TbCouponRecord" table="tb_coupon_record" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+        </id>
+        <property name="couponCodeId">
+            <column name="coupon_code_id" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="couponCode">
+            <column name="coupon_code" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="useTime">
+            <column name="use_time" sql-type="datetime"/>
+        </property>
+        <property name="orderId">
+            <column name="order_id" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="discountMoney">
+            <column name="discount_money" sql-type="decimal(11,2)" precision="11" scale="2"/>
+        </property>
+    </class>
+</hibernate-mapping>

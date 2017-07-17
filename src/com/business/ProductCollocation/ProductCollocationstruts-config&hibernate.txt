@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.ProductCollocation.ProductCollocationActionForm" name="ProductCollocationActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="ProductCollocationActionForm" input="/business/ProductCollocation_add.jsp"	
+		name="ProductCollocationActionForm" parameter="act" path="/business/ProductCollocation"
+			scope="request" type="com.business.ProductCollocation.ProductCollocationAction">
+			<forward name="update" path="/business/ProductCollocation_edit.jsp" />
+			<forward name="list" path="/business/ProductCollocation_list.jsp" />
+			<forward name="view" path="/business/ProductCollocation_view.jsp" />
+			<forward name="add" path="/business/ProductCollocation_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/ProductCollocation/ProductCollocation.hbm.xml" />
+
+
+<!-- menu   -->
+ProductCollocation_add	/business/ProductCollocation.do?act=preAdd
+ProductCollocation_list	/business/ProductCollocation.do?act=list

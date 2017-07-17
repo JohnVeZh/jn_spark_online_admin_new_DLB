@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.JQrT.JQrTActionForm" name="JQrTActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="JQrTActionForm" input="/business/JQrT_add.jsp"	
+		name="JQrTActionForm" parameter="act" path="/business/JQrT"
+			scope="request" type="com.business.JQrT.JQrTAction">
+			<forward name="update" path="/business/JQrT_edit.jsp" />
+			<forward name="list" path="/business/JQrT_list.jsp" />
+			<forward name="view" path="/business/JQrT_view.jsp" />
+			<forward name="add" path="/business/JQrT_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/JQrT/JQrT.hbm.xml" />
+
+
+<!-- menu   -->
+JQrT_add	/business/JQrT.do?act=preAdd
+JQrT_list	/business/JQrT.do?act=list

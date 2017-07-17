@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.MatchedPapersUserRecord.MatchedPapersUserRecordActionForm" name="MatchedPapersUserRecordActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="MatchedPapersUserRecordActionForm" input="/business/MatchedPapersUserRecord_add.jsp"	
+		name="MatchedPapersUserRecordActionForm" parameter="act" path="/business/MatchedPapersUserRecord"
+			scope="request" type="com.business.MatchedPapersUserRecord.MatchedPapersUserRecordAction">
+			<forward name="update" path="/business/MatchedPapersUserRecord_edit.jsp" />
+			<forward name="list" path="/business/MatchedPapersUserRecord_list.jsp" />
+			<forward name="view" path="/business/MatchedPapersUserRecord_view.jsp" />
+			<forward name="add" path="/business/MatchedPapersUserRecord_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/MatchedPapersUserRecord/MatchedPapersUserRecord.hbm.xml" />
+
+
+<!-- menu   -->
+MatchedPapersUserRecord_add	/business/MatchedPapersUserRecord.do?act=preAdd
+MatchedPapersUserRecord_list	/business/MatchedPapersUserRecord.do?act=list

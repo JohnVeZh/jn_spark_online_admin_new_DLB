@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.MatchedPapersTopicHearingSubjectChoice.MatchedPapersTopicHearingSubjectChoiceActionForm" name="MatchedPapersTopicHearingSubjectChoiceActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="MatchedPapersTopicHearingSubjectChoiceActionForm" input="/business/MatchedPapersTopicHearingSubjectChoice_add.jsp"	
+		name="MatchedPapersTopicHearingSubjectChoiceActionForm" parameter="act" path="/business/MatchedPapersTopicHearingSubjectChoice"
+			scope="request" type="com.business.MatchedPapersTopicHearingSubjectChoice.MatchedPapersTopicHearingSubjectChoiceAction">
+			<forward name="update" path="/business/MatchedPapersTopicHearingSubjectChoice_edit.jsp" />
+			<forward name="list" path="/business/MatchedPapersTopicHearingSubjectChoice_list.jsp" />
+			<forward name="view" path="/business/MatchedPapersTopicHearingSubjectChoice_view.jsp" />
+			<forward name="add" path="/business/MatchedPapersTopicHearingSubjectChoice_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/MatchedPapersTopicHearingSubjectChoice/MatchedPapersTopicHearingSubjectChoice.hbm.xml" />
+
+
+<!-- menu   -->
+MatchedPapersTopicHearingSubjectChoice_add	/business/MatchedPapersTopicHearingSubjectChoice.do?act=preAdd
+MatchedPapersTopicHearingSubjectChoice_list	/business/MatchedPapersTopicHearingSubjectChoice.do?act=list

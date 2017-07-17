@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.SystemFeedback.SystemFeedbackActionForm" name="SystemFeedbackActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="SystemFeedbackActionForm" input="/business/SystemFeedback_add.jsp"	
+		name="SystemFeedbackActionForm" parameter="act" path="/business/SystemFeedback"
+			scope="request" type="com.business.SystemFeedback.SystemFeedbackAction">
+			<forward name="update" path="/business/SystemFeedback_edit.jsp" />
+			<forward name="list" path="/business/SystemFeedback_list.jsp" />
+			<forward name="view" path="/business/SystemFeedback_view.jsp" />
+			<forward name="add" path="/business/SystemFeedback_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/SystemFeedback/SystemFeedback.hbm.xml" />
+
+
+<!-- menu   -->
+SystemFeedback_add	/business/SystemFeedback.do?act=preAdd
+SystemFeedback_list	/business/SystemFeedback.do?act=list

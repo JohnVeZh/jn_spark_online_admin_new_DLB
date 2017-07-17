@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.JQrWritingType.JQrWritingTypeActionForm" name="JQrWritingTypeActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="JQrWritingTypeActionForm" input="/business/JQrWritingType_add.jsp"	
+		name="JQrWritingTypeActionForm" parameter="act" path="/business/JQrWritingType"
+			scope="request" type="com.business.JQrWritingType.JQrWritingTypeAction">
+			<forward name="update" path="/business/JQrWritingType_edit.jsp" />
+			<forward name="list" path="/business/JQrWritingType_list.jsp" />
+			<forward name="view" path="/business/JQrWritingType_view.jsp" />
+			<forward name="add" path="/business/JQrWritingType_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/JQrWritingType/JQrWritingType.hbm.xml" />
+
+
+<!-- menu   -->
+JQrWritingType_add	/business/JQrWritingType.do?act=preAdd
+JQrWritingType_list	/business/JQrWritingType.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.CommonWords.CommonWordsActionForm" name="CommonWordsActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="CommonWordsActionForm" input="/business/CommonWords_add.jsp"	
+		name="CommonWordsActionForm" parameter="act" path="/business/CommonWords"
+			scope="request" type="com.business.CommonWords.CommonWordsAction">
+			<forward name="update" path="/business/CommonWords_edit.jsp" />
+			<forward name="list" path="/business/CommonWords_list.jsp" />
+			<forward name="view" path="/business/CommonWords_view.jsp" />
+			<forward name="add" path="/business/CommonWords_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/CommonWords/CommonWords.hbm.xml" />
+
+
+<!-- menu   -->
+CommonWords_add	/business/CommonWords.do?act=preAdd
+CommonWords_list	/business/CommonWords.do?act=list

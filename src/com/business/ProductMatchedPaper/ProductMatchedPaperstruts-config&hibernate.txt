@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.ProductMatchedPaper.ProductMatchedPaperActionForm" name="ProductMatchedPaperActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="ProductMatchedPaperActionForm" input="/business/ProductMatchedPaper_add.jsp"	
+		name="ProductMatchedPaperActionForm" parameter="act" path="/business/ProductMatchedPaper"
+			scope="request" type="com.business.ProductMatchedPaper.ProductMatchedPaperAction">
+			<forward name="update" path="/business/ProductMatchedPaper_edit.jsp" />
+			<forward name="list" path="/business/ProductMatchedPaper_list.jsp" />
+			<forward name="view" path="/business/ProductMatchedPaper_view.jsp" />
+			<forward name="add" path="/business/ProductMatchedPaper_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/ProductMatchedPaper/ProductMatchedPaper.hbm.xml" />
+
+
+<!-- menu   -->
+ProductMatchedPaper_add	/business/ProductMatchedPaper.do?act=preAdd
+ProductMatchedPaper_list	/business/ProductMatchedPaper.do?act=list

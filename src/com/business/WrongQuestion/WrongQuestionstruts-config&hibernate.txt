@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.WrongQuestion.WrongQuestionActionForm" name="WrongQuestionActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="WrongQuestionActionForm" input="/business/WrongQuestion_add.jsp"	
+		name="WrongQuestionActionForm" parameter="act" path="/business/WrongQuestion"
+			scope="request" type="com.business.WrongQuestion.WrongQuestionAction">
+			<forward name="update" path="/business/WrongQuestion_edit.jsp" />
+			<forward name="list" path="/business/WrongQuestion_list.jsp" />
+			<forward name="view" path="/business/WrongQuestion_view.jsp" />
+			<forward name="add" path="/business/WrongQuestion_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/WrongQuestion/WrongQuestion.hbm.xml" />
+
+
+<!-- menu   -->
+WrongQuestion_add	/business/WrongQuestion.do?act=preAdd
+WrongQuestion_list	/business/WrongQuestion.do?act=list

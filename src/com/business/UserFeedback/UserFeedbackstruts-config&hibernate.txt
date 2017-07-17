@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.UserFeedback.UserFeedbackActionForm" name="UserFeedbackActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="UserFeedbackActionForm" input="/business/UserFeedback_add.jsp"	
+		name="UserFeedbackActionForm" parameter="act" path="/business/UserFeedback"
+			scope="request" type="com.business.UserFeedback.UserFeedbackAction">
+			<forward name="update" path="/business/UserFeedback_edit.jsp" />
+			<forward name="list" path="/business/UserFeedback_list.jsp" />
+			<forward name="view" path="/business/UserFeedback_view.jsp" />
+			<forward name="add" path="/business/UserFeedback_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/UserFeedback/UserFeedback.hbm.xml" />
+
+
+<!-- menu   -->
+UserFeedback_add	/business/UserFeedback.do?act=preAdd
+UserFeedback_list	/business/UserFeedback.do?act=list

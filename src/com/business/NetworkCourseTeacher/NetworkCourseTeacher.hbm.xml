@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.business.NetworkCourseTeacher.NetworkCourseTeacher" table="network_course_teacher" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="moblie">
+            <column name="moblie" sql-type="varchar(32)" length="32" />
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(64)" length="32" />
+        </property>
+        <property name="logo">
+            <column name="logo" sql-type="varchar(200)" length="200" />
+        </property>
+        <property name="sex">
+            <column name="sex" sql-type="tinyint(4)" />
+        </property>
+        <property name="introduce">
+            <column name="introduce" sql-type="longtext" />
+        </property>
+        <property name="isDelete">
+            <column name="is_delete" sql-type="tinyint(4)" default="0" />
+        </property>
+        <property name="sort">
+            <column name="sort" sql-type="int(11)" />
+        </property>
+        <property name="createTime">
+            <column name="create_time" sql-type="datetime" />
+        </property>
+        <property name="tags">
+            <column name="tags" sql-type="varchar(64)" length="64" />
+        </property>
+    </class>
+</hibernate-mapping>

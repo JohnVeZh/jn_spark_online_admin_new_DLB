@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.PushLog.PushLogActionForm" name="PushLogActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="PushLogActionForm" input="/business/PushLog_add.jsp"	
+		name="PushLogActionForm" parameter="act" path="/business/PushLog"
+			scope="request" type="com.business.PushLog.PushLogAction">
+			<forward name="update" path="/business/PushLog_edit.jsp" />
+			<forward name="list" path="/business/PushLog_list.jsp" />
+			<forward name="view" path="/business/PushLog_view.jsp" />
+			<forward name="add" path="/business/PushLog_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/PushLog/PushLog.hbm.xml" />
+
+
+<!-- menu   -->
+PushLog_add	/business/PushLog.do?act=preAdd
+PushLog_list	/business/PushLog.do?act=list

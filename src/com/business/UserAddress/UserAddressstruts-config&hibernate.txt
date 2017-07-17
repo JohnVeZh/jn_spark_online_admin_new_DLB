@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.UserAddress.UserAddressActionForm" name="UserAddressActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="UserAddressActionForm" input="/business/UserAddress_add.jsp"	
+		name="UserAddressActionForm" parameter="act" path="/business/UserAddress"
+			scope="request" type="com.business.UserAddress.UserAddressAction">
+			<forward name="update" path="/business/UserAddress_edit.jsp" />
+			<forward name="list" path="/business/UserAddress_list.jsp" />
+			<forward name="view" path="/business/UserAddress_view.jsp" />
+			<forward name="add" path="/business/UserAddress_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/UserAddress/UserAddress.hbm.xml" />
+
+
+<!-- menu   -->
+UserAddress_add	/business/UserAddress.do?act=preAdd
+UserAddress_list	/business/UserAddress.do?act=list

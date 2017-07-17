@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.SystemCodeTable.SystemCodeTableActionForm" name="SystemCodeTableActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="SystemCodeTableActionForm" input="/business/SystemCodeTable_add.jsp"	
+		name="SystemCodeTableActionForm" parameter="act" path="/business/SystemCodeTable"
+			scope="request" type="com.business.SystemCodeTable.SystemCodeTableAction">
+			<forward name="update" path="/business/SystemCodeTable_edit.jsp" />
+			<forward name="list" path="/business/SystemCodeTable_list.jsp" />
+			<forward name="view" path="/business/SystemCodeTable_view.jsp" />
+			<forward name="add" path="/business/SystemCodeTable_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/SystemCodeTable/SystemCodeTable.hbm.xml" />
+
+
+<!-- menu   -->
+SystemCodeTable_add	/business/SystemCodeTable.do?act=preAdd
+SystemCodeTable_list	/business/SystemCodeTable.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.KnowledgePointEn.KnowledgePointEnActionForm" name="KnowledgePointEnActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="KnowledgePointEnActionForm" input="/business/KnowledgePointEn_add.jsp"	
+		name="KnowledgePointEnActionForm" parameter="act" path="/business/KnowledgePointEn"
+			scope="request" type="com.business.KnowledgePointEn.KnowledgePointEnAction">
+			<forward name="update" path="/business/KnowledgePointEn_edit.jsp" />
+			<forward name="list" path="/business/KnowledgePointEn_list.jsp" />
+			<forward name="view" path="/business/KnowledgePointEn_view.jsp" />
+			<forward name="add" path="/business/KnowledgePointEn_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/KnowledgePointEn/KnowledgePointEn.hbm.xml" />
+
+
+<!-- menu   -->
+KnowledgePointEn_add	/business/KnowledgePointEn.do?act=preAdd
+KnowledgePointEn_list	/business/KnowledgePointEn.do?act=list

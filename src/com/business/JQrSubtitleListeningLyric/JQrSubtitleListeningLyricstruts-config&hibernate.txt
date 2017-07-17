@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.JQrSubtitleListeningLyric.JQrSubtitleListeningLyricActionForm" name="JQrSubtitleListeningLyricActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="JQrSubtitleListeningLyricActionForm" input="/business/JQrSubtitleListeningLyric_add.jsp"	
+		name="JQrSubtitleListeningLyricActionForm" parameter="act" path="/business/JQrSubtitleListeningLyric"
+			scope="request" type="com.business.JQrSubtitleListeningLyric.JQrSubtitleListeningLyricAction">
+			<forward name="update" path="/business/JQrSubtitleListeningLyric_edit.jsp" />
+			<forward name="list" path="/business/JQrSubtitleListeningLyric_list.jsp" />
+			<forward name="view" path="/business/JQrSubtitleListeningLyric_view.jsp" />
+			<forward name="add" path="/business/JQrSubtitleListeningLyric_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/JQrSubtitleListeningLyric/JQrSubtitleListeningLyric.hbm.xml" />
+
+
+<!-- menu   -->
+JQrSubtitleListeningLyric_add	/business/JQrSubtitleListeningLyric.do?act=preAdd
+JQrSubtitleListeningLyric_list	/business/JQrSubtitleListeningLyric.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.MatchedPapersTopicReadType.MatchedPapersTopicReadTypeActionForm" name="MatchedPapersTopicReadTypeActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="MatchedPapersTopicReadTypeActionForm" input="/business/MatchedPapersTopicReadType_add.jsp"	
+		name="MatchedPapersTopicReadTypeActionForm" parameter="act" path="/business/MatchedPapersTopicReadType"
+			scope="request" type="com.business.MatchedPapersTopicReadType.MatchedPapersTopicReadTypeAction">
+			<forward name="update" path="/business/MatchedPapersTopicReadType_edit.jsp" />
+			<forward name="list" path="/business/MatchedPapersTopicReadType_list.jsp" />
+			<forward name="view" path="/business/MatchedPapersTopicReadType_view.jsp" />
+			<forward name="add" path="/business/MatchedPapersTopicReadType_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/MatchedPapersTopicReadType/MatchedPapersTopicReadType.hbm.xml" />
+
+
+<!-- menu   -->
+MatchedPapersTopicReadType_add	/business/MatchedPapersTopicReadType.do?act=preAdd
+MatchedPapersTopicReadType_list	/business/MatchedPapersTopicReadType.do?act=list

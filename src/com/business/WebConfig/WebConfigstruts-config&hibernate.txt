@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.WebConfig.WebConfigActionForm" name="WebConfigActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="WebConfigActionForm" input="/business/WebConfig_add.jsp"	
+		name="WebConfigActionForm" parameter="act" path="/business/WebConfig"
+			scope="request" type="com.business.WebConfig.WebConfigAction">
+			<forward name="update" path="/business/WebConfig_edit.jsp" />
+			<forward name="list" path="/business/WebConfig_list.jsp" />
+			<forward name="view" path="/business/WebConfig_view.jsp" />
+			<forward name="add" path="/business/WebConfig_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/WebConfig/WebConfig.hbm.xml" />
+
+
+<!-- menu   -->
+WebConfig_add	/business/WebConfig.do?act=preAdd
+WebConfig_list	/business/WebConfig.do?act=list

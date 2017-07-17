@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.HomeworkCorrectingRecord.HomeworkCorrectingRecordActionForm" name="HomeworkCorrectingRecordActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="HomeworkCorrectingRecordActionForm" input="/business/HomeworkCorrectingRecord_add.jsp"	
+		name="HomeworkCorrectingRecordActionForm" parameter="act" path="/business/HomeworkCorrectingRecord"
+			scope="request" type="com.business.HomeworkCorrectingRecord.HomeworkCorrectingRecordAction">
+			<forward name="update" path="/business/HomeworkCorrectingRecord_edit.jsp" />
+			<forward name="list" path="/business/HomeworkCorrectingRecord_list.jsp" />
+			<forward name="view" path="/business/HomeworkCorrectingRecord_view.jsp" />
+			<forward name="add" path="/business/HomeworkCorrectingRecord_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/HomeworkCorrectingRecord/HomeworkCorrectingRecord.hbm.xml" />
+
+
+<!-- menu   -->
+HomeworkCorrectingRecord_add	/business/HomeworkCorrectingRecord.do?act=preAdd
+HomeworkCorrectingRecord_list	/business/HomeworkCorrectingRecord.do?act=list

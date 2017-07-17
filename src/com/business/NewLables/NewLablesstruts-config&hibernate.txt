@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.NewLables.NewLablesActionForm" name="NewLablesActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NewLablesActionForm" input="/business/NewLables_add.jsp"	
+		name="NewLablesActionForm" parameter="act" path="/business/NewLables"
+			scope="request" type="com.business.NewLables.NewLablesAction">
+			<forward name="update" path="/business/NewLables_edit.jsp" />
+			<forward name="list" path="/business/NewLables_list.jsp" />
+			<forward name="view" path="/business/NewLables_view.jsp" />
+			<forward name="add" path="/business/NewLables_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/NewLables/NewLables.hbm.xml" />
+
+
+<!-- menu   -->
+NewLables_add	/business/NewLables.do?act=preAdd
+NewLables_list	/business/NewLables.do?act=list

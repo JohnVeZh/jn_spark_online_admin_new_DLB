@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.NewsLablesRecord.NewsLablesRecordActionForm" name="NewsLablesRecordActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NewsLablesRecordActionForm" input="/business/NewsLablesRecord_add.jsp"	
+		name="NewsLablesRecordActionForm" parameter="act" path="/business/NewsLablesRecord"
+			scope="request" type="com.business.NewsLablesRecord.NewsLablesRecordAction">
+			<forward name="update" path="/business/NewsLablesRecord_edit.jsp" />
+			<forward name="list" path="/business/NewsLablesRecord_list.jsp" />
+			<forward name="view" path="/business/NewsLablesRecord_view.jsp" />
+			<forward name="add" path="/business/NewsLablesRecord_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/NewsLablesRecord/NewsLablesRecord.hbm.xml" />
+
+
+<!-- menu   -->
+NewsLablesRecord_add	/business/NewsLablesRecord.do?act=preAdd
+NewsLablesRecord_list	/business/NewsLablesRecord.do?act=list

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.NetworkVideo.NetworkVideoActionForm" name="NetworkVideoActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NetworkVideoActionForm" input="/business/NetworkVideo_add.jsp"	
+		name="NetworkVideoActionForm" parameter="act" path="/business/NetworkVideo"
+			scope="request" type="com.business.NetworkVideo.NetworkVideoAction">
+			<forward name="update" path="/business/NetworkVideo_edit.jsp" />
+			<forward name="list" path="/business/NetworkVideo_list.jsp" />
+			<forward name="view" path="/business/NetworkVideo_view.jsp" />
+			<forward name="add" path="/business/NetworkVideo_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/NetworkVideo/NetworkVideo.hbm.xml" />
+
+
+<!-- menu   -->
+NetworkVideo_add	/business/NetworkVideo.do?act=preAdd
+NetworkVideo_list	/business/NetworkVideo.do?act=list

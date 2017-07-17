@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.SmsLog.SmsLogActionForm" name="SmsLogActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="SmsLogActionForm" input="/business/SmsLog_add.jsp"	
+		name="SmsLogActionForm" parameter="act" path="/business/SmsLog"
+			scope="request" type="com.business.SmsLog.SmsLogAction">
+			<forward name="update" path="/business/SmsLog_edit.jsp" />
+			<forward name="list" path="/business/SmsLog_list.jsp" />
+			<forward name="view" path="/business/SmsLog_view.jsp" />
+			<forward name="add" path="/business/SmsLog_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/SmsLog/SmsLog.hbm.xml" />
+
+
+<!-- menu   -->
+SmsLog_add	/business/SmsLog.do?act=preAdd
+SmsLog_list	/business/SmsLog.do?act=list

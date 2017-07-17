@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.PreferentialCodeUse.PreferentialCodeUseActionForm" name="PreferentialCodeUseActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="PreferentialCodeUseActionForm" input="/business/PreferentialCodeUse_add.jsp"	
+		name="PreferentialCodeUseActionForm" parameter="act" path="/business/PreferentialCodeUse"
+			scope="request" type="com.business.PreferentialCodeUse.PreferentialCodeUseAction">
+			<forward name="update" path="/business/PreferentialCodeUse_edit.jsp" />
+			<forward name="list" path="/business/PreferentialCodeUse_list.jsp" />
+			<forward name="view" path="/business/PreferentialCodeUse_view.jsp" />
+			<forward name="add" path="/business/PreferentialCodeUse_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/PreferentialCodeUse/PreferentialCodeUse.hbm.xml" />
+
+
+<!-- menu   -->
+PreferentialCodeUse_add	/business/PreferentialCodeUse.do?act=preAdd
+PreferentialCodeUse_list	/business/PreferentialCodeUse.do?act=list

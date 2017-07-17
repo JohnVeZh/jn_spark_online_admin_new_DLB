@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+     <class name="com.business.NetworkCourseCode.NetworkCourseCode" table="network_course_code" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(16)" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="nvId">
+            <column name="nv_id" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="decimal(10,2)" not-null="true"/>
+        </property>
+        <property name="startTime">
+            <column name="start_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="endTime">
+            <column name="end_time" sql-type="datetime" not-null="true"/>
+        </property>
+         <property name="userId">
+            <column name="user_id" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+         <property name="isExport">
+            <column name="is_export" sql-type=" tinyint(4)" not-null="true"/>
+        </property>
+         <property name="isEnable">
+            <column name="is_enable" sql-type=" tinyint(4)" not-null="true"/>
+        </property>
+         <property name="createTime">
+            <column name="create_time" sql-type="datetime" not-null="true"/>
+        </property>
+         <property name="ncType"></property>
+         <property name="ncName"></property>
+         <property name="ncLevel"></property>
+         <property name="ncLevelType"></property>
+    </class>
+</hibernate-mapping>

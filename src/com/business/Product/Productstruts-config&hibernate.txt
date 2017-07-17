@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.Product.ProductActionForm" name="ProductActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="ProductActionForm" input="/business/Product_add.jsp"	
+		name="ProductActionForm" parameter="act" path="/business/Product"
+			scope="request" type="com.business.Product.ProductAction">
+			<forward name="update" path="/business/Product_edit.jsp" />
+			<forward name="list" path="/business/Product_list.jsp" />
+			<forward name="view" path="/business/Product_view.jsp" />
+			<forward name="add" path="/business/Product_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/Product/Product.hbm.xml" />
+
+
+<!-- menu   -->
+Product_add	/business/Product.do?act=preAdd
+Product_list	/business/Product.do?act=list

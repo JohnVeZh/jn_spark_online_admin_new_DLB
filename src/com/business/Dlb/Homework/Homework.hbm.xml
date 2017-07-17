@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.business.Dlb.Homework.Homework" table="dlb_exercise">
+        
+        <id name="id" >
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex"/>
+        </id>
+        <property name="section">
+            <column name="section" sql-type="varchar(32)" length="32">
+                <comment>学段，四级01，六级02</comment>
+            </column>
+        </property>
+        <property name="questionType">
+            <column name="question_type" sql-type="tinyint(4)" length="4">
+                <comment>1听力，2阅读，3翻译，4写作</comment>
+            </column>
+        </property>
+        <property name="courseId">
+            <column name="course_id" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="courseCatalogId">
+            <column name="course_catalog_id" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="title">
+            <column name="title" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="displayDate">
+            <column name="display_date" sql-type="datetime"/>
+        </property>
+        <property name="sort">
+            <column name="sort" sql-type="int(11)" length="11"/>
+        </property>
+    </class>
+
+</hibernate-mapping>    

@@ -1,0 +1,21 @@
+<!-- Struts1 formbean -->
+<form-bean type="com.business.NewQuestionsType.NewQuestionsTypeActionForm" name="NewQuestionsTypeActionForm"/>
+
+<!-- Struts1 action -->
+<action attribute="NewQuestionsTypeActionForm" input="/business/NewQuestionsType_add.jsp"	
+		name="NewQuestionsTypeActionForm" parameter="act" path="/business/NewQuestionsType"
+			scope="request" type="com.business.NewQuestionsType.NewQuestionsTypeAction">
+			<forward name="update" path="/business/NewQuestionsType_edit.jsp" />
+			<forward name="list" path="/business/NewQuestionsType_list.jsp" />
+			<forward name="view" path="/business/NewQuestionsType_view.jsp" />
+			<forward name="add" path="/business/NewQuestionsType_add.jsp" />
+</action>
+
+
+<!-- hibernate mapping -->
+<mapping resource="com/business/NewQuestionsType/NewQuestionsType.hbm.xml" />
+
+
+<!-- menu   -->
+NewQuestionsType_add	/business/NewQuestionsType.do?act=preAdd
+NewQuestionsType_list	/business/NewQuestionsType.do?act=list
