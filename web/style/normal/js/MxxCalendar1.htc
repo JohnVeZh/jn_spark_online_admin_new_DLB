@@ -1,0 +1,577 @@
+<!--
+MxxCalendar.htc
+调用方法:在<head></head>中添加
+ <style type="text/css">
+  .mxxCalendar{  behavior: url(MxxCalendar.htc);}
+ </style>
+   为需要菜单的对象添加  class="mxxCalendar"
+   e.g : <input type="text" id="txtMxxCalendar" size="15" class="mxxCalendar">
+-->
+<!--
+接口定义
+-->
+<public:component>
+   <public:property name="description"    value="mxxCalendar" />
+   <public:property name="version"     value="1.0.0.0" />
+
+   <public:attach  event="oncontentready"   onevent="init()"   />
+   <public:attach  event="onfocus"   onevent="showMxxCalendar()" />
+   <public:attach  event="onclick"   onevent="showMxxCalendar()" />
+
+</public:component>
+<!--
+组件实现
+-->
+<script language="javascript">
+var oPopup = null; //popup对象，作为载体
+var step = 1 ; //动态显示时的记步器
+
+function mxxCalendar(){
+ this.showTime = eval(element.showtime); //是否显示时间选择项,默认为不显示
+ this.style = "yy-mm"; //显示时间的样式
+ this.year = 0; //当前年
+ this.month = 0; //当前月
+ this.day = 0; //当前月
+ this.left = 0; //控件位置x坐标
+ this.top = 0; //控件位置y坐标
+ this.width = 150; //控件宽度
+ this.height = 160; //控件高度
+ this.curClassName=""; //记录onmouseover时,日期td的className
+ this.minYear = 1970; //年区间最小值
+ this.maxYear = 2030; //年区间最大值
+ this.isDynamicShow = false; //是否动态显示控件
+ this.dynamicShow = "v";  //动态显示方向 h:水平 v:竖直
+ this.speed = 2; //动态显示时的速度
+}
+var mc = new mxxCalendar();
+function init(){
+ element.readOnly = true;
+ element.style.cursor = "default";
+ oPopup= window.createPopup();
+ var oPopDoc = oPopup.document;
+ var oPopBody = oPopDoc.body;
+ oPopDoc.oncontextmenu = function (){ return false; };
+ oPopBody.onselectstart = function (){ return false; };
+ var strHTML=""
+ strHTML+='<table id="tbMxxCalendar" cellpadding="0">'
+     + '<tr>'
+     + '<td><input type="button" HIDEFOCUS="true" onfocus="this.blur()" value="&lt;&lt;" title="向前一年(Up or W)" class="button"></td>'
+     + '<td><input type="button" HIDEFOCUS="true" onfocus="this.blur()" value="&lt;" title="向前一月(Left or A)" class="button"></td>'
+     + '<td colspan="2"></td><td colspan="2"></td>'
+     + '<td><input type="button" HIDEFOCUS="true" onfocus="this.blur()" value="&gt;" title="向后一月(Right or D)" class="button"></td>'
+     + '<td><input type="button" HIDEFOCUS="true" onfocus="this.blur()" value="&gt;&gt;" title="向后一年(Down or S)" class="button"></td>'
+     + '</tr><tr>';
+ for(i=0;i<8;i++)
+  strHTML += '<td width="10%">'+'周日一二三四五六'.charAt(i)+'</td>';
+ strHTML+='</tr>';
+ for(var i=0;i<5;i++){
+  strHTML+="<tr>";
+  for(var j=0;j<8;j++)
+     strHTML+="<td>&nbsp;</td>";
+  strHTML+="</tr>";
+ }
+ strHTML+='<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>';
+ if(mc.showTime){
+  for(var i=0;i<3;i++)
+   strHTML += '<td title="'+"时分秒".charAt(i)+'" class="tdTime"></td>';
+ }
+ else strHTML += '<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>';
+ strHTML += '<td><input type="button" hidefocus="true" onfocus="this.blur()" value="清" title="清楚文本框内容(Del)"/ class="button"></td>'
+      +  '</table>';
+ oPopBody.innerHTML=strHTML;
+ SetMxxCalendarStyle();
+ attachEventForTb();
+}
+function SetMxxCalendarStyle(){
+ var oPopDoc = oPopup.document;
+ var oStyleSheet=oPopDoc.createStyleSheet(); 
+ with(oStyleSheet){
+  addRule("td", "vertical-align:middle; text-align: center; border:1px solid; border-color:  #D4D0C8 #FFFFFF  #FFFFFF #D4D0C8");
+  addRule("#tbMxxCalendar", "border:solid 1px #6BBFD9; font-size:12px; width:100%; height:100%; cursor:default");
+  addRule(".button", "width:100%; height:100%;border: 0px solid #D4D0C8; padding-top: 1px; height: 18;color:#000080; background-color:#FFFFF1");
+  addRule(".firstrow", "color:#000080; background-color:#FFFFF1");
+  addRule(".secondrow", "color:blue; background-color:#FFFFF1");
+  addRule(".curMonth", "color:#000080; background-color:#DEEAF6");
+  addRule(".notCurMonth", "color:#DCDCDC; background-color:#DEEAF6");
+  addRule(".curDay", "color:red; background-color:#DEEAF6");
+  addRule(".tdTime", "color:#FF00FF; background-color:#FFFFF1");
+  addRule(".tdOver", "color:#FFFFF1; background-color:#6BBFD9");
+  addRule(".tdWeek", "color:#3399FF; background-color:#FFFFF1");
+ }
+ var tbRows = oPopup.document.getElementById("tbMxxCalendar").rows;
+ tbRows[0].className = "firstrow";
+ tbRows[1].className = "secondrow";
+ for(var i=2;i<8;i++){
+  tbRows[i].cells[0].className = "tdWeek";
+ }
+}
+//为表格设定事件
+function attachEventForTb(){
+ var pDoc = oPopup.document;
+ var tbRows = pDoc.getElementById("tbMxxCalendar").rows;
+ var head= pDoc.getElementsByTagName("head").item(0);
+ with(tbRows[0]){
+  cells[0].childNodes[0].attachEvent("onclick",function(){chgDate("y",-1);});
+  cells[1].childNodes[0].attachEvent("onclick",function(){chgDate("m",-1);});
+  cells[4].childNodes[0].attachEvent("onclick",function(){chgDate("m",1);});
+  cells[5].childNodes[0].attachEvent("onclick",function(){chgDate("y",1);});
+  cells[2].attachEvent("onclick",function(){selectVal(tbRows[0].cells[2],0);});
+  cells[3].attachEvent("onclick",function(){selectVal(tbRows[0].cells[3],12);});
+ }
+ var script = pDoc.createElement('SCRIPT'); 
+ script.language = "javascript";
+ var strScript = '';
+ strScript += 'document.onkeydown = function(){'
+           +  ' var code = window.event.keyCode;'
+           +  ' var firstRow = document.getElementById("tbMxxCalendar").rows[0];'
+           +  ' if(event.ctrlKey){'
+           +  '  var td=null;'
+           +  '  switch(code){'
+           +  '   case 37: td = firstRow.cells[1].childNodes[0];td.click();td.click();td.click(); break;'
+           +  '   case 38: td = firstRow.cells[0].childNodes[0];td.click();td.click();td.click();td.click();td.click(); break;'
+           +  '   case 39: td = firstRow.cells[4].childNodes[0];td.click();td.click();td.click(); break;'
+           +  '   case 40: td = firstRow.cells[5].childNodes[0];td.click();td.click();td.click();td.click();td.click(); break;'
+           +  '   default: return;'
+           +  '  }'
+           +  ' }'
+           +  ' else{'
+           +  '  switch(code){'
+           +  '   case 32: case 13: var td = document.getElementById("curDay"); if(td) td.click(); break;'
+           +  '   case 65: case 37: firstRow.cells[1].childNodes[0].click(); break;'
+           +  '   case 87: case 38: firstRow.cells[0].childNodes[0].click(); break;'
+           +  '   case 68: case 39: firstRow.cells[4].childNodes[0].click(); break;'
+           +  '   case 83: case 40: firstRow.cells[5].childNodes[0].click(); break;'
+           +  '   case 46: document.getElementById("tbMxxCalendar").rows[7].cells[7].childNodes[0].click(); break;'
+           +  '   default: return;'
+           +  '  }'
+           +  ' }'
+           +  '}';
+ script.text = strScript;
+ head.appendChild(script);
+
+ for(var i=2;i<8;i++)
+  for(var j=1,k=(i==7?(mc.showTime?4:7):8);j<k;j++)
+   addEvent(tbRows[i].cells[j]);
+ with(tbRows[7]){
+  if(mc.showTime){
+   cells[4].attachEvent("onclick",function(){selectVal(cells[4],23);});
+   cells[5].attachEvent("onclick",function(){selectVal(cells[5],59);});
+   cells[6].attachEvent("onclick",function(){selectVal(cells[6],59);});
+  }
+  cells[7].childNodes[0].attachEvent("onclick",function(){element.value=""; oPopup.hide();});
+ }
+}
+
+//显示日期控件
+function showMxxCalendar(){
+ var parObj = element;
+ mc.top =  0;
+ mc.left = 0;
+ while(parObj){
+  mc.left += parObj.offsetLeft;
+  mc.top += parObj.offsetTop;
+  if (!parObj.offsetParent)
+  {
+   mc.top -=  parObj.ownerDocument.body.scrollTop;
+   mc.left -= parObj.ownerDocument.body.scrollLeft;
+  }
+  if(!parObj.offsetParent && parObj.ownerDocument.parentWindow.frameElement)
+   parObj = parObj.ownerDocument.parentWindow.frameElement;
+  else
+   parObj = parObj.offsetParent;
+
+ }
+ //没有考虑框架中也有滚动条的情况
+ mc.top +=  element.clientHeight+6;
+ mc.left += 4;
+
+ var date = element.value.createDate(); 
+ mc.year = date.getFullYear();
+ mc.month = date.getMonth();
+ mc.day = date.getDate();
+ writeCalendar(date);
+ if(mc.isDynamicShow) timer = setTimeout(dynamicShow,mc.speed);
+ else oPopup.show(mc.left, mc.top, mc.width,mc.height, document.body);
+
+}
+//动态显示控件
+var timer = null;
+function dynamicShow(){
+ if(step > 15) { step = 1; clearTimeout(timer); return ;}
+ else{
+  if(mc.dynamicShow == "v")
+   oPopup.show(mc.left, mc.top, mc.width,Math.floor(Math.sin(Math.PI*step/30)*mc.height), document.body);
+  else
+   oPopup.show(mc.left, mc.top, Math.floor(Math.sin(Math.PI*step/30)*mc.width),mc.height, document.body);
+  step ++;
+  timer = setTimeout(dynamicShow,mc.speed);
+ }
+}
+//根据日期来改变控件的显示
+function writeCalendar(date){
+ //获得传入日期属性
+ var tbRows = oPopup.document.getElementById("tbMxxCalendar").rows;
+ var tdYear = tbRows[0].cells[2];
+ var tdMonth = tbRows[0].cells[3];
+ var year = date.getFullYear();
+ var month = date.getMonth();
+ if(mc.showTime){
+  tbRows[7].cells[4].innerText = date.getHours().toString().replace(/^(\d)$/,"0$1");
+  tbRows[7].cells[5].innerText = date.getMinutes().toString().replace(/^(\d)$/,"0$1");
+  tbRows[7].cells[6].innerText = date.getSeconds().toString().replace(/^(\d)$/,"0$1");
+ }
+ //判断是否合法的年份
+ //if(year > mc.maxYear || year <mc.minYear){ alert("超出设定的显示年份!"); return false;}
+ //写入年月
+ tdYear.innerText = year;
+ tdMonth.innerText = eval(month+1).toString().replace(/^(\d)$/,"0$1");
+ tdYear.title = "西元" +year + "年";
+ tdMonth.title = eval(month+1) + "月";
+
+ //返回当月1号日期
+ date = new Date(year,month,1);
+ //计算当前月1号的周数
+ var week = date.getWeekNum();
+ //计算该周第一天(周日)的日期
+ date = new Date(year,month,date.getDate()-date.getDay());
+ for(var i=2;i<8;i++){
+  tbRows[i].cells[0].innerText = week;
+  tbRows[i].cells[0].title = year + "年的第" + week++ + "周";
+  for(var j=1,k=(i==7?(mc.showTime?4:7):8);j<k;j++){
+   var tdTemp = tbRows[i].cells[j];
+   tdTemp.innerText = date.getDate();
+   tdTemp.id = "";
+   tdTemp.title =date.getFullYear() + "/" + eval(date.getMonth()+1)+"/" + tdTemp.innerText;
+   if(month != date.getMonth()) tdTemp.className = "notCurMonth";
+   else if(mc.year == date.getFullYear() && mc.month == date.getMonth() && mc.day == date.getDate()) {
+    tdTemp.id = "curDay";
+    tdTemp.title += "(Enter or Space)";
+    tdTemp.className = "curDay";
+   }
+   else tdTemp.className = "curMonth";
+   date = date.dateAfter();
+  }
+ }
+}
+//年月改变事件
+function chgDate(flag,num){
+ var tbRows = oPopup.document.getElementById("tbMxxCalendar").rows;
+ var year = parseInt(tbRows[0].cells[2].innerText,10);
+ var month = parseInt(tbRows[0].cells[3].innerText,10)-1;
+ var hour =parseInt(tbRows[7].cells[4].innerText,10);
+ var minute =parseInt(tbRows[7].cells[5].innerText,10);
+ var second =parseInt(tbRows[7].cells[6].innerText,10);
+ var date =null;
+ if(flag == "y") date = new Date(year+num,month,1);
+ else if (flag == "m") date = new Date(year,month+num,1);
+ else date = new Date();
+ date.setHours(hour , minute, second);
+ writeCalendar(date);
+}
+
+function addEvent(td){
+   td.attachEvent("onmouseover",function(){ mc.curClassName = td.className; td.className = "tdOver"; });
+   td.attachEvent("onmouseout",function(){td.className = mc.curClassName;});
+   td.attachEvent("onclick",function(){
+  var tbRows = oPopup.document.getElementById("tbMxxCalendar").rows;
+  var style = mc.style;
+  var date = new Date(td.title);
+  if(mc.showTime){
+   var hour =parseInt(tbRows[7].cells[4].innerText,10);
+   var minute =parseInt(tbRows[7].cells[5].innerText,10);
+   var second =parseInt(tbRows[7].cells[6].innerText,10);
+   date.setHours(hour , minute, second)
+   style += " hh:mi:ss";
+  }
+  element.value = date.parseString(style);
+  oPopup.hide();
+ });
+}
+
+var pp=null;
+function initpp(){
+ pp=oPopup.document.parentWindow.createPopup();
+ var ppDoc = pp.document;
+ var ppBody = pp.document.body;
+ ppDoc.oncontextmenu = function (){ return false; };
+ ppDoc.onselectstart = function (){ return false; };
+ ppBody.style.overflow = "auto";
+ var oStyleSheet=ppDoc.createStyleSheet(); 
+ oStyleSheet.addRule("body", "background-color:#DEEAF6; border:solid #6BBFD9 1px; scrollbar-arrow-color:#000080; scrollbar-shadow-color:#DEEAF6; scrollbar-base-color:#DEEAF6; scrollbar-highlight-color:#DEEAF6;");
+ oStyleSheet.addRule(".divNormal", "color:#000080; vertical-align:middle; font-size:12px; text-align: center; border:1px solid; border-color:  #FFFFFF  #D4D0C8 #D4D0C8 #FFFFFF ; width:100%; height:16; cursor:default;");
+ oStyleSheet.addRule(".divOver", "color:#FFFFF1; background-color:#6BBFD9; vertical-align:middle; font-size:12px; text-align: center; border:1px solid; border-color:  #FFFFFF  #D4D0C8 #D4D0C8 #FFFFFF ; width:100%; height:16; cursor:default;");
+ oStyleSheet.addRule(".divCurent", "color:#FF0000; background-color:#6BBFD9; vertical-align:middle; font-size:12px; text-align: center; border:1px solid; border-color:  #FFFFFF  #D4D0C8 #D4D0C8 #FFFFFF ; width:100%; height:16; cursor:default;");
+}
+
+function selectVal(obj,val){
+ var start =0;
+ var end = val;
+ if(val ==0){ start =mc.minYear; end = mc.maxYear;}
+ else if(val ==12){ start =1; end = 12;}
+ var txt = obj.innerText;
+
+ if(pp == null)  initpp();
+ var ppDoc = pp.document;
+ var ppBody = pp.document.body;
+ ppBody.innerHTML="";
+ for(var i=start;i<=end;i++){
+  var newDiv = ppDoc.createElement('div');
+  newDiv.id = "div"+i;
+  newDiv.innerText = i;
+  newDiv.className = "divNormal";
+  divAttach(newDiv,obj,val);
+  ppBody.appendChild(newDiv);
+ }
+ pp.show(mc.width+1, 0, 50, mc.height, oPopup.document.body);
+ var divNow = ppDoc.getElementById("div"+parseInt(obj.innerText,10));
+ if(divNow){
+  divNow.scrollIntoView();
+  divNow.className = "divCurent";
+ }
+}
+function divAttach(newDiv,obj,val){
+ newDiv.attachEvent("onmouseover",function(){
+  newDiv.className = "divOver";
+  });
+ newDiv.attachEvent("onmouseout",function(){
+  newDiv.className = "divNormal";
+  });
+ newDiv.attachEvent("onclick",function(){
+  pp.hide();
+  obj.innerText = newDiv.innerText.trim().replace(/^(\d)$/,"0$1");
+  var data = parseInt(obj.innerText,10);
+  var date = null;
+  var tbRows = oPopup.document.getElementById("tbMxxCalendar").rows;
+  var hour =parseInt(tbRows[7].cells[4].innerText,10);
+  var minute =parseInt(tbRows[7].cells[5].innerText,10);
+  var second =parseInt(tbRows[7].cells[6].innerText,10);
+  if(val == 0){
+   var month = parseInt(tbRows[0].cells[3].innerText,10)-1;
+   date = new Date(data,month,1);
+  }
+  else if(val ==12){
+   var year = parseInt(tbRows[0].cells[2].innerText,10);
+   date = new Date(year,data-1,1); 
+  }
+  else return false;
+  date.setHours(hour , minute, second, 0);
+  writeCalendar(date);
+ });
+}
+
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"");}
+/*用相对不规则的字符串来创建日期对象,不规则的含义为:顺序包含年月日三个或者年月日时分秒六个数值串,有间隔
+ *如果element.value非法，返回当前日期
+ */
+String.prototype.createDate = function(){
+ if(this == "") return new Date();
+ var regThree = /^\D*(\d{2,4})\D+(\d{1,2})\D+(\d{1,2})\D*$/;
+ var regSix = /^\D*(\d{2,4})\D+(\d{1,2})\D+(\d{1,2})\D+(\d{1,2})\D+(\d{1,2})\D+(\d{1,2})\D*$/;
+ var str = "";
+ var date = null;
+ if(regThree.test(this)){
+  str = this.replace(/\s/g,"").replace(regThree,"$1/$2/$3");
+  date = new Date(str);
+ }
+ else if(regSix.test(this)){
+  str = this.match(regSix);
+  date = new Date(str[1],str[2]-1,str[3],str[4],str[5],str[6]);
+ }
+ else return new Date();
+ return date;
+}
+//根据日期返回该日期所在年的周数
+Date.prototype.getWeekNum = function (){
+ var dat = new Date(this.getFullYear(),0,1);
+ var week = dat.getDay();
+ week = (week==0?7:week);
+ var days = this.calDateDistance(dat)+1;
+ return ((days + 6 - this.getDay() - 7 + week)/7);
+}
+/*功能:返回两日期之差
+ *参数:date Date对象
+ */
+Date.prototype.calDateDistance = function (date){
+ if(typeof(date) != "object" || !(/Date/.test(date.constructor)))
+   throw new Error(-1,"calDateDistance参数为Date类型.");
+ return num = (( this.valueOf()- date.valueOf())/86400000).fmtRtnVal(0);
+}
+//返回整数或者两位小数的浮点数
+Number.prototype.fmtRtnVal = function (intOrFloat){
+ return (intOrFloat == 0 ? Math.floor(this) : parseInt(this*100)/100);
+}
+/* 功能 : 返回下一天的日期
+ * 返回 : 新的Date
+ */
+Date.prototype.dateAfter=function(){
+ return new Date(this.valueOf() + 86400000);
+}
+/*
+ * 功能:根据输入表达式返回日期字符串
+ * 参数:dateFmt:字符串,由以下结构组成    
+ *      yy:长写年,mm:数字月,dd:日,hh:时,mi:分,ss秒
+*/
+Date.prototype.parseString = function(dateFmt){
+ dateFmt = (dateFmt == null?"yy-mm-dd" : dateFmt);
+ if(typeof(dateFmt) != "string" )
+  throw (new Error(-1, 'parseString()方法需要字符串类型参数!'));
+ var str=dateFmt;
+ str = str.replace(/yy/g,this.getFullYear());
+ str = str.replace(/mm/g,(this.getMonth()+1));
+ str = str.replace(/dd/g,this.getDate());
+ str = str.replace(/hh/g,this.getHours());
+ str = str.replace(/mi/g,this.getMinutes());
+ str = str.replace(/ss/g,this.getSeconds());
+ str = str.replace(/(\D)(\d)(?=\D|$)/g, "$10$2");
+ return str;
+}
+</script>
+
+<script language="JavaScript">
+<!--
+/*用相对不规则的字符串来创建日期对象,不规则的含义为:顺序包含年月日三个数值串,有间隔*/
+String.prototype.parseDate = function(){
+ var regThree = /^\D*(\d{2,4})\D+(\d{1,2})\D+(\d{1,2})\D*$/;
+ var regSix = /^\D*(\d{2,4})\D+(\d{1,2})\D+(\d{1,2})\D+(\d{1,2})\D+(\d{1,2})\D+(\d{1,2})\D*$/;
+ //var str = "";
+ var date = null;
+ if(regThree.test(this))
+  date = new Date(this.replace(/\s/g,"").replace(regThree,"$1/$2/$3"));
+ else if(regSix.test(this)){
+  str = this.match(regSix);
+  date = new Date(str[1],str[2]-1,str[3],str[4],str[5],str[6]);
+ }else return new Date();
+ return date;
+}
+
+/*
+ * 功能:根据输入表达式返回日期字符串
+ * 参数:dateFmt:字符串,由以下结构组成    
+ *      yy:长写年,YY:短写年mm:数字月,MM:英文月,dd:日,hh:时,
+ *      mi:分,ss秒,ms:毫秒,we:汉字星期,WE:英文星期.
+ *      isFmtWithZero : 是否用0进行格式化,true or false
+*/
+Date.prototype.parseString = function(dateFmt,isFmtWithZero){
+ dateFmt = (dateFmt == null?"yy-mm-dd" : dateFmt);
+ isFmtWithZero = (isFmtWithZero == null?true : isFmtWithZero);
+ if(typeof(dateFmt) != "string" )
+  throw (new Error(-1, 'parseString()方法需要字符串类型参数!'));
+ var weekArr=[["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+      ["SUN","MON","TUR","WED","THU","FRI","SAT"]];
+ var monthArr=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+ var str=dateFmt;
+ var o = {
+  "yy" : this.getFullYear(),
+  "YY" : this.getYear(),
+  "mm" : this.getMonth()+1,
+  "MM" : monthArr[this.getMonth()],
+  "dd" : this.getDate(),
+  "hh" : this.getHours(),
+  "mi" : this.getMinutes(),
+  "ss" : this.getSeconds(),
+  "we" : weekArr[0][this.getDay()],
+  "WE" : weekArr[1][this.getDay()]
+ }
+ for(var i in o){
+  str = str.replace(new RegExp(i,"g"),o[i].toString().fmtWithZero(isFmtWithZero));
+ }
+ str = str.replace(/ms/g,this.getMilliseconds().toString().fmtWithZeroD(isFmtWithZero));
+ return str;
+}
+/*将一位数字格式化成两位,如: 9 to 09*/
+String.prototype.fmtWithZero = function(isFmtWithZero){ 
+ return (isFmtWithZero && /^\d$/.test(this))?"0"+this:this;
+}
+String.prototype.fmtWithZeroD = function(isFmtWithZero){ 
+ return (isFmtWithZero && /^\d{2}$/.test(this))?"00"+this:((isFmtWithZero && /^\d$/.test(this))?"0"+this:this);
+}
+
+/* 功能 : 返回与某日期相距N天(N个24小时)的日期
+ * 参数 : num number类型 可以为正负整数或者浮点数,默认为1;
+ *        type 0(秒) or 1(天),默认为天
+ * 返回 : 新的PowerDate类型
+ */
+Date.prototype.dateAfter=function(num,type){
+ num = (num == null?1:num);
+ if(typeof(num)!="number") throw new Error(-1,"dateAfterDays(num,type)的num参数为数值类型.");
+ type = (type==null?1:type);
+ var arr = [1000,86400000];
+ return new Date(this.valueOf() + num*arr[type]);
+}
+
+//判断是否是闰年,返回true 或者 false
+Date.prototype.isLeapYear = function (){
+ var year = this.getFullYear();
+ return (0==year%4 && ((year % 100 != 0)||(year % 400 == 0)));
+}
+
+//返回该月天数
+Date.prototype.getDaysOfMonth = function (){
+ return (new Date(this.getFullYear(),this.getMonth()+1,0)).getDate();
+}
+
+//日期比较函数,参数date:为Date类型,如this日期晚于参数:1,相等:0 早于: -1
+Date.prototype.dateCompare = function(date){
+ if(typeof(date) != "object" || !(/Date/.test(date.constructor)))
+   throw new Error(-1,"dateCompare(date)的date参数为Date类型.");
+ var d = this.getTime() - date.getTime();
+ return d>0?1:(d==0?0:-1);
+}
+
+/*功能:返回两日期之差
+ *参数:pd   PowerDate对象
+ *    type: 返回类别标识.yy:年,mm:月,ww:周,dd:日,hh:小时,mi:分,ss:秒,ms:毫秒
+ *    intOrFloat :返回整型还是浮点型值 0:整型,不等于0:浮点型
+ *    output : 输出提示,如:时间差为#周!
+ */
+Date.prototype.calDateDistance = function (date,type,intOrFloat,output){
+ if(typeof(date) != "object" || !(/Date/.test(date.constructor)))
+   throw new Error(-1,"calDateDistance(date,type,intOrFloat)的date参数为Date类型.");
+ type = (type==null?'dd':type);
+ if(!((new RegExp(type+",","g")).test("yy,mm,ww,dd,hh,mi,ss,ms,")))
+   throw new Error(-1,"calDateDistance(pd,type,intOrFloat,output)的type参数为非法.");
+ var iof = (intOrFloat==null?0:intOrFloat);
+ var num=0;
+ var o = {
+  "ww" : 7*86400000,
+  "dd" : 86400000,
+  "hh" : 3600000,
+  "mi" : 60000,
+  "ss" : 1000,
+  "ms" : 1
+ }
+ switch(type){
+  case "yy": num = this.getFullYear() - date.getFullYear(); break;
+  case "mm": num = (this.getFullYear() - date.getFullYear())*12+this.getMonth()-date.getMonth(); break;
+  default: 
+   var sub = this.valueOf() - date.valueOf();
+   if (o[type])
+    num = (sub/o[type]).fmtRtnVal(iof);
+   break;
+ }
+ return (output ? output.replace(/#/g," "+num+" ") : num);
+}
+//返回整数或者两位小数的浮点数
+Number.prototype.fmtRtnVal = function (intOrFloat){
+ return (intOrFloat == 0 ? Math.floor(this) : parseInt(this*100)/100);
+}
+//根据当前日期所在年和周数返回周日的日期
+Date.prototype.RtnByWeekNum = function (weekNum){
+ if(typeof(weekNum) != "number")
+  throw new Error(-1,"RtnByWeekNum(weekNum)的参数是数字类型.");
+ var date = new Date(this.getFullYear(),0,1);
+ var week = date.getDay();
+ week = (week==0?7:week);
+ return date.dateAfter(weekNum*7-week,1);
+}
+//根据日期返回该日期所在年的周数
+Date.prototype.getWeekNum = function (){
+ var dat = new Date(this.getFullYear(),0,1);
+ var week = dat.getDay();
+ week = (week==0?7:week);
+ var days = this.calDateDistance(dat,"dd")+1;
+ return ((days + 6 - this.getDay() - 7 + week)/7);
+}
+
+//-->
+</script>

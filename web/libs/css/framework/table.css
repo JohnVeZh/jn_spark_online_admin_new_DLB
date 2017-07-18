@@ -1,0 +1,6 @@
+/*¡–±Ì≥¨øÌœ‘ æ...*/
+table {table-layout:fixed;}  
+.td{white-space:nowrap;overflow:hidden; text-overflow:ellipsis;} 
+.DataTable_Content{
+	white-space:nowrap;overflow:hidden; text-overflow:ellipsis;
+}

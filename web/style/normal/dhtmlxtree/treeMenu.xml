@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu absolutePosition="auto" mode="popup" mixedImages="yes"  width="30px" globalCss="contextMenu" globalSecondCss="contextMenu" globalTextCss="contextMenuItem">
+		<MenuItem name="菜单" id="menu" src="icon15.gif" withoutImages="true" width="30px">
+			<MenuItem name="展开"  id="menu_open"/>	
+			<MenuItem name="关闭" id="menu_close"/>
+			<divider id="div_5"/>	
+			<MenuItem name="级联展开"  id="menu_open_all"/>	
+			<MenuItem name="级联关闭" id="menu_close_all"/>		
+		</MenuItem>
+		
+		<MenuItem name="节点" id="branch" src="branch_add.gif" withoutImages="true" width="30px">
+			<MenuItem name="新增"  id="branch_add"/>	
+			<MenuItem name="修改" id="branch_edit"/>
+			<divider id="div_5"/>
+			<MenuItem name="删除" id="branch_remove"/>
+		</MenuItem>
+
+</menu>

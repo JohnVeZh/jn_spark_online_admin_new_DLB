@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		
+		<!-- System module formbean-->
+		<form-bean name="SysFunctionForm"
+			type="com.easecom.system.web.SysFunctionForm" />
+		<form-bean name="SysOrgForm"
+			type="com.easecom.system.web.SysOrgForm" />
+		<form-bean name="SysRoleForm"
+			type="com.easecom.system.web.SysRoleForm" />
+		<form-bean name="SysUserForm"
+			type="com.easecom.system.web.SysUserForm" /> 
+		<form-bean name="LoginForm"
+			type="com.easecom.system.web.LoginForm" /> 
+		
+		<form-bean type="com.easecom.manage.web.CustomInfoForm" name="CustomInfoForm"/>
+		<form-bean name="SysConfigForm" 	type="com.easecom.system.web.SysConfigForm" />
+		
+		
+		<!-- 用户 -->
+		<form-bean type="com.business.Users.UsersActionForm" name="UsersActionForm"/>
+		<form-bean type="com.business.UserAddress.UserAddressActionForm" name="UserAddressActionForm"/>
+		<!-- 用户反馈 -->
+		<form-bean type="com.business.UserFeedback.UserFeedbackActionForm" name="UserFeedbackActionForm"/>
+		
+		<!-- 资讯 -->
+		<form-bean type="com.business.News.NewsActionForm" name="NewsActionForm"/>
+		<form-bean type="com.business.NewLables.NewLablesActionForm" name="NewLablesActionForm"/>
+		<form-bean type="com.business.NewsMessage.NewsMessageActionForm" name="NewsMessageActionForm"/>
+
+		<!-- 推送 -->	
+		<form-bean type="com.business.PushLog.PushLogActionForm" name="PushLogActionForm"/>
+	    <form-bean type="com.business.PushMessage.PushMessageActionForm" name="PushMessageActionForm"/>
+	    <form-bean type="com.business.PushMessageUser.PushMessageUserActionForm" name="PushMessageUserActionForm"/>
+	    <!-- Apk版本更新 -->
+	    <form-bean type="com.business.Apkversions.ApkversionsActionForm" name="ApkversionsActionForm"/>
+
+		<!-- 图书商城 -->
+		<form-bean type="com.business.ProductType.ProductTypeActionForm" name="ProductTypeActionForm"/>
+		<form-bean type="com.business.Product.ProductActionForm" name="ProductActionForm"/>
+		<form-bean type="com.business.ProductGrade.ProductGradeActionForm" name="ProductGradeActionForm"/>
+		<form-bean type="com.business.ProductCollocation.ProductCollocationActionForm" name="ProductCollocationActionForm"/>
+		<form-bean type="com.business.Express.ExpressActionForm" name="ExpressActionForm"/>
+		<form-bean type="com.business.ProductOrderLogistics.ProductOrderLogisticsActionForm" name="ProductOrderLogisticsActionForm"/>
+		<form-bean type="com.business.ProductOrder.ProductOrderActionForm" name="ProductOrderActionForm"/>
+		<form-bean type="com.business.ProductOrderDetails.ProductOrderDetailsActionForm" name="ProductOrderDetailsActionForm"/>
+		<form-bean type="com.business.ProductOrderDetailsCollocation.ProductOrderDetailsCollocationActionForm" name="ProductOrderDetailsCollocationActionForm"/>
+		<form-bean type="com.business.ProductMatchedPaper.ProductMatchedPaperActionForm" name="ProductMatchedPaperActionForm"/>
+		<form-bean type="com.business.ProductNetworkVideo.ProductNetworkVideoActionForm" name="ProductNetworkVideoActionForm"/>
+		<form-bean type="com.business.ProductOrderEvaluate.ProductOrderEvaluateActionForm" name="ProductOrderEvaluateActionForm"/>
+		<form-bean type="com.business.ProductOrderRefund.ProductOrderRefundActionForm" name="ProductOrderRefundActionForm"/>
+		<form-bean type="com.business.ProductOrderRefundCheck.ProductOrderRefundCheckActionForm" name="ProductOrderRefundCheckActionForm"/>
+
+		<!-- 网课 -->
+		<form-bean type="com.business.NetworkVideo.NetworkVideoActionForm" name="NetworkVideoActionForm"/>
+		<form-bean type="com.business.NetworkVideoCatalog.NetworkVideoCatalogActionForm" name="NetworkVideoCatalogActionForm"/>
+		<form-bean type="com.business.NetworkVideoCatalogVideo.NetworkVideoCatalogVideoActionForm" name="NetworkVideoCatalogVideoActionForm"/>
+		<form-bean type="com.business.NetworkVideoTeaher.NetworkVideoTeaherActionForm" name="NetworkVideoTeaherActionForm"/>
+		<!-- 新网课 -->
+		<form-bean type="com.business.NetworkCourseTeacher.NetworkCourseTeacherActionForm" name="NetworkCourseTeacherActionForm"/>
+		<form-bean name="NetworkCourseOrderActionForm" type="com.business.NetworkCourseOrder.NetworkCourseOrderActionForm"/>
+		<form-bean type="com.business.NetworkCourse.NetworkCourse" name="NetworkCourse"/>
+		<form-bean type="com.business.NetworkCourseVideo.NetworkCourseVideo" name="NetworkCourseVideo"/>
+		<form-bean type="com.business.NetworkCourseOrderRefund.NetworkCourseOrderRefundActionForm" name="NetworkCourseOrderRefundActionForm" />
+		<form-bean type="com.business.NetworkCourseCode.NetworkCourseCode" name="NetworkCourseCode"/>
+		<!-- 社区 -->
+		<form-bean type="com.business.CommunityPost.CommunityPostActionForm" name="CommunityPostActionForm"/>
+		<form-bean type="com.business.CommunityPostMessage.CommunityPostMessageActionForm" name="CommunityPostMessageActionForm"/>
+		<form-bean type="com.business.CommunityPostLikeRecord.CommunityPostLikeRecordActionForm" name="CommunityPostLikeRecordActionForm"/>
+		<form-bean type="com.business.CommunityPostFollowRecord.CommunityPostFollowRecordActionForm" name="CommunityPostFollowRecordActionForm"/>
+		
+		<!-- 激活码 -->
+		<form-bean type="com.business.BookActivationCode.BookActivationCodeActionForm" name="BookActivationCodeActionForm"/>
+	
+	
+		<!-- 优惠码 -->
+		<form-bean type="com.business.PreferentialCode.PreferentialCodeActionForm" name="PreferentialCodeActionForm"/>
+        <form-bean type="com.business.PreferentialCodeGenerate.PreferentialCodeGenerateActionForm" name="PreferentialCodeGenerateActionForm"/>
+		<form-bean type="com.business.PreferentialCodeProduct.PreferentialCodeProductActionForm" name="PreferentialCodeProductActionForm"/>
+		
+		<!-- 在线问答 -->
+		<form-bean type="com.business.Problem.ProblemActionForm" name="ProblemActionForm"/>
+		<form-bean type="com.business.Answer.AnswerActionForm" name="AnswerActionForm"/>
+		
+		<!-- 配套试卷 -->
+		<form-bean type="com.business.MatchedPapers.MatchedPapersActionForm" name="MatchedPapersActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicHearing.MatchedPapersTopicHearingActionForm" name="MatchedPapersTopicHearingActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicHearingSubject.MatchedPapersTopicHearingSubjectActionForm" name="MatchedPapersTopicHearingSubjectActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicHearingSubjectChoice.MatchedPapersTopicHearingSubjectChoiceActionForm" name="MatchedPapersTopicHearingSubjectChoiceActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicRead.MatchedPapersTopicReadActionForm" name="MatchedPapersTopicReadActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicReadSubject.MatchedPapersTopicReadSubjectActionForm" name="MatchedPapersTopicReadSubjectActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicReadSubjectChoice.MatchedPapersTopicReadSubjectChoiceActionForm" name="MatchedPapersTopicReadSubjectChoiceActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicReadType.MatchedPapersTopicReadTypeActionForm" name="MatchedPapersTopicReadTypeActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicTranslate.MatchedPapersTopicTranslateActionForm" name="MatchedPapersTopicTranslateActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicWriting.MatchedPapersTopicWritingActionForm" name="MatchedPapersTopicWritingActionForm"/>
+		<form-bean type="com.business.MatchedPapersType.MatchedPapersTypeActionForm" name="MatchedPapersTypeActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicHearingType.MatchedPapersTopicHearingTypeActionForm" name="MatchedPapersTopicHearingTypeActionForm"/>
+		<form-bean type="com.business.MatchedPapersTopicLyric.MatchedPapersTopicLyricActionForm" name="MatchedPapersTopicLyricActionForm"/>
+		<form-bean type="com.business.MatchedWrongRecord.MatchedWrongRecordActionForm" name="MatchedWrongRecordActionForm"/>
+		<form-bean type="com.business.MatchedPapersUser.MatchedPapersUserActionForm" name="MatchedPapersUserActionForm"/>
+		<form-bean type="com.business.MatchedPapersUserRecord.MatchedPapersUserRecordActionForm" name="MatchedPapersUserRecordActionForm"/>
+		
+		<!-- 新题型听力 -->
+		<form-bean type="com.business.NewQuestionsType.NewQuestionsTypeActionForm" name="NewQuestionsTypeActionForm"/>
+		<form-bean type="com.business.NewQuestionsTypePapers.NewQuestionsTypePapersActionForm" name="NewQuestionsTypePapersActionForm"/>
+		<form-bean type="com.business.NewQuestionsPapersTopicChoice.NewQuestionsPapersTopicChoiceActionForm" name="NewQuestionsPapersTopicChoiceActionForm"/>
+		<form-bean type="com.business.NewQuestionsPapersTopicType.NewQuestionsPapersTopicTypeActionForm" name="NewQuestionsPapersTopicTypeActionForm"/>
+		<form-bean type="com.business.NewQuestionsPapersTopic.NewQuestionsPapersTopicActionForm" name="NewQuestionsPapersTopicActionForm"/>
+		<form-bean type="com.business.NewQuestionsWrongQuestion.NewQuestionsWrongQuestionActionForm" name="NewQuestionsWrongQuestionActionForm"/>
+		<form-bean type="com.business.NewQuestionsTypePapersUserRecord.NewQuestionsTypePapersUserRecordActionForm" name="NewQuestionsTypePapersUserRecordActionForm"/>
+		<form-bean type="com.business.NewQuestionsPapersTopicLyric.NewQuestionsPapersTopicLyricActionForm" name="NewQuestionsPapersTopicLyricActionForm"/>
+		<form-bean type="com.business.NewWrongRecord.NewWrongRecordActionForm" name="NewWrongRecordActionForm"/>
+		<form-bean type="com.business.NewWords.NewWordsActionForm" name="NewWordsActionForm"/>
+		
+		<!-- 词汇管理 -->
+		<form-bean type="com.business.CommonType.CommonTypeActionForm" name="CommonTypeActionForm"/>
+		<form-bean type="com.business.CommonWords.CommonWordsActionForm" name="CommonWordsActionForm"/>
+		<form-bean type="com.business.KnowledgePointEn.KnowledgePointEnActionForm" name="KnowledgePointEnActionForm"/>
+		<!-- 在线问答 -->
+		<form-bean type="com.business.HomeworkCorrecting.HomeworkCorrectingActionForm" name="HomeworkCorrectingActionForm"/>
+	    <form-bean type="com.business.HomeworkCorrectingRecord.HomeworkCorrectingRecordActionForm" name="HomeworkCorrectingRecordActionForm"/>
+	    
+	    
+	    <form-bean type="com.business.WrongQuestion.WrongQuestionActionForm" name="WrongQuestionActionForm"/>
+	    
+	    <form-bean type="com.business.SystemFeedback.SystemFeedbackActionForm" name="SystemFeedbackActionForm"/>
+	    
+	    <!-- SEO -->
+	    <form-bean type="com.business.WebConfig.WebConfigActionForm" name="WebConfigActionForm"/>
+	    
+	    <form-bean type="com.business.SystemCodeTable.SystemCodeTableActionForm" name="SystemCodeTableActionForm"/>
+	    
+	    <form-bean type="com.business.TopSearchQueries.TopSearchQueriesActionForm" name="TopSearchQueriesActionForm"/>
+	    
+	    <!-- 简听力 -->
+	    <form-bean type="com.business.JQrT.JQrTActionForm" name="JQrTActionForm"/>
+	    <form-bean type="com.business.JQrMptht.JQrMpthtActionForm" name="JQrMpthtActionForm"/>
+	    <form-bean type="com.business.JQrMpthsc.JQrMpthscActionForm" name="JQrMpthscActionForm"/>
+	    <form-bean type="com.business.JQrMpths.JQrMpthsActionForm" name="JQrMpthsActionForm"/>
+	    <form-bean type="com.business.JQrMpth.JQrMpthActionForm" name="JQrMpthActionForm"/>
+	    <form-bean type="com.business.JQrMp.JQrMpActionForm" name="JQrMpActionForm"/>
+	    <!-- 碎片化 -->
+	    <form-bean type="com.business.JQrFragmentation.JQrFragmentationActionForm" name="JQrFragmentationActionForm"/>
+	    <!-- 简听力写作 -->
+	    <form-bean type="com.business.JQrWritingType.JQrWritingTypeActionForm" name="JQrWritingTypeActionForm"/>
+	    <form-bean type="com.business.JQrWriting.JQrWritingActionForm" name="JQrWritingActionForm"/>
+	    <!-- 简词汇 -->
+	    <form-bean type="com.business.JCommonType.JCommonTypeActionForm" name="JCommonTypeActionForm"/>
+	    <form-bean type="com.business.JCommonWords.JCommonWordsActionForm" name="JCommonWordsActionForm"/>
+	    <!-- 简字幕听力 -->
+	    <form-bean type="com.business.JQrSubtitleListeningLyric.JQrSubtitleListeningLyricActionForm" name="JQrSubtitleListeningLyricActionForm"/>
+		<form-bean type="com.business.JQrSubtitleListening.JQrSubtitleListeningActionForm" name="JQrSubtitleListeningActionForm"/>
+		<!-- 简写作 -->	    
+	    <form-bean type="com.business.JQrStudyMaterialsWriting.JQrStudyMaterialsWritingActionForm" name="JQrStudyMaterialsWritingActionForm"/>
+	    <!-- 简网课 -->
+	    <form-bean type="com.business.JQrNw.JQrNwActionForm" name="JQrNwActionForm"/>
+	    <form-bean type="com.business.JQrNwt.JQrNwtActionForm" name="JQrNwtActionForm"/>
+	    <!-- 简系列二维码总表 -->
+	    <form-bean type="com.business.JQrCode.JQrCodeActionForm" name="JQrCodeActionForm"/>
+	    
+	    <!-- 短信日志 -->
+	    <form-bean type="com.business.SmsLog.SmsLogActionForm" name="SmsLogActionForm"/>
+	    <!-- 兑换码使用记录 -->
+	    <form-bean type="com.business.PreferentialCodeUse.PreferentialCodeUseActionForm" name="PreferentialCodeUseActionForm"/>
+
+		<!-- 优惠券列表-->
+		<form-bean type="com.business.TbCoupon.TbCouponActionForm" name="TbCouponActionForm"/>
+		<!-- 优惠码列表-->
+		<form-bean type="com.business.TbCouponCode.TbCouponCodeActionForm" name="TbCouponCodeActionForm"/>
+		<!-- 使用记录列表-->
+		<form-bean type="com.business.TbCouponRecord.TbCouponRecordActionForm" name="TbCouponRecordActionForm"/>
+		<!-- 绑定商品列表-->
+		<form-bean type="com.business.TbCouponProduct.TbCouponProductActionForm" name="TbCouponProductActionForm"/>
+		
+		<!-- 优惠券相关 -->
+		<form-bean type="com.business.coupon.vo.CouponCodeForm" name="CouponCodeForm"/>
+		<form-bean type="com.business.coupon.vo.CouponTemplateForm" name="CouponTemplateForm"/>
+		
+		<!-- 新版app网课相关 -->
+		
+		<!-- 专项讲解 -->
+		<form-bean type="com.business.v2.vo.TbSpecialExplainForm" name="TbSpecialExplainForm"/>
+		<!-- 题目纠错 -->
+		<form-bean type="com.business.v2.vo.TbSpecialFeedbackForm" name="TbSpecialFeedbackForm"/>
+		<!-- 分析建议 -->
+		<form-bean type="com.business.v2.vo.TbSpecialSuggestionForm" name="TbSpecialSuggestionForm"/>
+		<!--星火英语2.0专项听力-->
+		<form-bean name="TbQuestionListeningActionForm" type="com.business.v2.questionAction.TbQuestionListeningActionForm" />
+		<!--星火英语2.0专项阅读-->
+		<form-bean name="TbQuestionReadingActionForm" type="com.business.v2.questionAction.TbQuestionReadingActionForm"/>
+		<!-- 专项训练 -->
+		<form-bean type="com.business.v2.word.WordAction.TbWordActionForm" name="TbWordActionForm"/>
+		<form-bean type="com.business.v2.questionTranslation.TbQuestionTranslationActionForm" name="TbQuestionTranslationActionForm"/>
+		<form-bean type="com.business.v2.questionWriting.TbQuestionWritingActionForm" name="TbQuestionWritingActionForm"/>
+		<!-- 过级大礼包 -->
+
+		<form-bean type="com.business.Dlb.Homework.HomeworkActionForm" name="HomeworkActionForm"/>
+		<form-bean type="com.business.Dlb.Homework.HomeworkQuestionActionForm"  name="HomeworkQuestionActionForm"/>
+		<form-bean type="com.business.Dlb.ActivationCode.ActivationCode" name="ActivationCode"/>
+		<form-bean type="com.business.Dlb.PeriodPaperQrcode.PeriodPaperQrcode" name="PeriodPaperQrcode"/>
+		<form-bean type="com.business.Dlb.PeriodPaperUserAnswer.PeriodPaperUserAnswer" name="PeriodPaperUserAnswer"/>
+
+		<form-bean name="TbMessageActionForm" type="com.business.Dlb.Message.TbMessageActionForm"/>
+		<form-bean name="TbPopupActionForm" type="com.business.Dlb.Popup.TbPopupActionForm"/>
+
+	</form-beans>
+	<global-exceptions />
+	<global-forwards>
+		<forward contextRelative="true" name="DialogBox" path="/include/dialog.jsp" />
+		<forward name="prelogin" path="/login.do?act=preLogin" />
+	</global-forwards>
+	<action-mappings>
+	<!-- 过级大礼包 -->
+	<action path="/business/PeriodPaperUserAnswer" parameter="act" scope="request" type="com.business.Dlb.PeriodPaperUserAnswer.PeriodPaperUserAnswerAction" name="PeriodPaperUserAnswer">
+		<forward name="list" path="/system/Dlb/PeriodPaperUserAnswer/PeriodPaperUserAnswer_list.jsp" />
+		<forward name="update" path="/system/Dlb/PeriodPaperUserAnswer/PeriodPaperUserAnswer_reply.jsp" />
+		<forward name="view" path="/system/Dlb/PeriodPaperUserAnswer/PeriodPaperUserAnswer_view.jsp" />
+	</action>
+	<action path="/business/PeriodPaperQrcode" parameter="act" scope="request" type="com.business.Dlb.PeriodPaperQrcode.PeriodPaperQrcodeAcation" name="PeriodPaperQrcode">
+		<forward name="list" path="/system/Dlb/PeriodPaperQrcode/PeriodPaperQrcode_list.jsp" />
+		<forward name="view" path="/system/Dlb/PeriodPaperQrcode/PeriodPaperQrcode_view.jsp" />
+	</action>
+	<action path="/business/Dlb/Homework" parameter="act" scope="request" type="com.business.Dlb.Homework.HomeworkAction" name="HomeworkActionForm">
+		<forward name="courseList" path="/system/Dlb/Homework/homework_networkCourseList.jsp"/>
+		<forward name="homeworkList" path="/system/Dlb/Homework/Homework_list.jsp"/>
+		<forward name="add" path="/system/Dlb/Homework/Homework_add.jsp"/>
+		<forward name="edit" path="/system/Dlb/Homework/Homework_edit.jsp"/>
+	</action>
+	<action path="/business/ActivationCode" parameter="act" scope="request" type="com.business.Dlb.ActivationCode.ActivationCodeAction" name="ActivationCode">
+		<forward name="list" path="/system/Dlb/ActivationCode/ActivationCode_list.jsp" />
+		<forward name="update" path="/system/Dlb/ActivationCode/ActivationCode_update.jsp" />
+	</action>
+	<action path="/business/Dlb/HomeworkQuestion" parameter="act" scope="request" type="com.business.Dlb.Homework.HomeworkQuestionAction" name="HomeworkQuestionActionForm">
+		<forward name="listenList" path="/system/Dlb/Homework/homework_listenList.jsp"/>
+		<forward name="readList" path="/system/Dlb/Homework/homework_readList.jsp"/>
+		<forward name="translationList" path="/system/Dlb/Homework/homework_translationList.jsp"/>
+		<forward name="writeList" path="/system/Dlb/Homework/homework_writeList.jsp"/>
+		<forward name="update" path="/system/Dlb/Homework/HomeworkQuestion_edit.jsp"/>
+		<forward name="add" path="/system/Dlb/Homework/HomeworkQuestion_add.jsp"/>
+	</action>
+	<!-- 专项训练 -->
+	<action path="/business/Word" parameter="act" scope="request" type="com.business.v2.word.WordAction.WordAction" name="TbWordActionForm">
+		<forward name="tree" path="/system/v2/word/wordTypeTree.jsp" />
+		<forward name="list" path="/system/v2/word/wordType_list.jsp" />
+		<forward name="questionOptionList" path="/system/v2/word/WordQuestionOption_list.jsp" />
+		<forward name="WordView" path="/system/v2/word/wordView.jsp" />
+		<forward name="update" path="/system/v2/word/word_edit.jsp" />
+		<forward name="add" path="/system/v2/word/word_add.jsp" />
+		<forward name="preWordQuestionOptionAdd" path="/system/v2/word/WordQuestionOption_add.jsp" />
+		<forward name="WordQuestionOptionUpdate" path="/system/v2/word/WordQuestionOption_edit.jsp" />
+	</action>
+	<action path="/business/QuestionTranslation" parameter="act" scope="request" type="com.business.v2.questionTranslation.QuestionTranslationAction" name="TbQuestionTranslationActionForm">
+		<forward name="tree" path="/system/v2/QuestionTranslation/QuestionTranslationTypeTree.jsp" />
+		<forward name="list" path="/system/v2/QuestionTranslation/QuestionTranslation_list.jsp" />
+		<forward name="update" path="/system/v2/QuestionTranslation/QuestionTranslation_edit.jsp" />
+		<forward name="add" path="/system/v2/QuestionTranslation/QuestionTranslation_add.jsp" />
+		<forward name="dlbTranslationList" path="/system/Dlb/Homework/DlbQuestionTranslation_list.jsp"/>
+	</action>
+	<action path="/business/QuestionWriting" parameter="act" scope="request" type="com.business.v2.questionWriting.QuestionWritingAction" name="TbQuestionWritingActionForm">
+		<forward name="tree" path="/system/v2/QuestionWriting/QuestionWritingTypeTree.jsp" />
+		<forward name="list" path="/system/v2/QuestionWriting/QuestionWriting_list.jsp" />
+		<forward name="update" path="/system/v2/QuestionWriting/QuestionWriting_edit.jsp" />
+		<forward name="add" path="/system/v2/QuestionWriting/QuestionWriting_add.jsp" />
+		<forward name="dlbWriteList" path="/system/Dlb/Homework/DlbQuestionWriting_list.jsp"/>
+	</action>
+
+	<!--星火英语2.0专项听力-->
+	<action path="/business/TbQuestionListening" parameter="act" scope="request" type="com.business.v2.questionAction.TbQuestionListeningAction" name="TbQuestionListeningActionForm">
+		<forward name="list" path="/system/v2/TbQuestionListening/TbQuestionListening_list.jsp" />
+		<forward name="update" path="/system/v2/TbQuestionListening/TbQuestionListening_edit.jsp" />
+		<forward name="matchSubject" path="/system/v2/TbQuestionListening/TbQuestionListening_matchSubject.jsp" />
+		<forward name="add" path="/system/v2/TbQuestionListening/TbQuestionListening_add.jsp" />
+		<forward name="tree" path="/system/v2/TbQuestionListening/TbQuestionListeningTree.jsp" />
+		<forward name="preUpdateSubject" path="/system/v2/TbQuestionListening/TbQuestionListeningQuestion_edit.jsp" />
+		<forward name="preAddOption" path="/system/v2/TbQuestionListening/TbQuestionListeningQuestionOption_add.jsp" />
+		<forward name="preAddSubject" path="/system/v2/TbQuestionListening/TbQuestionListeningQuestion_add.jsp"/>
+		<forward name="dlbListenList" path="/system/Dlb/Homework/DlbQuestionListening_list.jsp"/>
+	</action>
+	<!--星火英语2.0专项阅读-->
+	<action path="/business/TbQuestionReading" parameter="act" scope="request" type="com.business.v2.questionAction.TbQuestionReadingAction" name="TbQuestionReadingActionForm">
+		<forward name="list" path="/system/v2/TbQuestionReading/TbQuestionReading_list.jsp" />
+		<forward name="update" path="/system/v2/TbQuestionReading/TbQuestionReading_edit.jsp" />
+		<forward name="matchSubject" path="/system/v2/TbQuestionReading/TbQuestionReading_matchSubject.jsp" />
+		<forward name="add" path="/system/v2/TbQuestionReading/TbQuestionReading_add.jsp" />
+		<forward name="tree" path="/system/v2/TbQuestionReading/TbQuestionReadingTree.jsp" />
+		<forward name="preUpdateSubject" path="/system/v2/TbQuestionReading/TbQuestionReadingQuestion_edit.jsp" />
+		<forward name="preAddOption" path="/system/v2/TbQuestionReading/TbQuestionReadingQuestionOption_add.jsp" />
+		<forward name="preAddSubject" path="/system/v2/TbQuestionReading/TbQuestionReadingQuestion_add.jsp"/>
+		<forward name="dlbReadList" path="/system/Dlb/Homework/DlbQuestionReading_list.jsp"/>
+	</action>
+
+	<!-- 新版app网课相关 -->
+	<action path="/business/NetworkCourse" parameter="act" scope="request" type="com.business.NetworkCourse.NetworkCourseAction" name="NetworkCourse">
+		<forward name="list" path="/system/NetworkCourse/NetworkCourse_list.jsp" />
+		<forward name="add" path="/system/NetworkCourse/NetworkCourse_add.jsp" />
+		<forward name="update" path="/system/NetworkCourse/NetworkCourse_edit.jsp" />
+		<forward name="courseStateEdit" path="/system/NetworkCourse/NetworkCourse_StateEdit.jsp" />
+		<forward name="scList" path="/system/SysConfig/NetworkCourse_list.jsp" />
+		<forward name="networkCourseSelector" path="/system/NetworkCourse/NetworkCourseSelector.jsp" />
+	</action>
+	<action path="/business/NetworkCourseComment" parameter="act" scope="request" type="com.business.NetworkCourseComment.NetworkCourseCommentAction" name="NetworkCourseComment">
+		<forward name="list" path="/system/NetworkCourseComment/NetworkCourseComment_list.jsp" />
+		<forward name="add" path="/system/NetworkCourseComment/NetworkCourseComment_add.jsp" />
+		<forward name="voteUpEdit" path="/system/NetworkCourseComment/NetworkCourseComment_voteUpEdit.jsp" />
+	</action>
+	<action path="/business/NetworkCourseVideo" parameter="act" scope="request" type="com.business.NetworkCourseVideo.NetworkCourseVideoAction" name="NetworkCourseVideo">
+		<forward name="list" path="/system/NetworkCourseVideo/NetworkCourseVideo_list.jsp" />
+		<forward name="add" path="/system/NetworkCourseVideo/NetworkCourseVideo_add.jsp" />
+		<forward name="update" path="/system/NetworkCourseVideo/NetworkCourseVideo_edit.jsp" />
+		<forward name="batchAdd" path="/system/NetworkCourseVideo/video_export.jsp" />
+	</action>
+	<action path="/business/NetworkCourseCode" parameter="act" scope="request" type="com.business.NetworkCourseCode.NetworkCourseCodeAction" name="NetworkCourseCode">
+		<forward name="list" path="/system/NetworkCourseCode/NetworkCourseCode_list.jsp" />
+		<forward name="add" path="/system/NetworkCourseCode/NetworkCourseCode_add.jsp" />
+	</action>
+	<action attribute="NetworkCourseTeacherActionForm" input="/business/NetworkCourseTeacher_add.jsp"
+			name="NetworkCourseTeacherActionForm" parameter="act" path="/business/NetworkCourseTeacher"
+			scope="request" type="com.business.NetworkCourseTeacher.NetworkCourseTeacherAction">
+		<forward name="update" path="/system/NetworkCourseTeacher/NetworkCourseTeacher_edit.jsp" />
+		<forward name="list" path="/system/NetworkCourseTeacher/NetworkCourseTeacher_list.jsp" />
+		<forward name="view" path="/system/NetworkCourseTeacher/NetworkCourseTeacher_view.jsp" />
+		<forward name="add" path="/system/NetworkCourseTeacher/NetworkCourseTeacher_add.jsp" />
+	</action>
+	<action attribute="NetworkCourseOrderActionForm" input="/business/NetworkCourseOrder_add.jsp"
+			path="/business/NetworkCourseOrder" name="NetworkCourseOrderActionForm"	parameter="act" scope="request"
+			type="com.business.NetworkCourseOrder.NetworkCourseOrderAction">
+		<forward name="list" path="/system/NetworkCourseOrder/NetworkCourseOrder_list.jsp"/>
+		<forward name="view" path="/system/NetworkCourseOrder/NetworkCourseOrder_view.jsp"/>
+		<forward name="update" path="/system/NetworkCourseOrder/NetworkCourseOrder_edit.jsp"/>
+		<forward name="express_import" path="/system/NetworkCourseOrder/express_import.jsp" />
+		<forward name="inexistence" path="/system/NetworkCourseOrder/inexistence.jsp"/>
+	</action>
+	<action attribute="NetworkCourseOrderRefundActionForm" input="/business/NetworkCourseOrderRefund_add.jsp"
+			path="/business/NetworkCourseOrderRefund" name="NetworkCourseOrderRefundActionForm"	parameter="act" scope="request"
+			type="com.business.NetworkCourseOrderRefund.NetworkCourseOrderRefundAction">
+		<forward name="list" path="/system/NetworkCourseOrderRefund/NetworkCourseOrderRefund_list.jsp"/>
+		<forward name="view" path="/system/NetworkCourseOrderRefund/NetworkCourseOrderRefund_view.jsp"/>
+		<forward name="update" path="/system/NetworkCourseOrderRefund/NetworkCourseOrderRefund_edit.jsp"/>
+	</action>
+	<!-- 	<action path="/business/apktrack" parameter="act" scope="request" type="com.business.apktrack.ApktrackAction">
+			<forward name="apktrackData" path="/system/apktrack/apktrackData.jsp" />
+			<forward name="channel_list" path="/system/apktrack/apktrack_channel_list.jsp" />
+			<forward name="channel_add" path="/system/apktrack/apktrack_channel_add.jsp" />
+		</action>
+ -->
+		<!-- System module action-->
+		<action attribute="SysOrgForm" input="/system/sysorgadd.jsp"	
+		name="SysOrgForm" parameter="act" path="/system/sysOrg"
+			scope="request" type="com.easecom.system.web.SysOrgAction">
+			<forward name="update" path="/system/sysorgupdate.jsp" />
+			<forward name="tree" path="/system/sysorgtree.jsp" />
+			<forward name="list0" path="/system/sysorgfrm.jsp" />
+			<forward name="list" path="/system/sysorglist.jsp" />
+			<forward name="view" path="/system/sysorgview.jsp" />
+			<forward name="add" path="/system/sysorgadd.jsp" />
+			<forward name="logolist" path="/sqt/logolist.jsp"></forward>
+			<forward name="logoadd"	path="/system/sysOrg.do?act=logolist" redirect="true"></forward>
+			<forward name="prelogoadd" path="/sqt/logoadd.jsp"></forward>
+			<forward name="logopreadd" path="/sqt/logoadd.jsp"></forward>
+		</action>
+		<action attribute="SysUserForm" input="/system/sysuseradd.jsp"
+			name="SysUserForm" parameter="act" path="/system/sysUser"
+			scope="request" type="com.easecom.system.web.SysUserAction">
+			<forward name="list" path="/system/sysuserlist.jsp" />
+			<forward name="add" path="/system/sysuseradd.jsp" />
+			<forward name="update" path="/system/sysuserupdate.jsp" />
+			<forward name="mainupdate"	path="/system/sysmainuserupdate.jsp" />
+			<forward name="main" path="/login.do?act=login" />
+			<forward name="tree" path="/system/sysusertree.jsp" />
+			<forward name="checkcfgtree"	path="/system/sysusercheckcfgtree.jsp" />
+			<forward name="checkcfglist"  path="/system/sysusercheckcfglist.jsp" />
+			<forward name="rolelist"	path="/system/sysusercfgrolelist.jsp" />
+			<forward name="allotupdate" path="sysUser.do?act=assign"				redirect="true">			</forward>
+			<forward name="importExcel" path="/system/importExcel.jsp" />
+			<forward name="enterpriselist"	path="/system/enterpriselist.jsp">		</forward>
+			<forward name="selectuser"	path="/system/selectenterprise.jsp">			</forward>
+			<forward name="deleteuser" path="sysUser.do?act=assign"	redirect="true">			</forward>
+			<forward name="userManagerView" path="/sqt/usermanager.jsp">		</forward>
+			<forward name="homepage" path="/login.do?act=preLogin"	redirect="true">	</forward>
+			<forward name="view" path="/system/dzbgsview.jsp"></forward>
+			<forward name="qyview" path="/system/dzbqyview.jsp"></forward>
+			<forward name="insertuser"	path="/system/insertuserback.jsp"></forward>
+			<forward name="updatepd" path="sysUser.do?act=selectassign">	</forward>
+			<forward name="selectqyuser" path="/system/displayqyuser.jsp"></forward>
+			<forward name="initModifypd" path="sysUser.do?act=initModifypd"></forward>
+			<forward name="modifypd" path="/system/modifypd.jsp"></forward>
+			<forward name="getorg" path="/system/org_tree.jsp"></forward>
+			<forward name="srolelist"	path="/system/sysusercfgrolelist.jsp" />
+			<forward name="designerlist"	path="/system/sysDesignerUserList.jsp" />
+			
+		</action>
+		<action attribute="LoginForm" name="LoginForm" parameter="act"
+			path="/login" scope="request"
+			type="com.easecom.system.web.LoginAction">
+			<forward name="admin" path="/system/main.jsp" />
+			<forward name="admin_user" path="/system/usermain.jsp" />
+			<forward name="admin_log" path="/system/logmain.jsp" />
+			<forward name="admin_question" path="/system/questionmain.jsp" />
+			<forward name="adminlogin" path="/login/login.jsp"  ></forward>
+			<forward name="userlogin" path="/login_user/login.jsp"  ></forward>
+			<forward name="loglogin" path="/login_log/login.jsp"  ></forward>
+			<forward name="questionlogin" path="/login_question/login.jsp"  ></forward>
+		</action>
+		
+		
+		<!-- <action attribute="LoginForm" name="LoginForm" parameter="act"
+			path="/cuslogin" scope="request"
+			type="com.easecom.system.web.CusLoginAction">
+			<forward name="admin" path="/cusindex.jsp" />
+			<forward name="sadmin" path="/sindex.jsp" />
+			<forward name="adminlogin" path="/cuslogin.jsp"  ></forward>
+			<forward name="shoplogin" path="/slogin.jsp"  ></forward>
+		</action> -->
+		
+		
+		<action attribute="SysRoleForm" input="/system/roleadd.jsp"
+			name="SysRoleForm" parameter="act" path="/system/sysrole"
+			scope="request" type="com.easecom.system.web.SysRoleAction">
+			<forward name="update" path="/system/roleupdate.jsp" />
+			<forward name="list" path="/system/rolelist.jsp" />
+			<forward name="add" path="/system/roleadd.jsp" />
+			<forward name="precfgfun" path="/system/rolefuncfg.jsp" />
+			<forward name="cfgfunview" path="/system/rolefunview.jsp" />
+		</action>
+		<action attribute="SysFunctionForm"
+			input="/system/sysfunctionadd.jsp" name="SysFunctionForm"
+			parameter="act" path="/system/sysFunction" scope="request"
+			type="com.easecom.system.web.SysFunctionAction">
+			<forward name="list" path="/system/sysfunctionlist.jsp" />
+			<forward name="add" path="/system/sysfunctionadd.jsp" />
+			<forward name="update" path="/system/sysfunctionupdate.jsp" />
+			<forward name="view" path="/system/sysfunctionview.jsp" />
+			<forward name="tree" path="/system/sysfunctiontree.jsp" />
+		</action>
+		<action attribute="SysUserForm" input="/system/count_gs.jsp"
+			name="SysUserForm" parameter="act" path="/countSysUser"
+			scope="request" type="com.easecom.base.web.CountSUAction">
+			<forward name="list" path="/system/count_gs.jsp" />
+		</action>
+		<!-- 系统日志 -->
+		<action path="/base/systemlog" type="com.easecom.base.web.SystemLogAction"
+						parameter="act" scope="request">
+			<forward name="list" path="/system/systemlog_list.jsp"></forward>
+		</action>
+		
+		<!-- 新增 -->
+		
+		<!-- 业务 -->
+		<!-- 用户管理 -->
+		<action attribute="UsersActionForm" input="/business/Users_add.jsp"	
+		name="UsersActionForm" parameter="act" path="/business/Users"
+			scope="request" type="com.business.Users.UsersAction">
+			<forward name="update" path="/system/Users/Users_edit.jsp" />
+			<forward name="list" path="/system/Users/Users_list.jsp" />
+			<forward name="view" path="/system/Users/Users_view.jsp" />
+			<forward name="add" path="/system/Users/Users_add.jsp" />
+		</action>
+		<action attribute="UserAddressActionForm" input="/manage/UserAddress/UserAddress_add.jsp"	
+			name="UserAddressActionForm" parameter="act" path="/business/UserAddress"
+			scope="request" type="com.business.UserAddress.UserAddressAction">
+			<forward name="update" path="/system/UsersAddress/UserAddress_edit.jsp" />
+			<forward name="list" path="/system/UsersAddress/UserAddress_list.jsp" />
+			<forward name="view" path="/system/UsersAddress/UserAddress_view.jsp" />
+			<forward name="add" path="/system/UsersAddress/UserAddress_add.jsp" />
+		</action>
+		<!-- 用户反馈 -->
+		<action attribute="UserFeedbackActionForm" input="/business/UserFeedback_add.jsp"	
+		name="UserFeedbackActionForm" parameter="act" path="/business/UserFeedback"
+			scope="request" type="com.business.UserFeedback.UserFeedbackAction">
+			<forward name="update" path="/system/UserFeedback/UserFeedback_edit.jsp" />
+			<forward name="list" path="/system/UserFeedback/UserFeedback_list.jsp" />
+			<forward name="view" path="/system/UserFeedback/UserFeedback_view.jsp" />
+			<forward name="add" path="/system/UserFeedback/UserFeedback_add.jsp" />
+	</action>
+		<!-- 资讯 -->		
+		<action attribute="NewsActionForm" input="/business/News_add.jsp"	
+			name="NewsActionForm" parameter="act" path="/business/News"
+				scope="request" type="com.business.News.NewsAction">
+				<forward name="update" path="/system/News/News_edit.jsp" />
+				<forward name="list" path="/system/News/News_list.jsp" />
+				<forward name="view" path="/system/News/News_view.jsp" />
+				<forward name="add" path="/system/News/News_add.jsp" />
+				<forward name="excnews" path="/system/ExclusiveDesign/ExclusiveDesign_news.jsp" />
+				<forward name="redirect" path="News.do?act=list" />
+				<forward name="newsSelector" path="/system/News/NewsSelector.jsp" />
+		</action>
+		<action attribute="NewLablesActionForm" input="/business/NewLables_add.jsp"	
+		name="NewLablesActionForm" parameter="act" path="/business/NewLables"
+			scope="request" type="com.business.NewLables.NewLablesAction">
+			<forward name="update" path="/system/NewLables/NewLables_edit.jsp" />
+			<forward name="list" path="/system/NewLables/NewLables_list.jsp" />
+			<forward name="view" path="/system/NewLables/NewLables_view.jsp" />
+			<forward name="add" path="/system/NewLables/NewLables_add.jsp" />
+	  </action>
+	  <action attribute="NewsMessageActionForm" input="/business/NewsMessage_add.jsp"	
+		name="NewsMessageActionForm" parameter="act" path="/business/NewsMessage"
+			scope="request" type="com.business.NewsMessage.NewsMessageAction">
+			<forward name="update" path="/system/NewsMessage/NewsMessage_edit.jsp" />
+			<forward name="list" path="/system/NewsMessage/NewsMessage_list.jsp" />
+			<forward name="view" path="/system/NewsMessage/NewsMessage_view.jsp" />
+			<forward name="add" path="/system/NewsMessage/NewsMessage_add.jsp" />
+			<forward name="comment" path="/system/NewsMessage/News_NewsMessage.jsp"></forward>
+    		
+     </action>
+	  
+		 <!-- 用户反馈 -->
+		<action attribute="UserFeedbackActionForm" input="/business/UserFeedback_add.jsp"	
+		name="UserFeedbackActionForm" parameter="act" path="/business/UserFeedback"
+			scope="request" type="com.business.UserFeedback.UserFeedbackAction">
+			<forward name="update" path="/system/UserFeedback/UserFeedback_edit.jsp" />
+			<forward name="list" path="/system/UserFeedback/UserFeedback_list.jsp" />
+			<forward name="view" path="/system/UserFeedback/UserFeedback_view.jsp" />
+			<forward name="add" path="/system/UserFeedback/UserFeedback_add.jsp" />
+	</action>
+	<!-- 推送 -->
+		<action attribute="PushLogActionForm" input="/business/PushLog_add.jsp"	
+			name="PushLogActionForm" parameter="act" path="/business/PushLog"
+			scope="request" type="com.business.PushLog.PushLogAction">
+			<forward name="update" path="/system/Pushlog/PushLog_edit.jsp" />
+			<forward name="list" path="/system/Pushlog/PushLog_list.jsp" />
+			<forward name="view" path="/system/Pushlog/PushLog_view.jsp" />
+			<forward name="add" path="/system/Pushlog/PushLog_add.jsp" />
+		</action>
+		<action attribute="PushMessageActionForm" input="/business/PushMessage_add.jsp"	
+		name="PushMessageActionForm" parameter="act" path="/business/PushMessage"
+			scope="request" type="com.business.PushMessage.PushMessageAction">
+			<forward name="update" path="/system/PushMessage/PushMessage_edit.jsp" />
+			<forward name="list" path="/system/PushMessage/PushMessage_list.jsp" />
+			<forward name="view" path="/system/PushMessage/PushMessage_view.jsp" />
+			<forward name="add" path="/system/PushMessage/PushMessage_add.jsp" />
+        </action>
+		<action attribute="PushMessageUserActionForm" input="/business/PushMessageUser_add.jsp"	
+		name="PushMessageUserActionForm" parameter="act" path="/business/PushMessageUser"
+			scope="request" type="com.business.PushMessageUser.PushMessageUserAction">
+			<forward name="update" path="/system/PushMessageUser/PushMessageUser_edit.jsp" />
+			<forward name="list" path="/system/PushMessageUser/PushMessageUser_list.jsp" />
+			<forward name="view" path="/system/PushMessageUser/PushMessageUser_view.jsp" />
+			<forward name="add" path="/system/PushMessageUser/PushMessageUser_add.jsp" />
+       </action>
+		<action path="/business/AppVersions" attribute="ApkvesionsActionForm"
+			parameter="act"	name="ApkversionsActionForm" scope="request" type="com.business.Apkversions.ApkversionsAction">
+			<forward name="update" path="/system/Apkversions/Apkversion_edit.jsp" />
+			<forward name="list" path="/system/Apkversions/Apkversion_list.jsp" />
+			<forward name="view" path="/system/Apkversions/Apkversion_view.jsp" />
+			<forward name="add" path="/system/Apkversions/Apkversion_add.jsp" />
+		</action>
+		<!-- 手机系统参数 -->
+		<action attribute="SysConfigForm" input=""	
+			name="SysConfigForm" parameter="act" path="/System/SysConfig"
+				scope="request" type="com.easecom.system.web.SysConfigAction">
+				<forward name="update" path="/system/SysConfig/SysConfig_edit.jsp" />
+				<forward name="list" path="/system/SysConfig/SysConfig_list.jsp" />
+				<forward name="view" path="/system/SysConfig/SysConfig_view.jsp" />
+				<forward name="add" path="/system/SysConfig/SysConfig_add.jsp" />
+				<forward name="addImgs" path="/system/SysConfig/SysConfig_add_Img.jsp" />
+				<forward name="addue" path="/system/SysConfig/SysConfig_add_ue.jsp" />
+				<forward name="addvalue" path="/system/SysConfig/SysConfig_add_value.jsp" />
+				<forward name="editImgs" path="/system/SysConfig/SysConfig_edit_Img.jsp" />
+				<forward name="editue" path="/system/SysConfig/SysConfig_edit_ue.jsp" />
+				<forward name="editvalue" path="/system/SysConfig/SysConfig_edit_value.jsp" />
+				
+				<forward name="redirect" path="SysConfig.do?act=list" />
+		</action>
+		
+		
+		<!-- 产品类型相关 -->
+		<action attribute="ProductTypeActionForm" input="/business/ProductType_add.jsp"	
+			name="ProductTypeActionForm" parameter="act" path="/business/ProductType"
+				scope="request" type="com.business.ProductType.ProductTypeAction">
+				<forward name="update" path="/system/ProductType/ProductType_edit.jsp" />
+				<forward name="list" path="/system/ProductType/ProductType_list.jsp" />
+				<forward name="view" path="/system/ProductType/ProductType_view.jsp" />
+				<forward name="add" path="/system/ProductType/ProductType_add.jsp" />
+				<forward name="tree" path="/system/ProductType/ProductTypeTree.jsp" />
+				<forward name="redirect" path="ProductType.do?act=list" />
+		</action>
+		
+		<!-- 商城 -->
+		<action attribute="ProductActionForm" input="/business/Product_add.jsp"	
+			name="ProductActionForm" parameter="act" path="/business/Product"
+			scope="request" type="com.business.Product.ProductAction">
+			<forward name="update" path="/system/Product/Product_edit.jsp" />
+			<forward name="list" path="/system/Product/Product_list.jsp" />
+			<forward name="view" path="/system/Product/Product_view.jsp" />
+			<forward name="add" path="/system/Product/Product_add.jsp" />
+			<forward name="tree" path="/system/Product/ProductTree.jsp" />
+			<forward name="chose" path="/system/Product/Product_chose.jsp"></forward>
+			<forward name="Colloclist" path="/system/ProductCollocation/Product_Booklist.jsp" />
+			<forward name="matched" path="/system/Product/Product_matched_Tree.jsp" />
+			<forward name="pcplist" path="/system/PreferentialCodeProduct/Product_Booklist.jsp" />
+			<forward name="redirect" path="Product.do?act=list" />
+			<forward name="bookSelector" path="/system/Product/BookSelector.jsp" />
+		</action>
+		
+		<action attribute="ProductGradeActionForm" input="/business/ProductGrade_add.jsp"	
+		name="ProductGradeActionForm" parameter="act" path="/business/ProductGrade"
+			scope="request" type="com.business.ProductGrade.ProductGradeAction">
+			<forward name="update" path="/system/ProductGrade/ProductGrade_edit.jsp" />
+			<forward name="list" path="/system/ProductGrade/ProductGrade_list.jsp" />
+			<forward name="view" path="/system/ProductGrade/ProductGrade_view.jsp" />
+			<forward name="add" path="/system/ProductGrade/ProductGrade_add.jsp" />
+		</action>
+		<action attribute="ExpressActionForm" input="/business/Express_add.jsp"	
+		name="ExpressActionForm" parameter="act" path="/business/Express"
+			scope="request" type="com.business.Express.ExpressAction">
+	</action>
+	<action attribute="ProductOrderLogisticsActionForm" input="/business/ProductOrderLogistics_add.jsp"	
+		name="ProductOrderLogisticsActionForm" parameter="act" path="/business/ProductOrderLogistics"
+			scope="request" type="com.business.ProductOrderLogistics.ProductOrderLogisticsAction">
+			<forward name="update" path="/system/ProductOrderLogistics/ProductOrderLogistics_edit.jsp" />
+			<forward name="list" path="/system/ProductOrderLogistics/ProductOrderLogistics_list.jsp" />
+			<forward name="view" path="/system/ProductOrderLogistics/ProductOrderLogistics_view.jsp" />
+			<forward name="add" path="/system/ProductOrderLogistics/ProductOrderLogistics_add.jsp" />
+   </action>
+
+	<action attribute="ProductOrderActionForm" input="/business/ProductOrder_add.jsp"
+		name="ProductOrderActionForm" parameter="act" path="/business/ProductOrder"
+			scope="request" type="com.business.ProductOrder.ProductOrderAction">
+			<forward name="update" path="/system/ProductOrder/ProductOrder_edit.jsp" />
+			<forward name="list" path="/system/ProductOrder/ProductOrder_list.jsp" />
+			<forward name="view" path="/system/ProductOrder/ProductOrder_view.jsp" />
+			<forward name="add" path="/system/ProductOrder/ProductOrder_add.jsp" />
+			<forward name="code" path="/system/ProductOrder/ProductOrder_code.jsp" />
+			<forward name="cancel" path="/system/ProductOrder/ProductOrder_cancel.jsp" />
+			<forward name="query" path="/system/ProductOrder/ProductOrder_query.jsp" />
+			<forward name="collEdit" path="/system/ProductOrder/ProductOrder_collEdit.jsp" />
+			<forward name="orderStateEdit" path="/system/ProductOrder/ProductOrder_orderStateEdit.jsp" />
+		    <forward name="bookList" path="/system/ProductOrder/ProductOrder_bookList.jsp" />
+			<forward name="netList" path="/system/ProductOrder/ProductOrder_netList.jsp" />
+			<forward name="coupon" path="/system/ProductOrder/Product_coupon_view.jsp" />
+			<forward name="express_import" path="/system/ProductOrder/express_import.jsp" />
+	</action>
+	<action attribute="ProductCollocationActionForm" input="/business/ProductCollocation_add.jsp"	
+		name="ProductCollocationActionForm" parameter="act" path="/business/ProductCollocation"
+			scope="request" type="com.business.ProductCollocation.ProductCollocationAction">
+			<forward name="update" path="/system/ProductCollocation/ProductCollocation_edit.jsp" />
+			<forward name="list" path="/system/ProductCollocation/ProductCollocation_list.jsp" />
+			<forward name="view" path="/system/ProductCollocation/ProductCollocation_view.jsp" />
+			<forward name="add" path="/system/ProductCollocation/ProductCollocation_add.jsp" />
+			<forward name="preMoney" path="/system/ProductCollocation/Product_BookMoney.jsp" />
+			<forward name="preEditMoney" path="/system/ProductCollocation/Product_EditBookMoney.jsp" />
+
+	</action>
+	<action attribute="ProductMatchedPaperActionForm" input="/business/ProductMatchedPaper_add.jsp"	
+		name="ProductMatchedPaperActionForm" parameter="act" path="/business/ProductMatchedPaper"
+			scope="request" type="com.business.ProductMatchedPaper.ProductMatchedPaperAction">
+			<forward name="update" path="/system/ProductMatchedPaper/ProductMatchedPaper_edit.jsp" />
+			<forward name="list" path="/system/ProductMatchedPaper/ProductMatchedPaper_list.jsp" />
+			<forward name="view" path="/system/ProductMatchedPaper/ProductMatchedPaper_view.jsp" />
+			<forward name="add" path="/system/ProductMatchedPaper/ProductMatchedPaper_add.jsp" />
+
+	</action>
+	<action attribute="ProductOrderDetailsCollocationActionForm" input="/business/ProductOrderDetailsCollocation_add.jsp"	
+		name="ProductOrderDetailsCollocationActionForm" parameter="act" path="/business/ProductOrderDetailsCollocation"
+			scope="request" type="com.business.ProductOrderDetailsCollocation.ProductOrderDetailsCollocationAction">
+			<forward name="update" path="/system/ProductOrderDetailsCollocation/ProductOrderDetailsCollocation_edit.jsp" />
+			<forward name="list" path="/system/ProductOrderDetailsCollocation/ProductOrderDetailsCollocation_list.jsp" />
+			<forward name="view" path="/system/ProductOrderDetailsCollocation/ProductOrderDetailsCollocation_view.jsp" />
+			<forward name="add" path="/system/ProductOrderDetailsCollocation/ProductOrderDetailsCollocation_add.jsp" />
+    </action>
+    <action attribute="ProductNetworkVideoActionForm" input="/business/ProductNetworkVideo_add.jsp"	
+		name="ProductNetworkVideoActionForm" parameter="act" path="/business/ProductNetworkVideo"
+			scope="request" type="com.business.ProductNetworkVideo.ProductNetworkVideoAction">
+			<forward name="update" path="/system/ProductNetworkVideo/ProductNetworkVideo_edit.jsp" />
+			<forward name="list" path="/system/ProductNetworkVideo/ProductNetworkVideo_list.jsp" />
+			<forward name="view" path="/system/ProductNetworkVideo/ProductNetworkVideo_view.jsp" />
+			<forward name="add" path="/system/ProductNetworkVideo/ProductNetworkVideo_add.jsp" />
+    </action>
+
+    <action attribute="ProductOrderEvaluateActionForm" input="/business/ProductOrderEvaluate_add.jsp"	
+		name="ProductOrderEvaluateActionForm" parameter="act" path="/business/ProductOrderEvaluate"
+			scope="request" type="com.business.ProductOrderEvaluate.ProductOrderEvaluateAction">
+			<forward name="update" path="/system/ProductOrderEvaluate/ProductOrderEvaluate_edit.jsp" />
+			<forward name="list" path="/system/ProductOrderEvaluate/ProductOrderEvaluate_list.jsp" />
+			<forward name="view" path="/system/ProductOrderEvaluate/ProductOrderEvaluate_view.jsp" />
+			<forward name="add" path="/system/ProductOrderEvaluate/ProductOrderEvaluate_add.jsp" />
+    </action>
+    <action attribute="ProductOrderRefundActionForm" input="/business/ProductOrderRefund_add.jsp"	
+		name="ProductOrderRefundActionForm" parameter="act" path="/business/ProductOrderRefund"
+			scope="request" type="com.business.ProductOrderRefund.ProductOrderRefundAction">
+			<forward name="update" path="/system/ProductOrderRefund/ProductOrderRefund_edit.jsp" />
+			<forward name="list" path="/system/ProductOrderRefund/ProductOrderRefund_list.jsp" />
+			<forward name="view" path="/system/ProductOrderRefund/ProductOrderRefund_view.jsp" />
+			<forward name="add" path="/system/ProductOrderRefund/ProductOrderRefund_add.jsp" />
+	</action>
+    <action attribute="ProductOrderRefundCheckActionForm" input="/business/ProductOrderRefundCheck_add.jsp"
+            name="ProductOrderRefundCheckActionForm" parameter="act" path="/business/ProductOrderRefundCheck"
+            scope="request" type="com.business.ProductOrderRefundCheck.ProductOrderRefundCheckAction">
+        <forward name="update" path="/system/ProductOrderRefundCheck/ProductOrderRefundCheck_edit.jsp" />
+        <forward name="list" path="/system/ProductOrderRefundCheck/ProductOrderRefundCheck_list.jsp" />
+        <forward name="view" path="/system/ProductOrderRefundCheck/ProductOrderRefundCheck_view.jsp" />
+        <forward name="add" path="/system/ProductOrderRefundCheck/ProductOrderRefundCheck_add.jsp" />
+        <forward name="check" path="/system/ProductOrderRefundCheck/ProductOrderRefundCheck_check.jsp" />
+    </action>
+    
+    
+	<!-- 网课 -->
+	<action attribute="NetworkVideoActionForm" input="/business/NetworkVideo_add.jsp"	
+		name="NetworkVideoActionForm" parameter="act" path="/business/NetworkVideo"
+			scope="request" type="com.business.NetworkVideo.NetworkVideoAction">
+			<forward name="update" path="/system/NetworkVideo/NetworkVideo_edit.jsp" />
+			<forward name="list" path="/system/NetworkVideo/NetworkVideo_list.jsp" />
+			<forward name="view" path="/system/NetworkVideo/NetworkVideo_view.jsp" />
+			<forward name="add" path="/system/NetworkVideo/NetworkVideo_add.jsp" />
+			<forward name="CatalogFrm" path="/system/NetworkVideoCatalog/NetworkVideoCatalogFrm.jsp" />
+			<forward name="CatalogVideoFrm" path="/system/NetworkVideoCatalogVideo/NetworkVideoCatalogVideoFrm.jsp" />
+			<forward name="Colloclist" path="/system/ProductCollocation/Product_netWorklist.jsp" />
+			<forward name="productList" path="/system/ProductNetworkVideo/NetworkVideo_list.jsp" />
+			<forward name="scList" path="/system/SysConfig/NetworkVideo_list.jsp" />
+			<forward name="pcplist" path="/system/PreferentialCodeProduct/Product_netWorklist.jsp" />
+			
+	</action>
+	<action attribute="NetworkVideoCatalogActionForm" input="/business/NetworkVideoCatalog_add.jsp"	
+		name="NetworkVideoCatalogActionForm" parameter="act" path="/business/NetworkVideoCatalog"
+			scope="request" type="com.business.NetworkVideoCatalog.NetworkVideoCatalogAction">
+			<forward name="update" path="/system/NetworkVideoCatalog/NetworkVideoCatalog_edit.jsp" />
+			<forward name="list" path="/system/NetworkVideoCatalog/NetworkVideoCatalog_list.jsp" />
+			<forward name="view" path="/system/NetworkVideoCatalog/NetworkVideoCatalog_view.jsp" />
+			<forward name="add" path="/system/NetworkVideoCatalog/NetworkVideoCatalog_add.jsp" />
+			<forward name="tree" path="/system/NetworkVideoCatalog/NetworkVideoCatalogTree.jsp" />
+	</action>
+	<action attribute="NetworkVideoCatalogVideoActionForm" input="/business/NetworkVideoCatalogVideo_add.jsp"	
+		name="NetworkVideoCatalogVideoActionForm" parameter="act" path="/business/NetworkVideoCatalogVideo"
+			scope="request" type="com.business.NetworkVideoCatalogVideo.NetworkVideoCatalogVideoAction">
+			<forward name="update" path="/system/NetworkVideoCatalogVideo/NetworkVideoCatalogVideo_edit.jsp" />
+			<forward name="list" path="/system/NetworkVideoCatalogVideo/NetworkVideoCatalogVideo_list.jsp" />
+			<forward name="view" path="/system/NetworkVideoCatalogVideo/NetworkVideoCatalogVideo_view.jsp" />
+			<forward name="add" path="/system/NetworkVideoCatalogVideo/NetworkVideoCatalogVideo_add.jsp" />
+			<forward name="tree" path="/system/NetworkVideoCatalogVideo/NetworkVideoCatalogVideoTree.jsp" />
+	</action>
+	<action attribute="NetworkVideoTeaherActionForm" input="/business/NetworkVideoTeaher_add.jsp"	
+		name="NetworkVideoTeaherActionForm" parameter="act" path="/business/NetworkVideoTeaher"
+			scope="request" type="com.business.NetworkVideoTeaher.NetworkVideoTeaherAction">
+			<forward name="update" path="/system/NetworkVideoTeaher/NetworkVideoTeaher_edit.jsp" />
+			<forward name="list" path="/system/NetworkVideoTeaher/NetworkVideoTeaher_list.jsp" />
+			<forward name="view" path="/system/NetworkVideoTeaher/NetworkVideoTeaher_view.jsp" />
+			<forward name="add" path="/system/NetworkVideoTeaher/NetworkVideoTeaher_add.jsp" />
+	</action>
+
+	<!-- 社区 -->
+	<action attribute="CommunityPostActionForm" input="/business/CommunityPost_add.jsp"	
+		name="CommunityPostActionForm" parameter="act" path="/business/CommunityPost"
+			scope="request" type="com.business.CommunityPost.CommunityPostAction">
+			<forward name="update" path="/system/CommunityPost/CommunityPost_edit.jsp" />
+			<forward name="list" path="/system/CommunityPost/CommunityPost_list.jsp" />
+			<forward name="view" path="/system/CommunityPost/CommunityPost_view.jsp" />
+			<forward name="add" path="/system/CommunityPost/CommunityPost_add.jsp" />
+			<forward name="communityPostSelector" path="/system/CommunityPost/CommunityPostSelector.jsp" />
+	</action>
+	<action attribute="CommunityPostMessageActionForm" input="/business/CommunityPostMessage_add.jsp"	
+		name="CommunityPostMessageActionForm" parameter="act" path="/business/CommunityPostMessage"
+			scope="request" type="com.business.CommunityPostMessage.CommunityPostMessageAction">
+			<forward name="update" path="/system/CommunityPostMessage/CommunityPostMessage_edit.jsp" />
+			<forward name="list" path="/system/CommunityPostMessage/CommunityPostMessage_list.jsp" />
+			<forward name="view" path="/system/CommunityPostMessage/CommunityPostMessage_view.jsp" />
+			<forward name="add" path="/system/CommunityPostMessage/CommunityPostMessage_add.jsp" />
+			<forward name="comment" path="/system/CommunityPostMessage/CommunityPostMessage_comment.jsp" />
+	</action>
+	<action attribute="CommunityPostLikeRecordActionForm" input="/business/CommunityPostLikeRecord_add.jsp"	
+		name="CommunityPostLikeRecordActionForm" parameter="act" path="/business/CommunityPostLikeRecord"
+			scope="request" type="com.business.CommunityPostLikeRecord.CommunityPostLikeRecordAction">
+			<forward name="update" path="/system/CommunityPostLikeRecord/CommunityPostLikeRecord_edit.jsp" />
+			<forward name="list" path="/system/CommunityPostLikeRecord/CommunityPostLikeRecord_list.jsp" />
+			<forward name="view" path="/system/CommunityPostLikeRecord/CommunityPostLikeRecord_view.jsp" />
+			<forward name="add" path="/system/CommunityPostLikeRecord/CommunityPostLikeRecord_add.jsp" />
+    </action>
+    <action attribute="CommunityPostFollowRecordActionForm" input="/business/CommunityPostFollowRecord_add.jsp"	
+		name="CommunityPostFollowRecordActionForm" parameter="act" path="/business/CommunityPostFollowRecord"
+			scope="request" type="com.business.CommunityPostFollowRecord.CommunityPostFollowRecordAction">
+			<forward name="update" path="/system/CommunityPostFollowRecord/CommunityPostFollowRecord_edit.jsp" />
+			<forward name="list" path="/system/CommunityPostFollowRecord/CommunityPostFollowRecord_list.jsp" />
+			<forward name="view" path="/system/CommunityPostFollowRecord/CommunityPostFollowRecord_view.jsp" />
+			<forward name="add" path="/system/CommunityPostFollowRecord/CommunityPostFollowRecord_add.jsp" />
+    </action>
+    
+	<!-- 激活码 -->
+	<action attribute="BookActivationCodeActionForm" input="/business/BookActivationCode_add.jsp"	
+		name="BookActivationCodeActionForm" parameter="act" path="/business/BookActivationCode"
+			scope="request" type="com.business.BookActivationCode.BookActivationCodeAction">
+			<forward name="update" path="/system/BookActivationCode/BookActivationCode_edit.jsp" />
+			<forward name="list" path="/system/BookActivationCode/BookActivationCode_list.jsp" />
+			<forward name="view" path="/system/BookActivationCode/BookActivationCode_view.jsp" />
+			<forward name="add" path="/system/BookActivationCode/BookActivationCode_add.jsp" />
+	</action>
+	
+	<!-- 优惠码-->
+	<action attribute="PreferentialCodeActionForm" input="/business/Preferentialcode/Preferentialcode_add.jsp"	
+		name="PreferentialCodeActionForm" parameter="act" path="/business/PreferentialCode"
+			scope="request" type="com.business.PreferentialCode.PreferentialcodeAction">
+			<forward name="update" path="/system/PreferentialCode/PreferentialCode_edit.jsp" />
+			<forward name="list" path="/system/PreferentialCode/PreferentialCode_list.jsp" />
+			<forward name="view" path="/system/PreferentialCode/PreferentialCode_view.jsp" />
+			<forward name="add" path="/system/PreferentialCode/PreferentialCode_add.jsp" />
+			<!--<forward name="ok" path="/business/Preferentialcode.do?act=list" />  -->
+	</action>
+	<action attribute="PreferentialCodeGenerateActionForm" input="/business/PreferentialCodeGenerate_add.jsp"	
+		name="PreferentialCodeGenerateActionForm" parameter="act" path="/business/PreferentialCodeGenerate"
+			scope="request" type="com.business.PreferentialCodeGenerate.PreferentialCodeGenerateAction">
+			<forward name="update" path="/system/PreferentialCodeGenerate/PreferentialCodeGenerate_edit.jsp" />
+			<forward name="list" path="/system/PreferentialCodeGenerate/PreferentialCodeGenerate_list.jsp" />
+			<forward name="view" path="/system/PreferentialCodeGenerate/PreferentialCodeGenerate_view.jsp" />
+			<forward name="add" path="/system/PreferentialCodeGenerate/PreferentialCodeGenerate_add.jsp" />
+    </action>
+	<action attribute="PreferentialCodeProductActionForm" input="/business/PreferentialCodeProduct_add.jsp"	
+		name="PreferentialCodeProductActionForm" parameter="act" path="/business/PreferentialCodeProduct"
+			scope="request" type="com.business.PreferentialCodeProduct.PreferentialCodeProductAction">
+			<forward name="update" path="/system/PreferentialCodeProduct/PreferentialCodeProduct_edit.jsp" />
+			<forward name="list" path="/system/PreferentialCodeProduct/PreferentialCodeProduct_list.jsp" />
+			<forward name="view" path="/system/PreferentialCodeProduct/PreferentialCodeProduct_view.jsp" />
+			<forward name="add" path="/system/PreferentialCodeProduct/PreferentialCodeProduct_add.jsp" />
+	</action>
+
+	<!-- 在线问答 -->
+	<action attribute="ProblemActionForm" input="/business/Problem_add.jsp"	
+		name="ProblemActionForm" parameter="act" path="/business/Problem"
+			scope="request" type="com.business.Problem.ProblemAction">
+			<forward name="update" path="/system/Problem/Problem_edit.jsp" />
+			<forward name="list" path="/system/Problem/Problem_list.jsp" />
+			<forward name="view" path="/system/Problem/Problem_view.jsp" />
+			<forward name="add" path="/system/Problem/Problem_add.jsp" />
+			<forward name="reploy" path="/system/Problem/Problem_reploy.jsp" />
+      </action>
+      <action attribute="AnswerActionForm" input="/business/Answer_add.jsp"	
+		name="AnswerActionForm" parameter="act" path="/business/Answer"
+			scope="request" type="com.business.Answer.AnswerAction">
+			<forward name="update" path="/system/Answer/Answer_edit.jsp" />
+			<forward name="list" path="/system/Answer/Answer_list.jsp" />
+			<forward name="view" path="/system/Answer/Answer_view.jsp" />
+			<forward name="add" path="/system/Answer/Answer_add.jsp" />
+     </action>
+     
+     <!-- 配套试卷 -->
+     <action attribute="MatchedPapersTypeActionForm" input="/business/MatchedPapersType_add.jsp"	
+		name="MatchedPapersTypeActionForm" parameter="act" path="/business/MatchedPapersType"
+			scope="request" type="com.business.MatchedPapersType.MatchedPapersTypeAction">
+			<forward name="update" path="/system/MatchedPapersType/MatchedPapersType_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersType/MatchedPapersType_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersType/MatchedPapersType_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersType/MatchedPapersType_add.jsp" />
+			<forward name="tree" path="/system/MatchedPapersType/MatchedPapersTypeTree.jsp" />
+	</action>
+	<action attribute="MatchedPapersActionForm" input="/business/MatchedPapers_add.jsp"	
+		name="MatchedPapersActionForm" parameter="act" path="/business/MatchedPapers"
+			scope="request" type="com.business.MatchedPapers.MatchedPapersAction">
+			<forward name="update" path="/system/MatchedPapers/MatchedPapers_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapers/MatchedPapers_list.jsp" />
+			<forward name="view" path="/system/MatchedPapers/MatchedPapers_view.jsp" />
+			<forward name="add" path="/system/MatchedPapers/MatchedPapers_add.jsp" />
+			<forward name="tree" path="/system/MatchedPapers/MatchedPapersTypeTree.jsp" />
+			<forward name="productList" path="/system/ProductMatchedPaper/MatchedPapers_list.jsp" />
+			<forward name="preWritExl" path="/system/MatchedPapers/writing_export.jsp" />
+			<forward name="preTranslateExl" path="/system/MatchedPapers/translate_export.jsp" />
+			<forward name="mpthsList" path="/system/MatchedPapers/MathSubject_list.jsp" />
+			<forward name="preUpdateRead" path="/system/MatchedPapers/preUpdateRead.jsp" />
+			<forward name="updateVideo" path="/system/MatchedPapers/MatchedPapersVideo_edit.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicHearingActionForm" input="/business/MatchedPapersTopicHearing_add.jsp"	
+		name="MatchedPapersTopicHearingActionForm" parameter="act" path="/business/MatchedPapersTopicHearing"
+			scope="request" type="com.business.MatchedPapersTopicHearing.MatchedPapersTopicHearingAction">
+			<forward name="update" path="/system/MatchedPapersTopicHearing/MatchedPapersTopicHearing_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicHearing/MatchedPapersTopicHearing_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicHearing/MatchedPapersTopicHearing_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicHearing/MatchedPapersTopicHearing_add.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicHearingSubjectChoiceActionForm" input="/business/MatchedPapersTopicHearingSubjectChoice_add.jsp"	
+		name="MatchedPapersTopicHearingSubjectChoiceActionForm" parameter="act" path="/business/MatchedPapersTopicHearingSubjectChoice"
+			scope="request" type="com.business.MatchedPapersTopicHearingSubjectChoice.MatchedPapersTopicHearingSubjectChoiceAction">
+			<forward name="update" path="/system/MatchedPapersTopicHearingSubjectChoice/MatchedPapersTopicHearingSubjectChoice_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicHearingSubjectChoice/MatchedPapersTopicHearingSubjectChoice_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicHearingSubjectChoice/MatchedPapersTopicHearingSubjectChoice_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicHearingSubjectChoice/MatchedPapersTopicHearingSubjectChoice_add.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicHearingSubjectActionForm" input="/business/MatchedPapersTopicHearingSubject_add.jsp"	
+		name="MatchedPapersTopicHearingSubjectActionForm" parameter="act" path="/business/MatchedPapersTopicHearingSubject"
+			scope="request" type="com.business.MatchedPapersTopicHearingSubject.MatchedPapersTopicHearingSubjectAction">
+			<forward name="update" path="/system/MatchedPapersTopicHearingSubject/MatchedPapersTopicHearingSubject_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicHearingSubject/MatchedPapersTopicHearingSubject_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicHearingSubject/MatchedPapersTopicHearingSubject_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicHearingSubject/MatchedPapersTopicHearingSubject_add.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicHearingTypeActionForm" input="/business/MatchedPapersTopicHearingType_add.jsp"	
+		name="MatchedPapersTopicHearingTypeActionForm" parameter="act" path="/business/MatchedPapersTopicHearingType"
+			scope="request" type="com.business.MatchedPapersTopicHearingType.MatchedPapersTopicHearingTypeAction">
+			<forward name="update" path="/system/MatchedPapersTopicHearingType/MatchedPapersTopicHearingType_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicHearingType/MatchedPapersTopicHearingType_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicHearingType/MatchedPapersTopicHearingType_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicHearingType/MatchedPapersTopicHearingType_add.jsp" />
+			<forward name="lyricExl" path="/system/MatchedPapersTopicHearingType/lyric_export.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicReadActionForm" input="/business/MatchedPapersTopicRead_add.jsp"	
+		name="MatchedPapersTopicReadActionForm" parameter="act" path="/business/MatchedPapersTopicRead"
+			scope="request" type="com.business.MatchedPapersTopicRead.MatchedPapersTopicReadAction">
+			<forward name="update" path="/system/MatchedPapersTopicRead/MatchedPapersTopicRead_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicRead/MatchedPapersTopicRead_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicRead/MatchedPapersTopicRead_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicRead/MatchedPapersTopicRead_add.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicReadTypeActionForm" input="/business/MatchedPapersTopicReadType_add.jsp"	
+		name="MatchedPapersTopicReadTypeActionForm" parameter="act" path="/business/MatchedPapersTopicReadType"
+			scope="request" type="com.business.MatchedPapersTopicReadType.MatchedPapersTopicReadTypeAction">
+			<forward name="update" path="/system/MatchedPapersTopicReadType/MatchedPapersTopicReadType_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicReadType/MatchedPapersTopicReadType_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicReadType/MatchedPapersTopicReadType_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicReadType/MatchedPapersTopicReadType_add.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicReadSubjectActionForm" input="/business/MatchedPapersTopicReadSubject_add.jsp"	
+		name="MatchedPapersTopicReadSubjectActionForm" parameter="act" path="/business/MatchedPapersTopicReadSubject"
+			scope="request" type="com.business.MatchedPapersTopicReadSubject.MatchedPapersTopicReadSubjectAction">
+			<forward name="update" path="/system/MatchedPapersTopicReadSubject/MatchedPapersTopicReadSubject_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicReadSubject/MatchedPapersTopicReadSubject_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicReadSubject/MatchedPapersTopicReadSubject_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicReadSubject/MatchedPapersTopicReadSubject_add.jsp" />
+	</action>
+	<action attribute="MatchedPapersTopicLyricActionForm" input="/business/MatchedPapersTopicLyric_add.jsp"	
+		name="MatchedPapersTopicLyricActionForm" parameter="act" path="/business/MatchedPapersTopicLyric"
+			scope="request" type="com.business.MatchedPapersTopicLyric.MatchedPapersTopicLyricAction">
+			<forward name="update" path="/system/MatchedPapersTopicLyric/MatchedPapersTopicLyric_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersTopicLyric/MatchedPapersTopicLyric_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersTopicLyric/MatchedPapersTopicLyric_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersTopicLyric/MatchedPapersTopicLyric_add.jsp" />
+    </action>
+	<action attribute="MatchedWrongRecordActionForm" input="/business/MatchedWrongRecord_add.jsp"	
+		name="MatchedWrongRecordActionForm" parameter="act" path="/business/MatchedWrongRecord"
+			scope="request" type="com.business.MatchedWrongRecord.MatchedWrongRecordAction">
+			<forward name="update" path="/system/MatchedWrongRecord/MatchedWrongRecord_edit.jsp" />
+			<forward name="list" path="/system/MatchedWrongRecord/MatchedWrongRecord_list.jsp" />
+			<forward name="view" path="/system/MatchedWrongRecord/MatchedWrongRecord_view.jsp" />
+			<forward name="add" path="/system/MatchedWrongRecord/MatchedWrongRecord_add.jsp" />
+    </action>
+	<action attribute="MatchedPapersUserActionForm" input="/business/MatchedPapersUser_add.jsp"	
+		name="MatchedPapersUserActionForm" parameter="act" path="/business/MatchedPapersUser"
+			scope="request" type="com.business.MatchedPapersUser.MatchedPapersUserAction">
+			<forward name="update" path="/system/MatchedPapersUser/MatchedPapersUser_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersUser/MatchedPapersUser_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersUser/MatchedPapersUser_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersUser/MatchedPapersUser_add.jsp" />
+   </action>
+   <action attribute="MatchedPapersUserRecordActionForm" input="/business/MatchedPapersUserRecord_add.jsp"	
+		name="MatchedPapersUserRecordActionForm" parameter="act" path="/business/MatchedPapersUserRecord"
+			scope="request" type="com.business.MatchedPapersUserRecord.MatchedPapersUserRecordAction">
+			<forward name="update" path="/system/MatchedPapersUserRecord/MatchedPapersUserRecord_edit.jsp" />
+			<forward name="list" path="/system/MatchedPapersUserRecord/MatchedPapersUserRecord_list.jsp" />
+			<forward name="view" path="/system/MatchedPapersUserRecord/MatchedPapersUserRecord_view.jsp" />
+			<forward name="add" path="/system/MatchedPapersUserRecord/MatchedPapersUserRecord_add.jsp" />
+   </action>
+   
+	<!-- 新题型听力 -->
+	<action attribute="NewQuestionsTypeActionForm" input="/business/NewQuestionsType_add.jsp"	
+		name="NewQuestionsTypeActionForm" parameter="act" path="/business/NewQuestionsType"
+			scope="request" type="com.business.NewQuestionsType.NewQuestionsTypeAction">
+			<forward name="update" path="/system/NewQuestionsType/NewQuestionsType_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsType/NewQuestionsType_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsType/NewQuestionsType_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsType/NewQuestionsType_add.jsp" />
+			<forward name="tree" path="/system/NewQuestionsType/NewQuestionsTypeTree.jsp" />
+			
+    </action>
+	<action attribute="NewQuestionsTypePapersActionForm" input="/business/NewQuestionsTypePapers_add.jsp"	
+		name="NewQuestionsTypePapersActionForm" parameter="act" path="/business/NewQuestionsTypePapers"
+			scope="request" type="com.business.NewQuestionsTypePapers.NewQuestionsTypePapersAction">
+			<forward name="update" path="/system/NewQuestionsTypePapers/NewQuestionsTypePapers_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsTypePapers/NewQuestionsTypePapers_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsTypePapers/NewQuestionsTypePapers_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsTypePapers/NewQuestionsTypePapers_add.jsp" />
+			<forward name="tree" path="/system/NewQuestionsTypePapers/NewQuestionsTypePapersTree.jsp" />
+    		<forward name="newtopic" path="/system/NewQuestionsTypePapers/Newtopic_list.jsp" />
+    		<forward name="lyricExl" path="/system/NewQuestionsTypePapers/lyric_export.jsp" />
+    </action>
+	<action attribute="NewQuestionsPapersTopicChoiceActionForm" input="/business/NewQuestionsPapersTopicChoice_add.jsp"	
+		name="NewQuestionsPapersTopicChoiceActionForm" parameter="act" path="/business/NewQuestionsPapersTopicChoice"
+			scope="request" type="com.business.NewQuestionsPapersTopicChoice.NewQuestionsPapersTopicChoiceAction">
+			<forward name="update" path="/system/NewQuestionsPapersTopicChoice/NewQuestionsPapersTopicChoice_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsPapersTopicChoice/NewQuestionsPapersTopicChoice_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsPapersTopicChoice/NewQuestionsPapersTopicChoice_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsPapersTopicChoice/NewQuestionsPapersTopicChoice_add.jsp" />
+    </action>
+    <action attribute="NewQuestionsPapersTopicActionForm" input="/business/NewQuestionsPapersTopic_add.jsp"	
+		name="NewQuestionsPapersTopicActionForm" parameter="act" path="/business/NewQuestionsPapersTopic"
+			scope="request" type="com.business.NewQuestionsPapersTopic.NewQuestionsPapersTopicAction">
+			<forward name="update" path="/system/NewQuestionsPapersTopic/NewQuestionsPapersTopic_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsPapersTopic/NewQuestionsPapersTopic_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsPapersTopic/NewQuestionsPapersTopic_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsPapersTopic/NewQuestionsPapersTopic_add.jsp" />
+   </action>
+    <action attribute="NewQuestionsPapersTopicTypeActionForm" input="/business/NewQuestionsPapersTopicType_add.jsp"	
+		name="NewQuestionsPapersTopicTypeActionForm" parameter="act" path="/business/NewQuestionsPapersTopicType"
+			scope="request" type="com.business.NewQuestionsPapersTopicType.NewQuestionsPapersTopicTypeAction">
+			<forward name="lyricExl" path="/system/NewQuestionsPapersTopicType/lyric_export.jsp" />
+			<forward name="update" path="/system/NewQuestionsPapersTopicType/NewQuestionsPapersTopicType_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsPapersTopicType/NewQuestionsPapersTopicType_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsPapersTopicType/NewQuestionsPapersTopicType_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsPapersTopicType/NewQuestionsPapersTopicType_add.jsp" />
+   </action>
+   <action attribute="NewQuestionsWrongQuestionActionForm" input="/business/NewQuestionsWrongQuestion_add.jsp"	
+		name="NewQuestionsWrongQuestionActionForm" parameter="act" path="/business/NewQuestionsWrongQuestion"
+			scope="request" type="com.business.NewQuestionsWrongQuestion.NewQuestionsWrongQuestionAction">
+			<forward name="update" path="/system/NewQuestionsWrongQuestion/NewQuestionsWrongQuestion_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsWrongQuestion/NewQuestionsWrongQuestion_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsWrongQuestion/NewQuestionsWrongQuestion_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsWrongQuestion/NewQuestionsWrongQuestion_add.jsp" />
+   </action>
+  <action attribute="NewQuestionsTypePapersUserRecordActionForm" input="/business/NewQuestionsTypePapersUserRecord_add.jsp"	
+		name="NewQuestionsTypePapersUserRecordActionForm" parameter="act" path="/business/NewQuestionsTypePapersUserRecord"
+			scope="request" type="com.business.NewQuestionsTypePapersUserRecord.NewQuestionsTypePapersUserRecordAction">
+			<forward name="update" path="/system/NewQuestionsTypePapersUserRecord/NewQuestionsTypePapersUserRecord_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsTypePapersUserRecord/NewQuestionsTypePapersUserRecord_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsTypePapersUserRecord/NewQuestionsTypePapersUserRecord_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsTypePapersUserRecord/NewQuestionsTypePapersUserRecord_add.jsp" />
+  </action>
+  <action attribute="NewQuestionsPapersTopicLyricActionForm" input="/business/NewQuestionsPapersTopicLyric_add.jsp"	
+		name="NewQuestionsPapersTopicLyricActionForm" parameter="act" path="/business/NewQuestionsPapersTopicLyric"
+			scope="request" type="com.business.NewQuestionsPapersTopicLyric.NewQuestionsPapersTopicLyricAction">
+			<forward name="update" path="/system/NewQuestionsPapersTopicLyric/NewQuestionsPapersTopicLyric_edit.jsp" />
+			<forward name="list" path="/system/NewQuestionsPapersTopicLyric/NewQuestionsPapersTopicLyric_list.jsp" />
+			<forward name="view" path="/system/NewQuestionsPapersTopicLyric/NewQuestionsPapersTopicLyric_view.jsp" />
+			<forward name="add" path="/system/NewQuestionsPapersTopicLyric/NewQuestionsPapersTopicLyric_add.jsp" />
+  </action>
+  <action attribute="NewWrongRecordActionForm" input="/business/NewWrongRecord_add.jsp"	
+		name="NewWrongRecordActionForm" parameter="act" path="/business/NewWrongRecord"
+			scope="request" type="com.business.NewWrongRecord.NewWrongRecordAction">
+			<forward name="update" path="/system/NewWrongRecord/NewWrongRecord_edit.jsp" />
+			<forward name="list" path="/system/NewWrongRecord/NewWrongRecord_list.jsp" />
+			<forward name="view" path="/system/NewWrongRecord/NewWrongRecord_view.jsp" />
+			<forward name="add" path="/system/NewWrongRecord/NewWrongRecord_add.jsp" />
+  </action>
+  <action attribute="NewWordsActionForm" input="/business/NewWords_add.jsp"	
+		name="NewWordsActionForm" parameter="act" path="/business/NewWords"
+			scope="request" type="com.business.NewWords.NewWordsAction">
+			<forward name="update" path="/system/NewWords/NewWords_edit.jsp" />
+			<forward name="list" path="/system/NewWords/NewWords_list.jsp" />
+			<forward name="view" path="/system/NewWords/NewWords_view.jsp" />
+			<forward name="add" path="/system/NewWords/NewWords_add.jsp" />
+  </action>
+  
+	<!-- 词汇 -->
+	<action attribute="CommonTypeActionForm" input="/business/CommonType_add.jsp"	
+		name="CommonTypeActionForm" parameter="act" path="/business/CommonType"
+			scope="request" type="com.business.CommonType.CommonTypeAction">
+			<forward name="update" path="/system/CommonType/CommonType_edit.jsp" />
+			<forward name="list" path="/system/CommonType/CommonType_list.jsp" />
+			<forward name="view" path="/system/CommonType/CommonType_view.jsp" />
+			<forward name="add" path="/system/CommonType/CommonType_add.jsp" />
+			<forward name="tree" path="/system/CommonType/CommonTypeTree.jsp" />
+			<forward name="type" path="/system/CommonType/CommonType_type.jsp" />
+			<forward name="redirect" path="CommonType.do?act=list" />
+   </action>
+   <!-- 常用词汇 -->
+	<action attribute="CommonWordsActionForm" input="/business/CommonWords_add.jsp"	
+		name="CommonWordsActionForm" parameter="act" path="/business/CommonWords"
+			scope="request" type="com.business.CommonWords.CommonWordsAction">
+			<forward name="update" path="/system/CommonWords/CommonWords_edit.jsp" />
+			<forward name="list" path="/system/CommonWords/CommonWords_list.jsp" />
+			<forward name="view" path="/system/CommonWords/CommonWords_view.jsp" />
+			<forward name="add" path="/system/CommonWords/CommonWords_add.jsp" />
+			<forward name="tree" path="/system/CommonWords/CommonWordsTree.jsp" />
+			<forward name="preExl" path="/system/CommonWords/exl.jsp" />
+			<forward name="redirect" path="CommonWords.do?act=list" />
+   </action>
+	<!-- 英语知识点 -->
+	<action attribute="KnowledgePointEnActionForm" input="/business/KnowledgePointEn_add.jsp"	
+		name="KnowledgePointEnActionForm" parameter="act" path="/business/KnowledgePointEn"
+			scope="request" type="com.business.KnowledgePointEn.KnowledgePointEnAction">
+			<forward name="update" path="/system/KnowledgePointEn/KnowledgePointEn_edit.jsp" />
+			<forward name="list" path="/system/KnowledgePointEn/KnowledgePointEn_list.jsp" />
+			<forward name="view" path="/system/KnowledgePointEn/KnowledgePointEn_view.jsp" />
+			<forward name="add" path="/system/KnowledgePointEn/KnowledgePointEn_add.jsp" />
+   </action>
+	<!-- 作业批改 -->
+	<action attribute="HomeworkCorrectingActionForm" input="/business/HomeworkCorrecting_add.jsp"	
+		name="HomeworkCorrectingActionForm" parameter="act" path="/business/HomeworkCorrecting"
+			scope="request" type="com.business.HomeworkCorrecting.HomeworkCorrectingAction">
+			<forward name="update" path="/system/HomeworkCorrecting/HomeworkCorrecting_edit.jsp" />
+			<forward name="list" path="/system/HomeworkCorrecting/HomeworkCorrecting_list.jsp" />
+			<forward name="view" path="/system/HomeworkCorrecting/HomeworkCorrecting_view.jsp" />
+			<forward name="add" path="/system/HomeworkCorrecting/HomeworkCorrecting_add.jsp" />
+			<forward name="check" path="/system/HomeworkCorrecting/HomeworkCorrecting_check.jsp" />
+   </action>
+   <action attribute="HomeworkCorrectingRecordActionForm" input="/business/HomeworkCorrectingRecord_add.jsp"	
+		name="HomeworkCorrectingRecordActionForm" parameter="act" path="/business/HomeworkCorrectingRecord"
+			scope="request" type="com.business.HomeworkCorrectingRecord.HomeworkCorrectingRecordAction">
+			<forward name="update" path="/system/HomeworkCorrectingRecord/HomeworkCorrectingRecord_edit.jsp" />
+			<forward name="list" path="/system/HomeworkCorrectingRecord/HomeworkCorrectingRecord_list.jsp" />
+			<forward name="view" path="/system/HomeworkCorrectingRecord/HomeworkCorrectingRecord_view.jsp" />
+			<forward name="add" path="/system/HomeworkCorrectingRecord/HomeworkCorrectingRecord_add.jsp" />
+   </action>
+   
+   
+   <action attribute="WrongQuestionActionForm" input="/business/WrongQuestion_add.jsp"	
+		name="WrongQuestionActionForm" parameter="act" path="/business/WrongQuestion"
+			scope="request" type="com.business.WrongQuestion.WrongQuestionAction">
+			<forward name="update" path="/system/WrongQuestion/WrongQuestion_edit.jsp" />
+			<forward name="list" path="/system/WrongQuestion/WrongQuestion_list.jsp" />
+			<forward name="view" path="/system/WrongQuestion/WrongQuestion_view.jsp" />
+			<forward name="add" path="/system/WrongQuestion/WrongQuestion_add.jsp" />
+    </action>
+   
+    <action attribute="SystemFeedbackActionForm" input="/business/SystemFeedback_add.jsp"	
+		name="SystemFeedbackActionForm" parameter="act" path="/business/SystemFeedback"
+			scope="request" type="com.business.SystemFeedback.SystemFeedbackAction">
+			<forward name="update" path="/system/SystemFeedback/SystemFeedback_edit.jsp" />
+			<forward name="list" path="/system/SystemFeedback/SystemFeedback_list.jsp" />
+			<forward name="view" path="/system/SystemFeedback/SystemFeedback_view.jsp" />
+			<forward name="add" path="/system/SystemFeedback/SystemFeedback_add.jsp" />
+   </action>
+  
+      <action attribute="WrongQuestionActionForm" input="/business/WrongQuestion_add.jsp"	
+		name="WrongQuestionActionForm" parameter="act" path="/business/Statistics"
+			scope="request" type="com.business.Statistics.StatisticsUserAction">
+			<forward name="userlist" path="/system/Statistics/Statistics_user.jsp" />
+			<forward name="userbook" path="/system/Statistics/Statistics_book.jsp" />
+			<forward name="interface" path="/system/Statistics/Statistics_log.jsp" />
+			<forward name="list" path="/system/open.jsp" />
+ 	 </action>
+   
+   <!-- SEO -->
+   <action attribute="WebConfigActionForm" input="/business/WebConfig_add.jsp"	
+		name="WebConfigActionForm" parameter="act" path="/business/WebConfig"
+			scope="request" type="com.business.WebConfig.WebConfigAction">
+			<forward name="update" path="/system/WebConfig/WebConfig_edit.jsp" />
+			<forward name="list" path="/system/WebConfig/WebConfig_list.jsp" />
+			<forward name="view" path="/system/WebConfig/WebConfig_view.jsp" />
+			<forward name="add" path="/system/WebConfig/WebConfig_add.jsp" />
+   </action>
+   
+   <action attribute="SystemCodeTableActionForm" input="/business/SystemCodeTable_add.jsp"	
+		name="SystemCodeTableActionForm" parameter="act" path="/business/SystemCodeTable"
+			scope="request" type="com.business.SystemCodeTable.SystemCodeTableAction">
+			<forward name="update" path="/system/SystemCodeTable/SystemCodeTable_edit.jsp" />
+			<forward name="list" path="/system/SystemCodeTable/SystemCodeTable_list.jsp" />
+			<forward name="view" path="/system/SystemCodeTable/SystemCodeTable_view.jsp" />
+			<forward name="add" path="/system/SystemCodeTable/SystemCodeTable_add.jsp" />
+  </action>
+   
+   <action attribute="TopSearchQueriesActionForm" input="/business/TopSearchQueries_add.jsp"	
+		name="TopSearchQueriesActionForm" parameter="act" path="/business/TopSearchQueries"
+			scope="request" type="com.business.TopSearchQueries.TopSearchQueriesAction">
+			<forward name="update" path="/system/TopSearchQueries/TopSearchQueries_edit.jsp" />
+			<forward name="list" path="/system/TopSearchQueries/TopSearchQueries_list.jsp" />
+			<forward name="view" path="/system/TopSearchQueries/TopSearchQueries_view.jsp" />
+			<forward name="add" path="/system/TopSearchQueries/TopSearchQueries_add.jsp" />
+  </action>
+  
+  <!-- 简听力 -->
+   <action attribute="JQrTActionForm" input="/business/JQrT_add.jsp"	
+		name="JQrTActionForm" parameter="act" path="/business/JQrT"
+			scope="request" type="com.business.JQrT.JQrTAction">
+			<forward name="update" path="/system/JQrT/JQrT_edit.jsp" />
+			<forward name="list" path="/system/JQrT/JQrT_list.jsp" />
+			<forward name="view" path="/system/JQrT/JQrT_view.jsp" />
+			<forward name="add" path="/system/JQrT/JQrT_add.jsp" />
+	</action>
+	<action attribute="JQrMpthtActionForm" input="/business/JQrMptht_add.jsp"	
+		name="JQrMpthtActionForm" parameter="act" path="/business/JQrMptht"
+			scope="request" type="com.business.JQrMptht.JQrMpthtAction">
+			<forward name="update" path="/system/JQrMptht/JQrMptht_edit.jsp" />
+			<forward name="list" path="/system/JQrMptht/JQrMptht_list.jsp" />
+			<forward name="view" path="/system/JQrMptht/JQrMptht_view.jsp" />
+			<forward name="add" path="/system/JQrMptht/JQrMptht_add.jsp" />
+	</action>
+   <action attribute="JQrMpthscActionForm" input="/business/JQrMpthsc_add.jsp"	
+		name="JQrMpthscActionForm" parameter="act" path="/business/JQrMpthsc"
+			scope="request" type="com.business.JQrMpthsc.JQrMpthscAction">
+			<forward name="update" path="/system/JQrMpthsc/JQrMpthsc_edit.jsp" />
+			<forward name="list" path="/system/JQrMpthsc/JQrMpthsc_list.jsp" />
+			<forward name="view" path="/system/JQrMpthsc/JQrMpthsc_view.jsp" />
+			<forward name="add" path="/system/JQrMpthsc/JQrMpthsc_add.jsp" />
+	</action>
+	<action attribute="JQrMpthsActionForm" input="/business/JQrMpths_add.jsp"	
+		name="JQrMpthsActionForm" parameter="act" path="/business/JQrMpths"
+			scope="request" type="com.business.JQrMpths.JQrMpthsAction">
+			<forward name="update" path="/system/JQrMpths/JQrMpths_edit.jsp" />
+			<forward name="list" path="/system/JQrMpths/JQrMpths_list.jsp" />
+			<forward name="view" path="/system/JQrMpths/JQrMpths_view.jsp" />
+			<forward name="add" path="/system/JQrMpths/JQrMpths_add.jsp" />
+	</action>
+	<action attribute="JQrMpthActionForm" input="/business/JQrMpth_add.jsp"	
+		name="JQrMpthActionForm" parameter="act" path="/business/JQrMpth"
+			scope="request" type="com.business.JQrMpth.JQrMpthAction">
+			<forward name="update" path="/system/JQrMpth/JQrMpth_edit.jsp" />
+			<forward name="list" path="/system/JQrMpth/JQrMpth_list.jsp" />
+			<forward name="view" path="/system/JQrMpth/JQrMpth_view.jsp" />
+			<forward name="add" path="/system/JQrMpth/JQrMpth_add.jsp" />
+	</action>
+	<action attribute="JQrMpActionForm" input="/business/JQrMp_add.jsp"	
+		name="JQrMpActionForm" parameter="act" path="/business/JQrMp"
+			scope="request" type="com.business.JQrMp.JQrMpAction">
+			<forward name="update" path="/system/JQrMp/JQrMp_edit.jsp" />
+			<forward name="list" path="/system/JQrMp/JQrMp_list.jsp" />
+			<forward name="view" path="/system/JQrMp/JQrMp_view.jsp" />
+			<forward name="add" path="/system/JQrMp/JQrMp_add.jsp" />
+			<forward name="tree" path="/system/JQrMp/MatchedPapersTypeTree.jsp" />
+			<forward name="preExl" path="/system/JQrMp/hearing_export.jsp" />
+			
+	</action>
+	<!-- 碎片化 -->
+	<action attribute="JQrFragmentationActionForm" input="/business/JQrFragmentation_add.jsp"	
+		name="JQrFragmentationActionForm" parameter="act" path="/business/JQrFragmentation"
+			scope="request" type="com.business.JQrFragmentation.JQrFragmentationAction">
+			<forward name="update" path="/system/JQrFragmentation/JQrFragmentation_edit.jsp" />
+			<forward name="list" path="/system/JQrFragmentation/JQrFragmentation_list.jsp" />
+			<forward name="view" path="/system/JQrFragmentation/JQrFragmentation_view.jsp" />
+			<forward name="add" path="/system/JQrFragmentation/JQrFragmentation_add.jsp" />
+	</action>
+	<!-- 简听力写作 -->
+	<action attribute="JQrWritingActionForm" input="/business/JQrWriting_add.jsp"	
+		name="JQrWritingActionForm" parameter="act" path="/business/JQrWriting"
+			scope="request" type="com.business.JQrWriting.JQrWritingAction">
+			<forward name="update" path="/system/JQrWriting/JQrWriting_edit.jsp" />
+			<forward name="list" path="/system/JQrWriting/JQrWriting_list.jsp" />
+			<forward name="view" path="/system/JQrWriting/JQrWriting_view.jsp" />
+			<forward name="add" path="/system/JQrWriting/JQrWriting_add.jsp" />
+			<forward name="tree" path="/system/JQrWriting/tree.jsp" />
+	</action>
+	<action attribute="JQrWritingTypeActionForm" input="/business/JQrWritingType_add.jsp"	
+		name="JQrWritingTypeActionForm" parameter="act" path="/business/JQrWritingType"
+			scope="request" type="com.business.JQrWritingType.JQrWritingTypeAction">
+			<forward name="update" path="/system/JQrWritingType/JQrWritingType_edit.jsp" />
+			<forward name="list" path="/system/JQrWritingType/JQrWritingType_list.jsp" />
+			<forward name="view" path="/system/JQrWritingType/JQrWritingType_view.jsp" />
+			<forward name="add" path="/system/JQrWritingType/JQrWritingType_add.jsp" />
+	</action>
+	<!-- 简词汇 -->
+	<action attribute="JCommonTypeActionForm" input="/business/JCommonType_add.jsp"	
+		name="JCommonTypeActionForm" parameter="act" path="/business/JCommonType"
+			scope="request" type="com.business.JCommonType.JCommonTypeAction">
+			<forward name="update" path="/system/JCommonType/JCommonType_edit.jsp" />
+			<forward name="list" path="/system/JCommonType/JCommonType_list.jsp" />
+			<forward name="view" path="/system/JCommonType/JCommonType_view.jsp" />
+			<forward name="add" path="/system/JCommonType/JCommonType_add.jsp" />
+	</action>
+	<action attribute="JCommonWordsActionForm" input="/business/JCommonWords_add.jsp"	
+		name="JCommonWordsActionForm" parameter="act" path="/business/JCommonWords"
+			scope="request" type="com.business.JCommonWords.JCommonWordsAction">
+			<forward name="update" path="/system/JCommonWords/JCommonWords_edit.jsp" />
+			<forward name="list" path="/system/JCommonWords/JCommonWords_list.jsp" />
+			<forward name="view" path="/system/JCommonWords/JCommonWords_view.jsp" />
+			<forward name="add" path="/system/JCommonWords/JCommonWords_add.jsp" />
+			<forward name="tree" path="/system/JCommonWords/tree.jsp" />
+	</action>
+	<!-- 简字幕听力 -->
+	<action attribute="JQrSubtitleListeningLyricActionForm" input="/business/JQrSubtitleListeningLyric_add.jsp"	
+		name="JQrSubtitleListeningLyricActionForm" parameter="act" path="/business/JQrSubtitleListeningLyric"
+			scope="request" type="com.business.JQrSubtitleListeningLyric.JQrSubtitleListeningLyricAction">
+			<forward name="update" path="/system/JQrSubtitleListeningLyric/JQrSubtitleListeningLyric_edit.jsp" />
+			<forward name="list" path="/system/JQrSubtitleListeningLyric/JQrSubtitleListeningLyric_list.jsp" />
+			<forward name="view" path="/system/JQrSubtitleListeningLyric/JQrSubtitleListeningLyric_view.jsp" />
+			<forward name="add" path="/system/JQrSubtitleListeningLyric/JQrSubtitleListeningLyric_add.jsp" />
+	</action>
+	<action attribute="JQrSubtitleListeningActionForm" input="/business/JQrSubtitleListening_add.jsp"	
+		name="JQrSubtitleListeningActionForm" parameter="act" path="/business/JQrSubtitleListening"
+			scope="request" type="com.business.JQrSubtitleListening.JQrSubtitleListeningAction">
+			<forward name="update" path="/system/JQrSubtitleListening/JQrSubtitleListening_edit.jsp" />
+			<forward name="list" path="/system/JQrSubtitleListening/JQrSubtitleListening_list.jsp" />
+			<forward name="view" path="/system/JQrSubtitleListening/JQrSubtitleListening_view.jsp" />
+			<forward name="add" path="/system/JQrSubtitleListening/JQrSubtitleListening_add.jsp" />
+	</action>
+	
+	<!-- 简写作 -->
+	<action attribute="JQrStudyMaterialsWritingActionForm" input="/business/JQrStudyMaterialsWriting_add.jsp"	
+		name="JQrStudyMaterialsWritingActionForm" parameter="act" path="/business/JQrStudyMaterialsWriting"
+			scope="request" type="com.business.JQrStudyMaterialsWriting.JQrStudyMaterialsWritingAction">
+			<forward name="update" path="/system/JQrStudyMaterialsWriting/JQrStudyMaterialsWriting_edit.jsp" />
+			<forward name="list" path="/system/JQrStudyMaterialsWriting/JQrStudyMaterialsWriting_list.jsp" />
+			<forward name="view" path="/system/JQrStudyMaterialsWriting/JQrStudyMaterialsWriting_view.jsp" />
+			<forward name="add" path="/system/JQrStudyMaterialsWriting/JQrStudyMaterialsWriting_add.jsp" />
+	</action>
+	<!-- 简网课 -->
+	<action attribute="JQrNwActionForm" input="/business/JQrNw_add.jsp"	
+		name="JQrNwActionForm" parameter="act" path="/business/JQrNw"
+			scope="request" type="com.business.JQrNw.JQrNwAction">
+			<forward name="update" path="/system/JQrNw/JQrNw_edit.jsp" />
+			<forward name="list" path="/system/JQrNw/JQrNw_list.jsp" />
+			<forward name="view" path="/system/JQrNw/JQrNw_view.jsp" />
+			<forward name="add" path="/system/JQrNw/JQrNw_add.jsp" />
+			<forward name="tree" path="/system/JQrNw/tree.jsp" />
+	</action>
+	<action attribute="JQrNwtActionForm" input="/business/JQrNwt_add.jsp"	
+		name="JQrNwtActionForm" parameter="act" path="/business/JQrNwt"
+			scope="request" type="com.business.JQrNwt.JQrNwtAction">
+			<forward name="update" path="/system/JQrNwt/JQrNwt_edit.jsp" />
+			<forward name="list" path="/system/JQrNwt/JQrNwt_list.jsp" />
+			<forward name="view" path="/system/JQrNwt/JQrNwt_view.jsp" />
+			<forward name="add" path="/system/JQrNwt/JQrNwt_add.jsp" />
+	</action>
+	<!-- 简系列二维码总表 -->
+	<action attribute="JQrCodeActionForm" input="/business/JQrCode_add.jsp"	
+		name="JQrCodeActionForm" parameter="act" path="/business/JQrCode"
+			scope="request" type="com.business.JQrCode.JQrCodeAction">
+			<forward name="update" path="/system/JQrCode/JQrCode_edit.jsp" />
+			<forward name="list" path="/system/JQrCode/JQrCode_list.jsp" />
+			<forward name="view" path="/system/JQrCode/JQrCode_view.jsp" />
+			<forward name="add" path="/system/JQrCode/JQrCode_add.jsp" />
+	</action>
+	
+	<!-- 短信日志 -->
+	<action attribute="SmsLogActionForm" input="/business/SmsLog_add.jsp"	
+		name="SmsLogActionForm" parameter="act" path="/business/SmsLog"
+			scope="request" type="com.business.SmsLog.SmsLogAction">
+			<forward name="update" path="/system/SmsLog/SmsLog_edit.jsp" />
+			<forward name="list" path="/system/SmsLog/SmsLog_list.jsp" />
+			<forward name="view" path="/system/SmsLog/SmsLog_view.jsp" />
+			<forward name="add" path="/system/SmsLog/SmsLog_add.jsp" />
+	</action>
+	
+	<!-- 兑换码使用记录 -->
+	<action attribute="PreferentialCodeUseActionForm" input="/business/PreferentialCodeUse_add.jsp"	
+		name="PreferentialCodeUseActionForm" parameter="act" path="/business/PreferentialCodeUse"
+			scope="request" type="com.business.PreferentialCodeUse.PreferentialCodeUseAction">
+			<forward name="update" path="/system/PreferentialCodeUse/PreferentialCodeUse_edit.jsp" />
+			<forward name="list" path="/system/PreferentialCodeUse/PreferentialCodeUse_list.jsp" />
+			<forward name="view" path="/system/PreferentialCodeUse/PreferentialCodeUse_view.jsp" />
+			<forward name="add" path="/system/PreferentialCodeUse/PreferentialCodeUse_add.jsp" />
+	</action>
+		<!-- 优惠券列表 -->
+		<action attribute="TbCouponActionForm" input="/business/TbCoupon_add.jsp"
+				name="TbCouponActionForm" parameter="act" path="/business/TbCoupon"
+				scope="request" type="com.business.TbCoupon.TbCouponAction">
+			<forward name="update" path="/system/TbCoupon/TbCoupon_edit.jsp" />
+			<forward name="list" path="/system/TbCoupon/TbCoupon_list.jsp" />
+			<forward name="view" path="/system/TbCoupon/TbCoupon_view.jsp" />
+			<forward name="add" path="/system/TbCoupon/TbCoupon_add.jsp" />
+		</action>
+
+		<!-- 优惠码生成列表 -->
+		<action attribute="TbCouponCodeActionForm" input="/business/TbCouponCode_add.jsp"
+				name="TbCouponCodeActionForm" parameter="act" path="/business/TbCouponCode"
+				scope="request" type="com.business.TbCouponCode.TbCouponCodeAction">
+			<forward name="update" path="/system/TbCouponCode/TbCouponCode_edit.jsp" />
+			<forward name="list" path="/system/TbCouponCode/TbCouponCode_list.jsp" />
+			<forward name="view" path="/system/TbCouponCode/TbCouponCode_view.jsp" />
+			<forward name="add" path="/system/TbCouponCode/TbCouponCode_add.jsp" />
+		</action>
+
+		<!-- 优惠码生成列表 -->
+		<action attribute="TbCouponCodeActionForm" input="/business/TbCouponRecord_add.jsp"
+				name="TbCouponRecordActionForm" parameter="act" path="/business/TbCouponRecord"
+				scope="request" type="com.business.TbCouponRecord.TbCouponRecordAction">
+			<forward name="update" path="/system/TbCouponRecord/TbCouponRecord_edit.jsp" />
+			<forward name="list" path="/system/TbCouponRecord/TbCouponRecord_list.jsp" />
+			<forward name="view" path="/system/TbCouponRecord/TbCouponRecord_view.jsp" />
+			<forward name="add" path="/system/TbCouponRecord/TbCouponRecord_add.jsp" />
+		</action>
+
+		<!-- 优惠券绑定列表 -->
+		<action attribute="TbCouponProductActionForm" input="/business/TbCouponProduct_add.jsp"
+				name="TbCouponProductActionForm" parameter="act" path="/business/TbCouponProduct"
+				scope="request" type="com.business.TbCouponProduct.TbCouponProductAction">
+			<forward name="update" path="/system/TbCouponProduct/TbCouponProduct_edit.jsp" />
+			<forward name="list" path="/system/TbCouponProduct/TbCouponProduct_list.jsp" />
+			<forward name="view" path="/system/TbCouponProduct/TbCouponProduct_view.jsp" />
+			<forward name="add" path="/system/TbCouponProduct/TbCouponProduct_add.jsp" />
+			<forward name="book" path="/system/TbCouponProduct/Product_Booklist.jsp" />
+			<forward name="net" path="/system/TbCouponProduct/Product_netWorklist.jsp" />
+		</action>
+		<!-- 批次管理列表 -->
+		<action attribute="SysConfigForm" input="/business/batch_add.jsp"
+				name="SysConfigForm" parameter="act" path="/business/Batch"
+				scope="request" type="com.business.Batch.BatchAction">
+			<forward name="update" path="/system/Batch/batch_edit.jsp" />
+			<forward name="list" path="/system/Batch/batch_list.jsp" />
+			<forward name="add" path="/system/Batch/batch_add.jsp" />
+		</action>
+
+		<!-- 优惠券 -->
+		<action attribute="CouponTemplateForm" name="CouponTemplateForm" path="/business/coupon" parameter="act"
+				scope="request" type="com.business.coupon.CouponAction">
+			<forward name="templateList" path="/system/coupon/template/CouponTemplate_list.jsp" />
+			<forward name="templateAdd" path="/system/coupon/template/CouponTemplate_add.jsp" />
+			<forward name="templateUpdate" path="/system/coupon/template/CouponTemplate_edit.jsp" />
+			<forward name="templateView" path="/system/coupon/template/CouponTemplate_view.jsp" />
+			<forward name="productBookSelector" path="/system/coupon/toolpage/ProductBookSelector.jsp" />
+			<forward name="productNetworkSelector" path="/system/coupon/toolpage/ProductNetworkSelector.jsp" />
+			<forward name="templateRelationList" path="/system/coupon/toolpage/CouponTemplateRelation_list.jsp" />
+			<forward name="templateBookBinder" path="/system/coupon/toolpage/TemplateBookBinder.jsp" />
+			<forward name="templateCarouselBinder" path="/system/coupon/toolpage/TemplateCarouselBinder.jsp" />
+			<forward name="templateNetworkBinder" path="/system/coupon/toolpage/TemplateNetworkBinder.jsp" />
+			<forward name="templateCommunityBinder" path="/system/coupon/toolpage/TemplateCommunityBinder.jsp" />
+		</action>
+
+		<action attribute="CouponCodeForm" name="CouponCodeForm" path="/business/CouponCode" parameter="act"
+				scope="request" type="com.business.coupon.CouponAction">
+			<forward name="list" path="/system/coupon/code/CouponCode_list.jsp" />
+			<forward name="add" path="/system/coupon/code/CouponCode_add.jsp" />
+			<forward name="update" path="/system/coupon/code/CouponCode_edit.jsp" />
+			<forward name="view" path="/system/coupon/code/CouponCode_view.jsp" />
+		</action>
+
+		<action path="/business/apktrack" parameter="act" scope="request" type="com.business.apktrack.ApktrackAction">
+			<forward name="apktrackData" path="/system/apktrack/apktrackData.jsp" />
+			<forward name="channel_list" path="/system/apktrack/apktrack_channel_list.jsp" />
+			<forward name="channel_add" path="/system/apktrack/apktrack_channel_add.jsp" />
+		</action>
+		
+		<!-- 专项讲解 -->
+		<action attribute="TbSpecialExplainForm" name="TbSpecialExplainForm" path="/business/training/explain" parameter="act"
+			scope="request" type="com.business.v2.SpecialExplainAction">
+			<forward name="SpecialExplain_list" path="/system/v2/SpecialExplain/SpecialExplain_list.jsp" />
+			<forward name="SpecialExplain_add" path="/system/v2/SpecialExplain/SpecialExplain_add.jsp" />
+			<forward name="SpecialExplain_update" path="/system/v2/SpecialExplain/SpecialExplain_update.jsp" />
+			<forward name="SpecialExplain_view" path="/system/v2/SpecialExplain/SpecialExplain_view.jsp" />
+			<forward name="NewsSelector" path="/system/v2/SpecialExplain/NewsSelector.jsp" />
+		</action>
+		<!-- 题目纠错 -->
+		<action attribute="TbSpecialFeedbackForm" name="TbSpecialFeedbackForm" path="/business/training/feedback" parameter="act"
+			scope="request" type="com.business.v2.SpecialFeedbackAction">
+			<forward name="SpecialFeedback_list" path="/system/v2/SpecialFeedback/SpecialFeedback_list.jsp" />
+			<forward name="SpecialFeedback_update" path="/system/v2/SpecialFeedback/SpecialFeedback_update.jsp" />
+		</action>
+		<!-- 分析建议 -->
+		<action attribute="TbSpecialSuggestionForm" name="TbSpecialSuggestionForm" path="/business/training/suggestion" parameter="act"
+			scope="request" type="com.business.v2.SpecialSuggestionAction">
+			<forward name="SpecialSuggestion_list" path="/system/v2/SpecialSuggestion/SpecialSuggestion_list.jsp" />
+			<forward name="SpecialSuggestion_add" path="/system/v2/SpecialSuggestion/SpecialSuggestion_add.jsp" />
+			<forward name="SpecialSuggestion_update" path="/system/v2/SpecialSuggestion/SpecialSuggestion_update.jsp" />
+			<forward name="SpecialSuggestion_view" path="/system/v2/SpecialSuggestion/SpecialSuggestion_view.jsp" />
+		</action>
+		<!-- 对象存储相关接口 -->
+		<action path="/business/common/storage" parameter="act" scope="request" type="com.business.common.ObjectStorageAction">
+		</action>
+
+		<!-- 消息管理-->
+
+		<action path="/business/Dlb/message" attribute="TbMessageActionForm" name="TbMessageActionForm"  parameter="act"
+				scope="request" type="com.business.Dlb.Message.TbMessageAction">
+			<forward name="list" path="/system/Dlb/Message/Message_list.jsp"/>
+			<forward name="add" path="/system/Dlb/Message/Message_add.jsp"/>
+			<forward name="preAdd" path="/system/Dlb/Message/Message_add.jsp"/>
+			<forward name="del" path="/system/Dlb/Message/Message_add.jsp"/>
+
+			<forward name="preUpdate" path="/system/Dlb/Message/Message_update.jsp"/>
+			<forward name="update" path="/system/Dlb/Message/Message_update.jsp"/>
+			<forward name="view" path="/system/Dlb/Message/Message_view.jsp"/>
+		</action>
+
+		<!-- 弹窗管理-->
+
+		<action path="/business/Dlb/popup" attribute="TbPopupActionForm" name="TbPopupActionForm"  parameter="act"
+				scope="request" type="com.business.Dlb.Popup.TbPopupAction">
+			<forward name="list" path="/system/Dlb/Popup/Popup_list.jsp"/>
+			<forward name="add" path="/system/Dlb/Popup/Popup_add.jsp"/>
+			<forward name="preAdd" path="/system/Dlb/Popup/Popup_add.jsp"/>
+			<forward name="del" path="/system/Dlb/Popup/Popup_add.jsp"/>
+
+			<forward name="preUpdate" path="/system/Dlb/Popup/Popup_update.jsp"/>
+			<forward name="update" path="/system/Dlb/Popup/Popup_update.jsp"/>
+			<forward name="down" path="/system/Dlb/Popup/Popup_update.jsp"/>
+		</action>
+	</action-mappings>
+	
+	<message-resources parameter="com.easecom.common.framework.struts.ApplicationResources"  />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validation.xml" />
+	</plug-in>
+	
+	</struts-config>

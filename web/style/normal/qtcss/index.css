@@ -1,0 +1,19 @@
+﻿@CHARSET "UTF-8";
+*{ margin:0; padding:0;}
+body{ font-size:9pt;}
+/*#fla_focus{position:relative; height:396px; border:#ccc 1px solid; width:351px; overflow:hidden;}
+#imgb{ height:396px; width:351px; overflow:visible; white-space:nowrap; margin-left:-351px;}
+#imgb img{ height:396px; width:351px; cursor:pointer;}*/
+/*小图部分请自定义，不写到JS里面去*/
+.smallimgs{ position:absolute; height:57px; line-height:57px; width:100%; bottom:0; left:0; filter:alpha(opacity=70); opacity:0.7; background:black url(../img/arr2.gif) -403px top no-repeat;}
+.imgs{display:inline-block; width:60px; height:45px; margin:6px 4px; float:left; border:gray solid 1px; position:relative; _width:58px; overflow:hidden;}
+.imgs img{ width:60px; margin-top:-5px; cursor:pointer;}
+.highlight_img{border:3px #fff solid; width:56px ;height:42px; _height:46px; _width:58px;}
+/*焦点图标题 */
+/*#imgtitle, .it_bg{text-align:center; width:100%; position:absolute; top:0; left:0; color:#fff;}
+.it_bg{ background:black; filter:alpha(opacity=40); opacity:0.4; height:100%; }
+#it_title{font:800 1.5em 宋体; position:relative; padding-top:5px;}
+#it_cont{ white-space:normal; text-align:left; position:relative; padding:5px 15px;}*/
+.numNavi{ position:absolute; height:15px; line-height:15px; width:100%; bottom:10px; left:0; text-align:right;}
+.numNavi span{ background:url(../images/flashbutton.gif) -15px 0 no-repeat; display:inline-block; cursor:pointer; color:#86a2b8; height:15px; width:15px; margin:0 3px; text-align:center; }
+.numNavi span.current{background-position:0 0; color:#fff;}

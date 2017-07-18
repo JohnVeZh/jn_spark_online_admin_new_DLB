@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor</title>
+    <link rel="stylesheet" type="text/css" href="css/wangEditor.min.css">
+    <style type="text/css">
+        #div1 {
+            width: 100%;
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+        <p>Hello,World !</p>
+    </div>
+
+   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="wangEditor/js/wangEditor.js"></script>
+    <script type="text/javascript" src="js/plupload/plupload.full.min.js"></script>
+    <script type="text/javascript" src="js/plupload/i18n/zh_CN.js"></script>
+    <script type="text/javascript" src="js/qiniu.js"></script>
+    <script type="text/javascript">
+
+        function printLog(title, info) {
+            window.console && console.log(title, info);
+        }
+
+        function uploadInit() {
+            var editor = this;
+            var btnId = editor.customUploadBtnId;
+            var containerId = editor.customUploadContainerId;
+
+            var uploader = Qiniu.uploader({
+                runtimes: 'html5,flash,html4',
+                browse_button: btnId,
+                uptoken_url:'http://localhost:8080/business/common/storage.do?act=getQiniuToken',
+
+                domain: 'http://oanafcpi7.bkt.clouddn.com/',
+
+                container: containerId,
+                max_file_size: '100mb',
+                flash_swf_url: 'js/plupload/Moxie.swf',
+                filters: {
+                        mime_types: [
+                          { title: "图片文件", extensions: "jpg,gif,png,bmp" }
+                        ]
+                },
+                max_retries: 3,
+                dragdrop: true,
+                drop_element: 'editor-container',
+                chunk_size: '4mb',
+                auto_start: true,
+                init: {
+                    'FilesAdded': function(up, files) {
+                        plupload.each(files, function(file) {
+
+                            printLog('on FilesAdded');
+                        });
+                    },
+                    'BeforeUpload': function(up, file) {
+
+                        printLog('on BeforeUpload');
+                    },
+                    'UploadProgress': function(up, file) {
+
+                        editor.showUploadProgress(file.percent);
+                    },
+                    'FileUploaded': function(up, file, info) {
+
+                        printLog(info);
+
+                        
+                        var domain = up.getOption('domain');
+                        var res = $.parseJSON(info);
+                        var sourceLink = domain + res.key;
+                        printLog(sourceLink);
+
+                        editor.command(null, 'insertHtml', '<img src="' + sourceLink + '" style="max-width:100%;"/>')
+                    },
+                    'Error': function(up, err, errTip) {
+
+                        printLog('on Error');
+                    },
+                    'UploadComplete': function() {
+                        printLog('on UploadComplete');
+                        editor.hideUploadProgress();
+                    }
+
+                }
+            });
+
+        }
+        var editor = new wangEditor('div1');
+		 editor.config.menus = [
+        'source',
+        '|',
+        'bold',
+        'underline',
+        'italic',
+        'strikethrough',
+        'eraser',
+        'forecolor',
+        'bgcolor',
+        '|',
+        'quote',
+        'fontfamily',
+        'fontsize',
+        'head',
+        'unorderlist',
+        'orderlist',
+        'alignleft',
+        'aligncenter',
+        'alignright',
+        '|',
+        'link',
+        'unlink',
+        'table',
+        'emotion',
+        '|',
+        'img',
+        'video',
+        'location',
+        'insertcode',
+        '|',
+        'undo',
+        'redo',
+        'fullscreen',
+		'lineheight',
+		'indent'
+		];
+        editor.config.customUpload = true;
+		editor.config.customUploadInit = uploadInit;
+	   
+        editor.create();
+    </script>
+</body>
+</html>

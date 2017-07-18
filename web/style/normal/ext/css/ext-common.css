@@ -1,0 +1,111 @@
+﻿.addButton {
+	background-image: url(../icons/add.gif) !important;
+}
+
+.editButton {
+	background-image: url(../icons/edit.gif) !important;
+}
+
+.delButton {
+	background-image: url(../icons/delete.gif) !important;
+}
+
+.viewButton {
+	background-image: url(../icons/view.gif) !important;
+}
+
+.saveButton {
+	background-image: url(../icons/save.gif) !important;
+}
+
+.backButton {
+	background-image: url(../icons/plugin.gif) !important;
+}
+.optionButton {
+	background-image: url(../icons/folder_explore.png) !important;
+}
+.downButton {
+	background-image: url(../icons/folder_go.png) !important;
+}
+.printButton {
+	background-image: url(../icons/iconPrint.gif) !important;
+}
+.structButton {
+	background-image: url(../icons/grid.png) !important;
+}
+.auditButton {
+	background-image: url(../icons/application_go.png) !important;
+}
+
+.pluginButton {
+	background-image: url(../icons/plugin.gif) !important;
+}
+
+.cancelButton {
+	background-image: url(../icons/cross.gif) !important;
+}
+.excelButton {
+	background-image: url(../icons/page_white_excel.png) !important;
+}
+.detailButton {
+	background-image: url(../icons/folder_table.png) !important;
+}
+.engineButton {
+	background-image: url(../icons/folder_wrench.png) !important;
+}
+
+.x-grid3-hd-row td,.x-grid3-row td,.x-grid3-summary-row td{
+	font:normal 11px arial,tahoma,helvetica,sans-serif;
+	-moz-outline:none;
+	-moz-user-focus:normal;
+	border-left:1px solid #eee;
+}
+
+.x-grid3-hd-row td {
+    line-height:15px;
+    vertical-align:middle;
+    border-left:1px solid #eee;
+    border-right:1px solid #d0d0d0;
+    background-color:#DFE8F6;
+}
+
+.x-grid3-row-selected {
+	background: #BDD3F7 !important;
+	border:1px;
+}
+
+/////////////////gridSummary.js css//////////////////////////////
+.x-grid3-summary-row {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	color: #333;
+	background: #f1f2f4;
+}
+.x-grid3-summary-row .x-grid3-cell-inner {
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+.x-grid3-cell-first .x-grid3-cell-inner {
+	padding-left: 16px;
+}
+.x-grid-hide-summary .x-grid3-summary-row {
+	display: none;
+}
+.x-grid3-summary-msg {
+	padding: 4px 16px;
+	font-weight: bold;
+}
+
+/////////////////////end gridSummary.js css/////////////////////////////////////
+
+////////////////////gird row color//////////////////////////
+.blue-row .x-grid3-cell-inner{   
+    color:blue;   
+}   
+.red-row .x-grid3-cell-inner{   
+    color:red;   
+}   
+.green-row .x-grid3-cell-inner{   
+    color:green;   
+}
+//////////////////// end gird row color//////////////////////////
