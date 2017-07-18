@@ -881,7 +881,7 @@ public class TbQuestionListeningAction extends BaseAction {
     }
 
     /**
-     * 批量导入
+     * 专项批量导入
      * @param mapping
      * @param form
      * @param request
@@ -1100,4 +1100,34 @@ public class TbQuestionListeningAction extends BaseAction {
         }
         return null;
     }
+
+    /**
+     * 试卷批量导入
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    public ActionForward ExcelImport2(ActionMapping mapping,ActionForm form, HttpServletRequest request,HttpServletResponse response) throws Exception {
+        SessionContainer sessionContainer = (SessionContainer) request.getSession().getAttribute("SessionContainer");
+        if (null == sessionContainer)
+            sessionContainer = new SessionContainer();
+        TbQuestionListeningActionForm listeningActionForm = (TbQuestionListeningActionForm) form;
+        FormFile file = listeningActionForm.getFile();
+        InputStream inputStream = file.getInputStream();
+
+        try{
+            Listening listening = new Listening();
+            Map<TbSpecialCatalog, List<Map<TbSpecialCatalog, List<Map<TbQuestionListening, List<Map<TbQuestionListeningQuestion, List<TbQuestionListeningQuestionOption>>>>>>>> listMap = listening.readFile(inputStream);
+            List<BaseModel> list1 = listening.parseData2(listMap);
+            TT.save(list1);
+            return list(mapping,form, request,response);
+                   } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

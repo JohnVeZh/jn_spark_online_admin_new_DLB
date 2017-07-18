@@ -189,6 +189,7 @@ public class QuestionTranslationMgr extends AbstractHibernateDAO{
 		String analysis=null;
 		String reference=null;
 		String content=null;
+		String target=null;
 		
 		if(vo.getTitle()!=null && !vo.getTitle().equals("")){
 			title="\""+vo.getTitle()+"\"";
@@ -203,8 +204,11 @@ public class QuestionTranslationMgr extends AbstractHibernateDAO{
 		if(vo.getContent()!=null && !vo.getContent().equals("")){
 			content="\""+vo.getContent()+"\"";
 		}
+		if (vo.getTarget()!=null && !vo.getTarget().equals("")){
+			target="\""+vo.getTarget()+"\"";
+		}
 		String translationSQL="INSERT INTO tb_question_translation(id,title,content,reference,analysis,analysis_url,target,is_del,create_time)VALUES"
-				+ "('"+vo.getId()+"',"+title+","+content+","+reference+","+analysis+","+getFormatField(vo.getAnalysisUrl())+",1,0,'"+DateUtils.getCurrDateTimeStr()+"')";
+				+ "('"+vo.getId()+"',"+title+","+content+","+reference+","+analysis+","+getFormatField(vo.getAnalysisUrl())+","+target+",0,'"+DateUtils.getCurrDateTimeStr()+"')";
 		uploadAdd(specialSQL,trainingSQL,translationSQL);
 	}
 	public void uploadAdd(String specialSQL, String trainingSQL, String translationSQL) throws SQLException, SystemException {

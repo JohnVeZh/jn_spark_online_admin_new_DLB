@@ -900,4 +900,33 @@ public class TbQuestionReadingAction  extends BaseAction {
         }
         return null;
     }
+
+    /**
+     * 试卷批量导入
+     * @param mapping
+     * @param form
+     * @param request
+     * @param response
+     * @return
+     */
+    public ActionForward ExcelImport2(ActionMapping mapping,ActionForm form, HttpServletRequest request,HttpServletResponse response) throws Exception {
+        SessionContainer sessionContainer = (SessionContainer) request.getSession().getAttribute("SessionContainer");
+        if (null == sessionContainer)
+            sessionContainer = new SessionContainer();
+        //获取excle文件
+        TbQuestionReadingActionForm readingActionForm = (TbQuestionReadingActionForm) form;
+        FormFile file = readingActionForm.getFile();
+        InputStream inputStream = file.getInputStream();
+
+        try{
+            Reading reading = new Reading();
+            Map<TbSpecialCatalog, List<Map<TbSpecialCatalog, List<Map<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>>>>>> listMap = reading.readFile(inputStream);
+            List<BaseModel> list1 = reading.parseData2(listMap);
+            TT.save(list1);
+            return list(mapping,form, request,response);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -450,7 +450,7 @@ public class QuestionTranslationAction extends BaseAction{
 	}
 	
 	/**
-	 * 批量导入
+	 * 专项批量导入
 	 * @param actionMapping
 	 * @param actionForm
 	 * @param request
@@ -495,6 +495,7 @@ public class QuestionTranslationAction extends BaseAction{
 				
 				for (int j = 2; j < hssfsheet.getPhysicalNumberOfRows(); j++) {
 					TbQuestionTranslation tqw=new TbQuestionTranslation();
+					tqw.setTarget("1");
 					hssfrow = hssfsheet.getRow(j);
 					// 判断是否还存在需要导入的数据
 					if (hssfrow == null) {
@@ -549,17 +550,118 @@ public class QuestionTranslationAction extends BaseAction{
 		}
 		return null;
 	  }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	/**
+	 * 试卷批量导入
+	 * @param actionMapping
+	 * @param actionForm
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
+	public ActionForward QuestionTranslationUpload2(ActionMapping actionMapping,ActionForm actionForm, HttpServletRequest request,HttpServletResponse response) throws Exception {
+		SessionContainer sessionContainer = (SessionContainer) request.getSession().getAttribute("SessionContainer");
+		if (null == sessionContainer)
+			sessionContainer = new SessionContainer();
+		Map m = new HashMap();
+		// 获取excel 文件
+		TbQuestionTranslationActionForm fm = (TbQuestionTranslationActionForm) actionForm;
+		//文件
+		FormFile formfile = fm.getFile();
+		//文件名
+		String filename = formfile.toString();
+		//文件类型 .xls  .xlsx
+		String fileType = filename.substring(filename.lastIndexOf(".") + 1);
+
+		InputStream inputstream = formfile.getInputStream();
+		Workbook wb=null;
+		int input = 0; // 导入记数
+		String type="";
+		try {
+			if (fileType.equals("xls")) {
+				wb = new HSSFWorkbook(inputstream);
+			} else if (fileType.equals("xlsx")) {
+				wb = new XSSFWorkbook(inputstream);
+			} else {
+				throw new Exception("读取的不是excel文件");
+			}
+			// 通过得到的文件输入流inputstream创建一个HSSFWordbook对象
+			//XSSFWorkbook hssfworkbook = new XSSFWorkbook(inputstream);
+			Sheet hssfsheet = wb.getSheetAt(0);// 第一个工作表
+			Row hssfrow = hssfsheet.getRow(0);// 第一行
+			// 遍历该表格中所有的工作表，i表示工作表的数量 getNumberOfSheets表示工作表的总数
+			for (int i = 0; i < wb.getNumberOfSheets(); i++) {
+				hssfsheet = wb.getSheetAt(i);
+				// 遍历该行所有的行,j表示行数 getPhysicalNumberOfRows行的总数
+
+				for (int j = 2; j < hssfsheet.getPhysicalNumberOfRows(); j++) {
+					TbQuestionTranslation tqw=new TbQuestionTranslation();
+					tqw.setTarget("2");
+					hssfrow = hssfsheet.getRow(j);
+					// 判断是否还存在需要导入的数据
+					if (hssfrow == null) {
+						System.out.println("这里已没有数据，在第" + i + "列,第" + j + "行");
+						break;
+					}
+					/** 将EXCEL中的第 j 行，第一列的值插入到实例中 */
+					if(hssfrow.getCell((short) 0)!=null){
+						type=hssfrow.getCell((short) 0).getStringCellValue().trim();
+					}
+					if(hssfrow.getCell((short) 1)!=null){
+						tqw.setName(hssfrow.getCell((short) 1).getStringCellValue().trim());
+					}
+					if(hssfrow.getCell((short) 2)!=null){
+						tqw.setTitle(hssfrow.getCell((short) 2).getStringCellValue().trim());
+					}
+					if(hssfrow.getCell((short) 3)!=null){
+						tqw.setContent(hssfrow.getCell((short) 3).getStringCellValue().trim());
+					}
+					if(hssfrow.getCell((short) 4)!=null){
+						tqw.setReference(hssfrow.getCell((short) 4).getStringCellValue().trim());
+					}
+					if(hssfrow.getCell((short) 5)!=null){
+						tqw.setAnalysis(hssfrow.getCell((short) 5).getStringCellValue().trim());
+					}
+					if(hssfrow.getCell((short) 6)!=null){
+						tqw.setAnalysisUrl(hssfrow.getCell((short) 6).getStringCellValue().trim());
+					}
+					if(hssfrow.getCell((short) 7)!=null){
+						tqw.setSortOrder(hssfrow.getCell((short) 7).getStringCellValue().trim());
+					}
+					String pid="";
+					if(type.equals("01")){
+						pid="0104";
+					}else if(type.equals("02")){
+						pid="0204";
+					}
+					if(pid!=null && !pid.equals("")){
+						mgr.UploadAdd(pid,tqw);
+					}
+					// 导入成功加1
+					input++;
+				}
+			}
+			m.put("result", true);
+			JsonUtils.outputJsonResponse(response, m);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			m.put("false", true);
+			JsonUtils.outputJsonResponse(response, m);
+		}
+		return null;
+	}
+
+
+
+
+
+
+
+
+
+
 	/**
 	 * sql拼接去''
 	 * @param obj
