@@ -45,7 +45,8 @@ $.fn.extend({
 					{title: "图片文件", extensions: "jpg,gif,png,bmp"}
 				]
 			},
-			max_retries: 0,
+            unique_names: true, //生成唯一文件名
+            max_retries: 0,
 			dragdrop: true,
 			drop_element: config.dragId,
 			chunk_size: '4mb',

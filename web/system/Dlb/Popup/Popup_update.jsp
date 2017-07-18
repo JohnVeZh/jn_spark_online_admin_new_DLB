@@ -57,7 +57,7 @@
                 top.Dialog.alert("“失效时间”必须晚于“生效时间");
                 return;
             }
-            if(!($("#imgPath").val())){
+            if(!($("#img").val())){
                 top.Dialog.alert("请上传图片");
                 return;
             }
@@ -114,7 +114,7 @@
 							上传图片：
 						</td>
 						<td width="40%" align="left">
-							<input id="imgPath" type="text" style="display: none" name="img" id="img" class="validate[required] iptClass" required="required" value="${m.img}"/>
+							<input  type="text" style="display: none" name="img" id="img" class="validate[required] iptClass" required="required" value="${m.img}"/>
 							<div style="float: left">
 								<input id="uploadImgBtn" type="button" value="上传并预览" />
 								<span class="star">最大为3M</span>&nbsp;

@@ -204,6 +204,74 @@ public class Reading {
 		}
 		return list;
 	}
+
+	public List<BaseModel> parseData2(Map<TbSpecialCatalog, List<Map<TbSpecialCatalog, List<Map<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>>>>>> typeMap) {
+		List<BaseModel> list = new ArrayList<BaseModel>();
+		for(Map.Entry<TbSpecialCatalog, List<Map<TbSpecialCatalog, List<Map<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>>>>>> typeItem : typeMap.entrySet()) {
+			TbSpecialCatalog type = typeItem.getKey();
+			String section = type.getId();
+			String typeId = getTypeIdBySection(section, type.getName());
+			List<Map<TbSpecialCatalog, List<Map<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>>>>> catList = typeItem.getValue();
+			for(int i=0; i<catList.size(); i++) {
+				Map<TbSpecialCatalog, List<Map<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>>>> catMap = catList.get(i);
+				List<TbSpecialCatalog> catList1 = new ArrayList<TbSpecialCatalog>(catMap.keySet());
+				Collections.sort(catList1, new Comparator<TbSpecialCatalog>() {
+					public int compare(TbSpecialCatalog o1, TbSpecialCatalog o2) {
+						return o1.getSortOrder()>o2.getSortOrder() ? 1 : -1;
+					}
+				});
+				for(TbSpecialCatalog cat : catList1) {
+					String catId = TT.nextCatId(typeId, 6);
+					cat.setId(catId);
+					cat.setPId(typeId);
+					if(TT.INTERNAL_SORT) {
+						cat.setSortOrder(TT.nextCatOrder(typeId));
+					}
+					cat.setIsDel("0");
+					cat.setCreateTime(new Date());
+					list.add(cat);
+					List<Map<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>>> readList = catMap.get(cat);
+					for(int j=0; j<readList.size(); j++) {
+						Map<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>> readMap = readList.get(j);
+						for(Map.Entry<TbQuestionReading, List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>>> readItem : readMap.entrySet()) {
+							TbQuestionReading read = readItem.getKey();
+							String trainingId = TT.uuid();
+							read.setId(trainingId);
+							read.setTarget("2");
+							read.setIsDel("0");
+							read.setCreateTime(new Date());
+							list.add(read);
+							TbSpecialTraining train = new TbSpecialTraining(TT.uuid());
+							train.setSection(section);
+							train.setCatalogId(catId);
+							train.setTrainingType("2");
+							train.setTrainingId(trainingId);
+							train.setSortOrder(TT.nextTrainOrder(catId));
+							list.add(train);
+							List<Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>>> questionList = readItem.getValue();
+							for(int k=0; k<questionList.size(); k++) {
+								Map<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>> questionMap = questionList.get(k);
+								for(Map.Entry<TbQuestionReadingQuestion, List<TbQuestionReadingQuestionOption>> questionItem : questionMap.entrySet()) {
+									TbQuestionReadingQuestion question = questionItem.getKey();
+									String questionId = TT.uuid();
+									question.setId(questionId);
+									question.setReadingId(trainingId);
+									list.add(question);
+									List<TbQuestionReadingQuestionOption> optionList = questionItem.getValue();
+									for(TbQuestionReadingQuestionOption option : optionList) {
+										option.setId(TT.uuid());
+										option.setQuestionId(questionId);
+										list.add(option);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return list;
+	}
 	
 	private String getTypeIdBySection(String section, String code) {
 

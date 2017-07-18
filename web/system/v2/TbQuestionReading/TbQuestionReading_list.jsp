@@ -148,11 +148,16 @@
 							class="img_add"></span>
 					</a>
 						&nbsp;&nbsp;
-					<a id="" title="批量导入"
+					<a id="" title="专项批量导入"
 					   href="javascript:;" onclick="top.Dialog.open({URL:'<%=path%>/system/v2/TbQuestionReading/TbQuestionReading_export.jsp',Title:'阅读专区',Width:400,Height:200});"> <span
-							class="img_xls"></span>批量导入
+							class="img_xls"></span>专项批量导入
 					</a>
 						&nbsp;&nbsp;
+					<a id="" title="试卷批量导入"
+					   href="javascript:;" onclick="top.Dialog.open({URL:'<%=path%>/system/v2/TbQuestionReading/HomeworkReading_export.jsp',Title:'阅读专区',Width:400,Height:200});"> <span
+							class="img_xls"></span>试卷批量导入
+					</a>
+					&nbsp;&nbsp;
 					<a id="" title="模板下载"
 					   href="<%=path%>/business/TbQuestionReading.do?act=fileDownload&fileName=阅读.xls&filePath=/template/training/阅读.xls" >
 							模板下载
