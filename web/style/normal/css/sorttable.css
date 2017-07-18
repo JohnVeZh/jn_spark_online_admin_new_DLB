@@ -1,0 +1,44 @@
+﻿.sort-table {font-size:12px;
+	font:		Icon;
+	border:		1px Solid ThreeDShadow;
+	background:	Window;
+	color:		WindowText;
+}
+
+.sort-table thead {font-size:12px;
+	background:	ButtonFace;
+}
+
+.sort-table td {font-size:12px;
+	padding:	2px 5px;
+}
+
+.sort-table thead td {font-size:12px;
+	border:			1px solid;
+	border-color:	ButtonHighlight ButtonShadow
+					ButtonShadow ButtonHighlight;
+	cursor:			default;
+}
+
+.sort-table thead td:active {font-size:12px;
+	border-color:	ButtonShadow ButtonHighlight 
+					ButtonHighlight ButtonShadow;
+	padding:		3px 4px 1px 6px;
+}
+
+.sort-arrow {font-size:12px;
+	width:					11px;
+	height:					11px;
+	background-position:	center center;
+	background-repeat:		no-repeat;
+	margin:					0 2px;
+}
+
+.sort-arrow.descending {font-size:12px;
+	background-image:		url("../images/sort_down.gif");
+	
+}
+
+.sort-arrow.ascending {font-size:12px;
+	background-image:		url("../images/sort_up.gif");
+}

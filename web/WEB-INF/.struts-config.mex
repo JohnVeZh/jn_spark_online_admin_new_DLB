@@ -1,0 +1,1813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/system/sysOrg.do" location="2272,3049" dimension="219,88" />
+  <StrutsActivity path="/system/sysUser.do" location="1483,1601" dimension="223,88" />
+  <StrutsActivity path="/login.do" location="44,897" dimension="209,88" />
+  <StrutsActivity path="/system/sysrole.do" location="641,3351" dimension="222,88" />
+  <StrutsActivity path="/system/sysFunction.do" location="1955,3351" dimension="242,88" />
+  <StrutsActivity path="/countSysUser.do" location="6950,250" dimension="254,92" />
+  <StrutsActivity path="/base/consumer.do" location="5450,3550" dimension="278,104" />
+  <StrutsActivity path="/base/consumerin.do" location="3650,3950" dimension="278,104" />
+  <StrutsActivity path="/base/consumerme.do" location="5450,3950" dimension="326,104" />
+  <StrutsActivity path="/base/meeting.do" location="6650,50" dimension="267,104" />
+  <StrutsActivity path="/base/search.do" location="7250,3950" dimension="267,104" />
+  <StrutsActivity path="/base/vipcount.do" location="7550,1150" dimension="331,104" />
+  <StrutsActivity path="/base/eardetails.do" location="8450,3450" dimension="331,104" />
+  <StrutsActivity path="/base/product.do" location="3950,50" dimension="264,104" />
+  <StrutsActivity path="/base/order.do" location="4550,50" dimension="313,104" />
+  <StrutsActivity path="/base/achiev.do" location="650,1250" dimension="292,104" />
+  <StrutsActivity path="/base/sanction.do" location="8150,1150" dimension="268,104" />
+  <StrutsActivity path="/base/checkSec.do" location="8450,50" dimension="303,104" />
+  <StrutsActivity path="/base/excel.do" location="3050,1250" dimension="248,104" />
+  <StrutsActivity path="/base/home.do" location="3650,1350" dimension="254,104" />
+  <StrutsActivity path="/onlineuser.do" location="8450,1350" dimension="283,104" />
+  <StrutsActivity path="DialogBox;6" location="1390,5063" dimension="126,75" />
+  <StrutsActivity path="prelogin;6" location="74,722" dimension="150,75" />
+  <StrutsActivity path="/system/sysorgupdate.jsp" location="1582,3257" dimension="155,49" />
+  <StrutsActivity path="/system/sysorgfrm.jsp" location="2450,1250" dimension="161,53" />
+  <StrutsActivity path="/system/sysorgtree.jsp" location="1837,3257" dimension="141,49" />
+  <StrutsActivity path="/sqt/logoadd.jsp" location="6650,2850" dimension="136,48" />
+  <StrutsActivity path="/system/sysorglist.jsp" location="2315,3257" dimension="134,49" />
+  <StrutsActivity path="/system/sysorgview.jsp" location="2549,3257" dimension="143,49" />
+  <StrutsActivity path="/system/sysorgadd.jsp" location="2792,3257" dimension="139,49" />
+  <StrutsActivity path="/sqt/logolist.jsp" location="4250,2550" dimension="142,48" />
+  <StrutsActivity path="/sqt/usermanager.jsp" location="3050,750" dimension="160,48" />
+  <StrutsActivity path="/system/sysuserupdate.jsp" location="0,1929" dimension="160,49" />
+  <StrutsActivity path="/system/sysusercfgrolelist.jsp" location="2750,2350" dimension="220,48" />
+  <StrutsActivity path="/system/modifypd.jsp" location="6950,2450" dimension="148,50" />
+  <StrutsActivity path="/system/sysusercheckcfglist.jsp" location="3050,150" dimension="226,48" />
+  <StrutsActivity path="sysUser.do" location="4850,2450" dimension="106,72" />
+  <StrutsActivity path="/system/sysuserlist.jsp" location="772,1929" dimension="139,49" />
+  <StrutsActivity path="/system/sysuseradd.jsp" location="1011,1929" dimension="144,49" />
+  <StrutsActivity path="/system/sysusercheckcfgtree.jsp" location="5150,2350" dimension="226,48" />
+  <StrutsActivity path="/system/importExcel.jsp" location="350,1250" dimension="170,53" />
+  <StrutsActivity path="/system/selectenterprise.jsp" location="4550,2450" dimension="208,48" />
+  <StrutsActivity path="/system/org_tree.jsp" location="5750,150" dimension="131,49" />
+  <StrutsActivity path="/system/sysusertree.jsp" location="2046,1929" dimension="146,49" />
+  <StrutsActivity path="/system/dzbqyview.jsp" location="6050,150" dimension="166,48" />
+  <StrutsActivity path="/system/dzbgsview.jsp" location="350,150" dimension="166,48" />
+  <StrutsActivity path="/system/displayqyuser.jsp" location="6950,450" dimension="169,50" />
+  <StrutsActivity path="/system/enterpriselist.jsp" location="6050,50" dimension="196,48" />
+  <StrutsActivity path="/system/sysmainuserupdate.jsp" location="4550,2750" dimension="214,48" />
+  <StrutsActivity path="/system/insertuserback.jsp" location="4550,750" dimension="196,48" />
+  <StrutsActivity path="/login.jsp" location="0,1085" dimension="73,49" />
+  <StrutsActivity path="/index.jsp" location="1550,950" dimension="88,53" />
+  <StrutsActivity path="/system/roleupdate.jsp" location="0,3559" dimension="141,49" />
+  <StrutsActivity path="/system/rolelist.jsp" location="468,3559" dimension="120,49" />
+  <StrutsActivity path="/system/rolefunview.jsp" location="5450,150" dimension="178,48" />
+  <StrutsActivity path="/system/roleadd.jsp" location="917,3559" dimension="125,49" />
+  <StrutsActivity path="/system/rolefuncfg.jsp" location="1142,3559" dimension="138,49" />
+  <StrutsActivity path="/system/sysfunctionupdate.jsp" location="1325,3559" dimension="178,49" />
+  <StrutsActivity path="/system/sysfunctiontree.jsp" location="1603,3559" dimension="164,49" />
+  <StrutsActivity path="/system/sysfunctionlist.jsp" location="1867,3559" dimension="157,49" />
+  <StrutsActivity path="/system/sysfunctionview.jsp" location="2124,3559" dimension="166,49" />
+  <StrutsActivity path="/system/sysfunctionadd.jsp" location="2390,3559" dimension="162,49" />
+  <StrutsActivity path="/system/count_gs.jsp" location="1850,1050" dimension="149,50" />
+  <StrutsActivity path="/consumerUpdate.jsp" location="8150,150" dimension="157,53" />
+  <StrutsActivity path="/consumerSearchResult.jsp" location="7550,350" dimension="188,53" />
+  <StrutsActivity path="/consumerAlllist.jsp" location="7850,350" dimension="144,53" />
+  <StrutsActivity path="/consumerDetail.jsp" location="8150,350" dimension="147,53" />
+  <StrutsActivity path="/consumerAdd.jsp" location="7550,750" dimension="138,53" />
+  <StrutsActivity path="/consumerInviteUpdate.jsp" location="5150,3950" dimension="188,53" />
+  <StrutsActivity path="/consumerInviteAlllist.jsp" location="4850,3950" dimension="175,53" />
+  <StrutsActivity path="/consumerInviteAdd.jsp" location="6950,3950" dimension="169,53" />
+  <StrutsActivity path="/consumerMeetingUpdate.jsp" location="6050,3950" dimension="205,53" />
+  <StrutsActivity path="/consumerMeetingAlllist.jsp" location="6350,3950" dimension="192,53" />
+  <StrutsActivity path="/meetingUpdate.jsp" location="5750,1150" dimension="147,53" />
+  <StrutsActivity path="/meetingAlllist.jsp" location="6050,1150" dimension="134,53" />
+  <StrutsActivity path="/searchuserone.jsp" location="8450,2850" dimension="142,53" />
+  <StrutsActivity path="/searchconsumer.jsp" location="4250,4050" dimension="152,53" />
+  <StrutsActivity path="/consumerMeetingAdd.jsp" location="6950,1150" dimension="186,53" />
+  <StrutsActivity path="/searchmeetingone.jsp" location="8450,3250" dimension="164,53" />
+  <StrutsActivity path="/searchconsumerone.jsp" location="8450,3050" dimension="174,53" />
+  <StrutsActivity path="/searchuser.jsp" location="6350,1150" dimension="120,53" />
+  <StrutsActivity path="/searchmeeting.jsp" location="6650,1150" dimension="142,53" />
+  <StrutsActivity path="/vipconsumercount.jsp" location="6650,4050" dimension="163,53" />
+  <StrutsActivity path="/vipconsumercountlist.jsp" location="6350,4150" dimension="179,53" />
+  <StrutsActivity path="/earningsUpdate.jsp" location="8450,1650" dimension="150,53" />
+  <StrutsActivity path="/earningsdetailscount.jsp" location="8450,1850" dimension="177,53" />
+  <StrutsActivity path="/earningsdetailslist.jsp" location="8450,3650" dimension="161,53" />
+  <StrutsActivity path="/productUpdate.jsp" location="7850,750" dimension="146,53" />
+  <StrutsActivity path="/productlist.jsp" location="8150,750" dimension="119,53" />
+  <StrutsActivity path="/productView.jsp" location="7550,950" dimension="130,53" />
+  <StrutsActivity path="/productAdd.jsp" location="7250,1150" dimension="127,53" />
+  <StrutsActivity path="/consumerOrderUpdate.jsp" location="7850,950" dimension="192,53" />
+  <StrutsActivity path="/userlist1.jsp" location="8450,350" dimension="105,53" />
+  <StrutsActivity path="/systemDetail.jsp" location="8150,950" dimension="130,53" />
+  <StrutsActivity path="/consumerAlllist1.jsp" location="1850,1150" dimension="151,53" />
+  <StrutsActivity path="/productOrderList.jsp" location="2750,1150" dimension="157,53" />
+  <StrutsActivity path="/consumerOrderlist.jsp" location="3950,1150" dimension="165,53" />
+  <StrutsActivity path="/consumerOrderView.jsp" location="4250,1150" dimension="176,53" />
+  <StrutsActivity path="/consumerOrderAdd.jsp" location="5150,1150" dimension="173,53" />
+  <StrutsActivity path="/orderlog.jsp" location="5450,1150" dimension="109,53" />
+  <StrutsActivity path="/achievementComAll.jsp" location="8150,1450" dimension="170,53" />
+  <StrutsActivity path="/achievementDep.jsp" location="8150,1650" dimension="153,53" />
+  <StrutsActivity path="/achievementDepAll.jsp" location="8150,4050" dimension="167,53" />
+  <StrutsActivity path="/sanctionUpdate.jsp" location="4550,4150" dimension="148,53" />
+  <StrutsActivity path="/sanctionListAll.jsp" location="3350,1250" dimension="138,53" />
+  <StrutsActivity path="/sanctionlist.jsp" location="4850,4150" dimension="121,53" />
+  <StrutsActivity path="/userlist.jsp" location="5150,4150" dimension="98,53" />
+  <StrutsActivity path="/sanctionView.jsp" location="5450,4150" dimension="132,53" />
+  <StrutsActivity path="/sanctionAdd.jsp" location="5750,4150" dimension="129,53" />
+  <StrutsActivity path="/sanctionCheckUpdate.jsp" location="8450,750" dimension="183,53" />
+  <StrutsActivity path="/sanctionCheckListAll.jsp" location="8450,950" dimension="173,53" />
+  <StrutsActivity path="/sanctionCheckList.jsp" location="4550,1250" dimension="159,53" />
+  <StrutsActivity path="/sanctionCheckView.jsp" location="4850,1250" dimension="167,53" />
+  <StrutsActivity path="/excelimport/sources_import04.jsp" location="6050,4150" dimension="233,53" />
+  <StrutsActivity path="/include/manage_home.jsp" location="8450,2050" dimension="188,53" />
+  <StrutsActivity path="/include/result_list.jsp" location="8450,2450" dimension="156,53" />
+  <StrutsActivity path="/include/superadmin_home.jsp" location="8450,2650" dimension="210,53" />
+  <StrutsActivity path="/include/my_order_list.jsp" location="8450,3850" dimension="179,53" />
+  <StrutsActivity path="/onlineuserlist.jsp" location="8450,4050" dimension="133,53" />
+  <StrutsActivity path="/include/dialog.jsp" location="1395,5238" dimension="116,49" />
+  <StrutsActivity path="/ConsumerInviteAlllist.jsp" location="4550,3950" dimension="177,53" />
+  <StrutsActivity path="/khupdategr.jsp" location="7550,150" dimension="125,53" />
+  <StrutsActivity path="/khcxresult.jsp" location="7850,150" dimension="115,53" />
+  <StrutsActivity path="/khalllist.jsp" location="6350,3750" dimension="100,53" />
+  <StrutsActivity path="/khaddgr.jsp" location="6950,3750" dimension="107,53" />
+  <StrutsActivity path="/khupdategr" location="6050,3750" dimension="105,53" />
+  <StrutsActivity path="/management/giftManager.jsp" location="3350,450" dimension="210,53" />
+  <StrutsActivity path="/management/giftAdd.jsp" location="6050,2150" dimension="181,53" />
+  <StrutsActivity path="/management/giftDetail.jsp" location="2150,1150" dimension="190,53" />
+  <StrutsActivity path="/system/sysconfigList.jsp" location="7850,4050" dimension="175,53" />
+  <StrutsActivity path="/system/accredit_open.jsp" location="7850,3750" dimension="183,53" />
+  <StrutsActivity path="/system/sysconfigUpdate.jsp" location="3950,4150" dimension="199,53" />
+  <StrutsActivity path="/management/class_tylb.jsp" location="1250,1250" dimension="192,53" />
+  <StrutsActivity path="/system/listtype_list.jsp" location="950,3950" dimension="164,53" />
+  <StrutsActivity path="/system/listtype_add.jsp" location="1250,3950" dimension="171,53" />
+  <StrutsActivity path="/base/friendlylink/list.jsp" location="6350,1350" dimension="174,53" />
+  <StrutsActivity path="/base/friendlylink/update.jsp" location="6650,1350" dimension="199,53" />
+  <StrutsActivity path="/base/friendlylink/add.jsp" location="7250,1350" dimension="181,53" />
+  <StrutsActivity path="/base/advertisement/view.jsp" location="7550,1350" dimension="202,53" />
+  <StrutsActivity path="/base/advertisement/list.jsp" location="7850,1350" dimension="193,53" />
+  <StrutsActivity path="/base/advertisement/update.jsp" location="6050,1550" dimension="218,53" />
+  <StrutsActivity path="/base/advertisement/add.jsp" location="6350,1550" dimension="200,53" />
+  <StrutsActivity path="/base/messageboard/view.jsp" location="6650,1550" dimension="208,53" />
+  <StrutsActivity path="/base/messageboard/list.jsp" location="6950,1550" dimension="199,53" />
+  <StrutsActivity path="/base/message_noProcess_list.jsp" location="7250,1550" dimension="228,53" />
+  <StrutsActivity path="/base/messageboard/returnInfo.jsp" location="7550,1550" dimension="241,53" />
+  <StrutsActivity path="/base/messageboard/add.jsp" location="7850,1550" dimension="206,53" />
+  <StrutsActivity path="/base/syscolumnview.jsp" location="5450,1650" dimension="175,53" />
+  <StrutsActivity path="/base/syscolumnlist.jsp" location="5750,1650" dimension="166,53" />
+  <StrutsActivity path="/base/customColumnlist.jsp" location="5150,1750" dimension="192,53" />
+  <StrutsActivity path="/base/syscolumnadd.jsp" location="6050,1750" dimension="173,53" />
+  <StrutsActivity path="/base/syscolumnupdate.jsp" location="6350,1750" dimension="191,53" />
+  <StrutsActivity path="/base/syscolumntree.jsp" location="6650,1750" dimension="173,53" />
+  <StrutsActivity path="/base/customColumnadd.jsp" location="6950,1750" dimension="199,53" />
+  <StrutsActivity path="/base/customColumnupdate.jsp" location="7250,1750" dimension="217,53" />
+  <StrutsActivity path="/base/roleCfgColumn.jsp" location="7550,1750" dimension="177,53" />
+  <StrutsActivity path="/base/sysOuterChainview.jsp" location="7850,1750" dimension="198,53" />
+  <StrutsActivity path="/base/sysOuterChainlist.jsp" location="4850,1850" dimension="189,53" />
+  <StrutsActivity path="/base/sysOuterChainadd.jsp" location="5450,1850" dimension="196,53" />
+  <StrutsActivity path="/base/sysOuterChainupdate.jsp" location="5750,1850" dimension="214,53" />
+  <StrutsActivity path="/base/sysOuterChaintree.jsp" location="6050,1950" dimension="196,53" />
+  <StrutsActivity path="/base/bottom_view.jsp" location="7850,1950" dimension="163,53" />
+  <StrutsActivity path="/base/bottom_list.jsp" location="6650,2150" dimension="154,53" />
+  <StrutsActivity path="/base/bottom_update.jsp" location="6950,2150" dimension="179,53" />
+  <StrutsActivity path="/base/PictureRotationview.jsp" location="7550,2150" dimension="203,53" />
+  <StrutsActivity path="/base/PictureRotationlist.jsp" location="7850,2150" dimension="194,53" />
+  <StrutsActivity path="/base/PictureRotationadd.jsp" location="7250,2350" dimension="201,53" />
+  <StrutsActivity path="/base/PictureRotationupdate.jsp" location="7550,2350" dimension="219,53" />
+  <StrutsActivity path="/base/newsList.jsp" location="7850,2350" dimension="138,53" />
+  <StrutsActivity path="/base/newsView.jsp" location="6350,2550" dimension="146,53" />
+  <StrutsActivity path="/base/newsColumnList.jsp" location="7250,2550" dimension="182,53" />
+  <StrutsActivity path="/base/newsList2.jsp" location="7550,2550" dimension="145,53" />
+  <StrutsActivity path="/base/newsAdd2.jsp" location="7850,2550" dimension="150,53" />
+  <StrutsActivity path="/base/newsUpdate.jsp" location="6350,2750" dimension="162,53" />
+  <StrutsActivity path="/base/columnTree.jsp" location="7250,2750" dimension="158,53" />
+  <StrutsActivity path="/base/newsUpdate2.jsp" location="7550,2750" dimension="169,53" />
+  <StrutsActivity path="/base/newsUpdate1.jsp" location="7850,2750" dimension="169,53" />
+  <StrutsActivity path="/base/newsList1.jsp" location="7250,2950" dimension="145,53" />
+  <StrutsActivity path="/base/newsAdd_new.jsp" location="7550,2950" dimension="171,53" />
+  <StrutsActivity path="/base/newsView2.jsp" location="7850,2950" dimension="153,53" />
+  <StrutsActivity path="/base/newsAdd.jsp" location="4250,3050" dimension="143,53" />
+  <StrutsActivity path="/base/newsAdd1.jsp" location="6650,3050" dimension="150,53" />
+  <StrutsActivity path="/base/newsView1.jsp" location="3650,3150" dimension="153,53" />
+  <StrutsActivity path="/9qmy/newspage.jsp" location="3950,3150" dimension="153,53" />
+  <StrutsActivity path="/9qmy/newsFlash.jsp" location="5150,3150" dimension="152,53" />
+  <StrutsActivity path="/9qmy/photoview.jsp" location="7550,3150" dimension="154,53" />
+  <StrutsActivity path="/9qmy/officialDocument_view.jsp" location="7850,3150" dimension="221,53" />
+  <StrutsActivity path="/9qmy/officialDocument_list.jsp" location="3050,3350" dimension="212,53" />
+  <StrutsActivity path="/9qmy/ebook.jsp" location="6050,3350" dimension="132,53" />
+  <StrutsActivity path="/9qmy/leader.jsp" location="6350,3350" dimension="131,53" />
+  <StrutsActivity path="/9qmy/softwareDow.jsp" location="6950,3350" dimension="170,53" />
+  <StrutsActivity path="/9qmy/news_single_page.jsp" location="7250,3350" dimension="197,53" />
+  <StrutsActivity path="/9qmy/balanceList.jsp" location="7550,3350" dimension="158,53" />
+  <StrutsActivity path="/9qmy/balanceview.jsp" location="7850,3350" dimension="164,53" />
+  <StrutsActivity path="/9qmy/flashView.jsp" location="50,3450" dimension="148,53" />
+  <StrutsActivity path="/9qmy/viewingview.jsp" location="350,3450" dimension="162,53" />
+  <StrutsActivity path="/9qmy/leaderView.jsp" location="950,3450" dimension="158,53" />
+  <StrutsActivity path="/9qmy/photolist.jsp" location="1250,3450" dimension="145,53" />
+  <StrutsActivity path="/9qmy/viewinglist.jsp" location="1550,3450" dimension="153,53" />
+  <StrutsActivity path="/9qmy/wrong403.jsp" location="2450,3450" dimension="152,53" />
+  <StrutsActivity path="/base/home.jsp" location="2750,3450" dimension="123,53" />
+  <StrutsActivity path="/9qmy/message.jsp" location="6650,3450" dimension="146,53" />
+  <StrutsActivity path="/9qmy/search.jsp" location="3950,3550" dimension="132,53" />
+  <StrutsActivity path="/9qmy/index.jsp" location="4250,3550" dimension="125,53" />
+  <StrutsActivity path="/9qmy/map.jsp" location="4550,3550" dimension="120,53" />
+  <StrutsActivity path="/9qmy/footer.jsp" location="4850,3550" dimension="130,53" />
+  <StrutsActivity path="/management/positionlist.jsp" location="6950,3550" dimension="201,53" />
+  <StrutsActivity path="/management/positionadd.jsp" location="7250,3550" dimension="208,53" />
+  <StrutsActivity path="/management/positionupdate.jsp" location="7550,3550" dimension="226,53" />
+  <StrutsActivity path="/management/cooperationlist.jsp" location="6650,3650" dimension="225,53" />
+  <StrutsActivity path="/management/newslist.jsp" location="3950,3750" dimension="183,53" />
+  <StrutsActivity path="/management/newsadd.jsp" location="350,3950" dimension="190,53" />
+  <StrutsActivity path="/management/newsupdate.jsp" location="650,3950" dimension="208,53" />
+  <StrutsActivity path="/management/userview.jsp" location="8150,4350" dimension="188,53" />
+  <StrutsActivity path="/management/userlist.jsp" location="3950,4450" dimension="179,53" />
+  <StrutsActivity path="/management/useradd.jsp" location="4250,4450" dimension="186,53" />
+  <StrutsActivity path="/management/userupdate.jsp" location="4550,4450" dimension="204,53" />
+  <StrutsActivity path="/management/userselfupdate.jsp" location="4850,4450" dimension="224,53" />
+  <StrutsActivity path="/management/addloglist.jsp" location="8150,2450" dimension="196,53" />
+  <StrutsActivity path="/management/gamesubjectlist.jsp" location="8150,1850" dimension="228,53" />
+  <StrutsActivity path="/management/gamelist.jsp" location="4550,3750" dimension="187,53" />
+  <StrutsActivity path="/management/gamesubjectadd.jsp" location="8150,2050" dimension="235,53" />
+  <StrutsActivity path="/management/gamesubjectupdate.jsp" location="8150,2250" dimension="253,53" />
+  <StrutsActivity path="/management/updateGContent.jsp" location="4850,3750" dimension="233,53" />
+  <StrutsActivity path="/management/upApk.jsp" location="5150,3750" dimension="176,53" />
+  <StrutsActivity path="/management/gamesuc.jsp" location="8150,2650" dimension="190,53" />
+  <StrutsActivity path="/management/gameview.jsp" location="5450,3750" dimension="196,53" />
+  <StrutsActivity path="/management/addgame.jsp" location="8150,2850" dimension="194,53" />
+  <StrutsActivity path="/management/upImg.jsp" location="5750,3750" dimension="176,53" />
+  <StrutsActivity path="/management/success.jsp" location="8150,3050" dimension="182,53" />
+  <StrutsActivity path="/management/gimglist.jsp" location="8150,3250" dimension="184,53" />
+  <StrutsActivity path="/management/creditsLogView.jsp" location="8150,3450" dimension="226,53" />
+  <StrutsActivity path="/management/creditsLog.jsp" location="8150,3650" dimension="199,53" />
+  <StrutsActivity path="/management/orderlistView.jsp" location="8150,3850" dimension="214,53" />
+  <StrutsActivity path="/management/orderlist.jsp" location="2150,3950" dimension="187,53" />
+  <StrutsActivity path="/management/updateOrderlist.jsp" location="2450,3950" dimension="230,53" />
+  <StrutsActivity path="/base/systemlog_list.jsp" location="5150,3550" dimension="170,53" />
+  <StrutsActivity path="/management/signlog_list.jsp" location="2450,4550" dimension="202,53" />
+  <StrutsActivity path="/management/memberlist.jsp" location="6050,4450" dimension="203,53" />
+  <StrutsActivity path="/management/memberadd.jsp" location="6350,4450" dimension="210,53" />
+  <StrutsActivity path="/management/memberupdate.jsp" location="6650,4450" dimension="228,53" />
+  <StrutsActivity path="/" location="6650,2950" dimension="46,48" />
+  <StrutsActivity path="/base/ippvlist.jsp" location="7250,2150" dimension="131,53" />
+  <StrutsActivity path="/base/ipControl_view.jsp" location="6350,1950" dimension="174,53" />
+  <StrutsActivity path="/base/ipControl_list.jsp" location="6650,1950" dimension="165,53" />
+  <StrutsActivity path="/base/ipControl_add.jsp" location="6950,1950" dimension="172,53" />
+  <StrutsActivity path="/base/ipControl_update.jsp" location="7250,1950" dimension="190,53" />
+  <StrutsActivity path="/base/ipControl_tree.jsp" location="7550,1950" dimension="172,53" />
+  <StrutsActivity path="/templete/sysconfigList.jsp" location="7550,3750" dimension="186,53" />
+  <StrutsActivity path="/templete/sysconfigUpdate.jsp" location="4250,2950" dimension="177,49" />
+  <StrutsActivity path="/system/positionadd.jsp" location="7850,3550" dimension="172,53" />
+  <StrutsActivity path="/system/cooperationlist.jsp" location="3650,3750" dimension="189,53" />
+  <StrutsActivity path="/system/newslist.jsp" location="50,2750" dimension="160,48" />
+  <StrutsActivity path="/sqt/noticesee.jsp" location="3650,850" dimension="148,48" />
+  <StrutsActivity path="/system/noticeaddlist.jsp" location="3950,850" dimension="190,48" />
+  <StrutsActivity path="/system/noticeview.jsp" location="4250,850" dimension="172,48" />
+  <StrutsActivity path="/system/noticeadd.jsp" location="2750,750" dimension="166,48" />
+  <StrutsActivity path="/system/noticeupdate.jsp" location="4550,850" dimension="184,48" />
+  <StrutsActivity path="/sqt/noticequery.jsp" location="4850,850" dimension="160,48" />
+  <StrutsActivity path="/sqt/noticereturnlist.jsp" location="3950,450" dimension="190,48" />
+  <StrutsActivity path="/sqt/noticeadd.jsp" location="5150,850" dimension="148,48" />
+  <StrutsActivity path="/system/fileuploadlist.jsp" location="3650,450" dimension="196,48" />
+  <StrutsActivity path="/system/fileuploadupdate.jsp" location="6650,2350" dimension="208,48" />
+  <StrutsActivity path="/sqt/fileuploadmore.jsp" location="4550,2850" dimension="178,48" />
+  <StrutsActivity path="/sqt/fileupload.jsp" location="4250,2850" dimension="154,48" />
+  <StrutsActivity path="/templete/sysconfig.jsp" location="6950,2550" dimension="142,49" />
+  <StrutsActivity path="/templete/kh_user_news.jsp" location="7250,450" dimension="166,49" />
+  <StrutsActivity path="/templete/news_view.jsp" location="7250,3250" dimension="150,49" />
+  <StrutsActivity path="/templete/chapter_news.jsp" location="5150,1050" dimension="165,49" />
+  <StrutsActivity path="/templete/trash_news.jsp" location="7250,850" dimension="153,49" />
+  <StrutsActivity path="/templete/khnews.jsp" location="3950,950" dimension="133,49" />
+  <StrutsActivity path="/templete/attachment_news.jsp" location="4550,950" dimension="183,49" />
+  <StrutsActivity path="/templete/news_history_view.jsp" location="6650,1050" dimension="189,49" />
+  <StrutsActivity path="/templete/sys_user_tree.jsp" location="6050,1350" dimension="189,53" />
+  <StrutsActivity path="/templete/kh_allnews.jsp" location="7250,750" dimension="149,49" />
+  <StrutsActivity path="/templete/allnews.jsp" location="4550,2950" dimension="132,49" />
+  <StrutsActivity path="/templete/sys_org_tree.jsp" location="6950,1350" dimension="185,53" />
+  <StrutsActivity path="/templete/trash_show_news.jsp" location="4250,950" dimension="184,49" />
+  <StrutsActivity path="/templete/org_tree.jsp" location="4850,950" dimension="139,49" />
+  <StrutsActivity path="/templete/historynews.jsp" location="5450,950" dimension="155,49" />
+  <StrutsActivity path="/templete/detailnews.jsp" location="5750,950" dimension="148,49" />
+  <StrutsActivity path="/templete/user_tree.jsp" location="4850,1450" dimension="166,53" />
+  <StrutsActivity path="/templete/news_list.jsp" location="6050,950" dimension="141,49" />
+  <StrutsActivity path="/templete/news_reporter_list.jsp" location="5450,1450" dimension="217,53" />
+  <StrutsActivity path="/templete/news_end_list.jsp" location="5750,1450" dimension="190,53" />
+  <StrutsActivity path="/templete/news_edit.jsp" location="3650,950" dimension="146,49" />
+  <StrutsActivity path="/templete/news_issue_list.jsp" location="950,1150" dimension="171,49" />
+  <StrutsActivity path="/templete/news_verify_list.jsp" location="7250,1050" dimension="175,49" />
+  <StrutsActivity path="/templete/news_sign_list.jsp" location="6950,1050" dimension="166,49" />
+  <StrutsActivity path="/templete/dutyList.jsp" location="4850,3250" dimension="135,49" />
+  <StrutsActivity path="/templete/dutyConfig.jsp" location="7250,950" dimension="150,49" />
+  <StrutsActivity path="/templete/baoliaojianglijilu.jsp" location="3650,1050" dimension="171,49" />
+  <StrutsActivity path="/templete/allbaoliao.jsp" location="3950,1050" dimension="141,49" />
+  <StrutsActivity path="/templete/allnotice.jsp" location="4550,1550" dimension="161,53" />
+  <StrutsActivity path="/templete/zhujiemian.jsp" location="5150,1550" dimension="174,53" />
+  <StrutsActivity path="/templete/baoliaoview.jsp" location="4250,1050" dimension="153,49" />
+  <StrutsActivity path="/templete/baoliaoattachment.jsp" location="4850,1050" dimension="186,49" />
+  <StrutsActivity path="/templete/baoliaohistory.jsp" location="5750,1050" dimension="164,49" />
+  <StrutsActivity path="/templete/sysconfigAdd.jsp" location="6950,2650" dimension="161,49" />
+  <StrutsActivity path="/mainFrame.jsp" location="6350,150" dimension="124,48" />
+  <StrutsActivity path="/ipad/eatplatList.jsp" location="6950,850" dimension="147,53" />
+  <StrutsActivity path="/ipad/eatplatadd.jsp" location="6950,2750" dimension="151,53" />
+  <StrutsActivity path="/ipad/eatplatedit.jsp" location="6950,2950" dimension="150,53" />
+  <StrutsActivity path="/ipad/foodview.jsp" location="650,3150" dimension="141,53" />
+  <StrutsActivity path="/ipad/foodList.jsp" location="350,950" dimension="135,53" />
+  <StrutsActivity path="/ipad/foodadd.jsp" location="950,950" dimension="139,53" />
+  <StrutsActivity path="/ipad/selectfoodList.jsp" location="6350,3150" dimension="168,53" />
+  <StrutsActivity path="/ipad/foodedit.jsp" location="1250,950" dimension="138,53" />
+  <StrutsActivity path="/ipad/foodtypeList.jsp" location="950,3150" dimension="160,53" />
+  <StrutsActivity path="/ipad/foodtypeadd.jsp" location="1250,3150" dimension="164,53" />
+  <StrutsActivity path="/ipad/foodtypeedit.jsp" location="1550,3150" dimension="163,53" />
+  <StrutsActivity path="/ipad/foodremarkList.jsp" location="1850,3150" dimension="177,53" />
+  <StrutsActivity path="/ipad/foodremarkadd.jsp" location="2750,3150" dimension="181,53" />
+  <StrutsActivity path="/ipad/foodremarkedit.jsp" location="4550,3150" dimension="180,53" />
+  <StrutsActivity path="/ipad/packageList.jsp" location="5450,3150" dimension="157,53" />
+  <StrutsActivity path="/ipad/packageadd.jsp" location="5750,3150" dimension="161,53" />
+  <StrutsActivity path="/ipad/packageedit.jsp" location="6050,3150" dimension="160,53" />
+  <StrutsActivity path="/main_kt_bf.jsp" location="6350,850" dimension="118,53" />
+  <StrutsActivity path="/wdcd.jsp" location="2450,950" dimension="88,53" />
+  <StrutsActivity path="/cp_ts.jsp" location="3950,3350" dimension="86,53" />
+  <StrutsActivity path="/cp_js.jsp" location="4250,3350" dimension="85,53" />
+  <StrutsActivity path="/datu.jsp" location="2750,950" dimension="83,53" />
+  <StrutsActivity path="/cp_rc.jsp" location="2150,950" dimension="87,53" />
+  <StrutsActivity path="/main_kt_dt.jsp" location="3050,950" dimension="118,53" />
+  <StrutsActivity path="/cp_tc.jsp" location="4550,3350" dimension="86,53" />
+  <StrutsActivity path="/main_.jsp" location="6650,3250" dimension="90,53" />
+  <StrutsActivity path="/cp_tc_xq.jsp" location="4850,3350" dimension="105,53" />
+  <StrutsActivity path="/orderlist.jsp" location="650,950" dimension="124,48" />
+  <StrutsActivity path="/ipad/cusorderviewList.jsp" location="3350,950" dimension="184,53" />
+  <StrutsActivity path="/ipad/versionmanager.jsp" location="1850,950" dimension="184,48" />
+  <StrutsActivity path="/main.jsp" location="350,2750" dimension="94,48" />
+  <StrutsActivity path="/mainFrame.html" location="173,1085" dimension="109,49" />
+  <StrutsActivity path="/ipad/cusorderList.jsp" location="6650,850" dimension="159,53" />
+  <StrutsActivity path="/system/surveyEdit.jsp" location="650,850" dimension="172,48" />
+  <StrutsActivity path="/system/surveyAdd.jsp" location="50,250" dimension="166,48" />
+  <StrutsActivity path="/system/surveylist.jsp" location="6350,250" dimension="172,48" />
+  <StrutsActivity path="/system/surveyProEdit.jsp" location="1550,850" dimension="190,48" />
+  <StrutsActivity path="/system/surveyProList.jsp" location="2150,850" dimension="190,48" />
+  <StrutsActivity path="/system/surveyFrontView.jsp" location="2750,850" dimension="202,48" />
+  <StrutsActivity path="/system/surveyFrontSubmit.jsp" location="3050,850" dimension="214,48" />
+  <StrutsActivity path="/system/surveyFrontAll.jsp" location="3350,850" dimension="196,48" />
+  <StrutsActivity path="/dizhibu.jsp" location="6650,250" dimension="112,48" />
+  <StrutsActivity path="/sqt/dizhibu.jsp" location="6650,450" dimension="136,48" />
+  <StrutsActivity path="/dizhibutree.jsp" location="4250,750" dimension="136,48" />
+  <StrutsActivity path="/system/dizhibutree.jsp" location="3650,750" dimension="178,48" />
+  <StrutsActivity path="/system/dizhibu.jsp" location="6650,350" dimension="154,48" />
+  <StrutsActivity path="/sqt/dizhibutree1.jsp" location="6950,750" dimension="144,50" />
+  <StrutsActivity path="/dizhibu_.jsp" location="5150,450" dimension="118,48" />
+  <StrutsActivity path="/system/dizhibu_.jsp" location="5450,450" dimension="160,48" />
+  <StrutsActivity path="/dizhibu_tree.jsp" location="950,850" dimension="142,48" />
+  <StrutsActivity path="/sqt/dizhibutreechild.jsp" location="6050,850" dimension="161,50" />
+  <StrutsActivity path="/system/dizhibu_tree.jsp" location="3950,750" dimension="184,48" />
+  <StrutsActivity path="/sqt/dizhibu_.jsp" location="2450,750" dimension="142,48" />
+  <StrutsActivity path="/system/newsview.jsp" location="5450,2450" dimension="160,48" />
+  <StrutsActivity path="/system/news_cflist.jsp" location="4550,1050" dimension="178,48" />
+  <StrutsActivity path="/system/newsupdate.jsp" location="5450,2650" dimension="172,48" />
+  <StrutsActivity path="/system/newsadd.jsp" location="5450,2150" dimension="154,48" />
+  <StrutsActivity path="/system/news_lawupdate.jsp" location="5450,1050" dimension="196,48" />
+  <StrutsActivity path="/sqt/mainnewsview.jsp" location="5750,2950" dimension="166,48" />
+  <StrutsActivity path="/system/news_cfupdate.jsp" location="6050,1050" dimension="190,48" />
+  <StrutsActivity path="/system/news_lawlist.jsp" location="6350,1050" dimension="184,48" />
+  <StrutsActivity path="/system/sourcesharelist.jsp" location="4250,450" dimension="202,48" />
+  <StrutsActivity path="/sqt/sourcesharelist.jsp" location="5450,2950" dimension="184,48" />
+  <StrutsActivity path="/sqt/sourceshareupload.jsp" location="5150,2950" dimension="196,48" />
+  <StrutsActivity path="/sqt/sourcesharetree.jsp" location="50,3150" dimension="184,48" />
+  <StrutsActivity path="/sqt/email.jsp" location="6650,2650" dimension="124,48" />
+  <StrutsActivity path="/system/smssend.jsp" location="5450,850" dimension="154,48" />
+  <StrutsActivity path="/system/noticesms.jsp" location="6350,2950" dimension="166,48" />
+  <StrutsActivity path="/system/smsback.jsp" location="6350,450" dimension="154,48" />
+  <StrutsActivity path="/system/noticesmsframe.jsp" location="4850,3050" dimension="196,48" />
+  <StrutsActivity path="/system/flowcount.jsp" location="350,3150" dimension="166,48" />
+  <StrutsActivity path="/sqt/newsmore.jsp" location="6650,750" dimension="142,48" />
+  <StrutsActivity path="/sqt/newslawmore.jsp" location="1250,850" dimension="160,48" />
+  <StrutsActivity path="/mydcmore.jsp" location="2450,150" dimension="118,48" />
+  <StrutsActivity path="/logintree.jsp" location="382,1085" dimension="93,49" />
+  <StrutsActivity path="/sqt/newcfmore.jsp" location="5750,850" dimension="148,48" />
+  <StrutsActivity path="/mydc.jsp" location="3350,150" dimension="94,48" />
+  <StrutsActivity path="/sqt/dizhibu_tree.jsp" location="5150,3050" dimension="166,48" />
+  <StrutsActivity path="/sqt/dizhibutree.jsp" location="5450,3050" dimension="160,48" />
+  <StrutsActivity path="/newsmore.jsp" location="5150,2850" dimension="118,48" />
+  <StrutsActivity path="/sqt/sourceshare.jsp" location="6050,2850" dimension="160,48" />
+  <StrutsActivity path="/system/surveyProAdd.jsp" location="2450,850" dimension="184,48" />
+  <StrutsActivity path="/sqt/dizhibuzongfrm.jsp" location="5750,3050" dimension="178,48" />
+  <StrutsActivity path="/system/closenoticesmsframe.jsp" location="3350,750" dimension="226,48" />
+  <StrutsActivity path="/usermanager.jsp" location="3650,150" dimension="136,48" />
+  <StrutsActivity path="/system/smsdepartmenttree.jsp" location="6050,450" dimension="214,48" />
+  <StrutsActivity path="/sqt/fileuploadupdate.jsp" location="5750,450" dimension="190,48" />
+  <StrutsActivity path="/htIndex.jsp" location="2150,750" dimension="112,48" />
+  <StrutsActivity path="/notice/notice" location="1850,50" dimension="256,84" />
+  <StrutsActivity path="/system/sysfunoperview.jsp" location="3650,2250" dimension="196,48" />
+  <StrutsActivity path="/system/sysfunoperlist.jsp" location="1250,2150" dimension="196,48" />
+  <StrutsActivity path="/system/sysfunoperadd.jsp" location="1250,2050" dimension="190,48" />
+  <StrutsActivity path="/system/sysfunoperupdate.jsp" location="4850,2250" dimension="208,48" />
+  <StrutsActivity path="/system/sysfunopertree.jsp" location="1550,2150" dimension="196,48" />
+  <StrutsActivity path="/system/sysparametercfg.jsp" location="1550,350" dimension="202,48" />
+  <StrutsActivity path="/system/sysfieldlist.jsp" location="1691,4687" dimension="138,49" />
+  <StrutsActivity path="/system/sysfieldadd.jsp" location="2176,4687" dimension="143,49" />
+  <StrutsActivity path="/system/sysfieldupdate.jsp" location="1187,4687" dimension="159,49" />
+  <StrutsActivity path="/system/sysfieldnoticelist.jsp" location="6050,250" dimension="220,48" />
+  <StrutsActivity path="/notice/checknotice.jsp" location="350,250" dimension="178,48" />
+  <StrutsActivity path="/notice/noticeadd.jsp" location="5750,2050" dimension="166,48" />
+  <StrutsActivity path="/notice/prechoosenoticetype.jsp" location="5450,250" dimension="226,48" />
+  <StrutsActivity path="/notice/swnoticeadd.jsp" location="50,350" dimension="178,48" />
+  <StrutsActivity path="/notice/sendnoticelist.jsp" location="650,250" dimension="196,48" />
+  <StrutsActivity path="/notice/noticeviewsearch.jsp" location="5450,2350" dimension="208,48" />
+  <StrutsActivity path="/notice/noticeupdate.jsp" location="5750,250" dimension="184,48" />
+  <StrutsActivity path="/notice/swnoticeupdate.jsp" location="350,350" dimension="196,48" />
+  <StrutsActivity path="/notice/swnoticeviewsearch.jsp" location="5450,2750" dimension="220,48" />
+  <StrutsActivity path="/mainnormal.jsp" location="5750,350" dimension="130,48" />
+  <StrutsActivity path="/notice/backnoticelist.jsp" location="4850,2750" dimension="196,48" />
+  <StrutsActivity path="/notice/backnotice.jsp" location="1250,350" dimension="172,48" />
+  <StrutsActivity path="/notice/noticeview.jsp" location="950,350" dimension="172,48" />
+  <StrutsActivity path="/notice/receivenoticelist.jsp" location="5150,2750" dimension="214,48" />
+  <StrutsActivity path="/notice/swnoticeview.jsp" location="1850,350" dimension="184,48" />
+  <StrutsActivity path="/notice/view.jsp" location="6350,350" dimension="136,48" />
+  <StrutsActivity path="/notice/cjkhreceivetotallist.jsp" location="1250,450" dimension="232,48" />
+  <StrutsActivity path="/notice/searchcfglist.jsp" location="3950,350" dimension="190,48" />
+  <StrutsActivity path="/notice/threenoticelist.jsp" location="5150,2250" dimension="202,48" />
+  <StrutsActivity path="/notice/wssearchlist.jsp" location="4850,350" dimension="184,48" />
+  <StrutsActivity path="/notice/dkhreceivetotallist.jsp" location="5750,2750" dimension="226,48" />
+  <StrutsActivity path="/notice/allsearchlist.jsp" location="4850,450" dimension="190,48" />
+  <StrutsActivity path="/notice/searchlist.jsp" location="1250,2750" dimension="172,48" />
+  <StrutsActivity path="/notice/wxfxtotallist.jsp" location="4250,350" dimension="190,48" />
+  <StrutsActivity path="/notice/checktotallist.jsp" location="5450,2250" dimension="196,48" />
+  <StrutsActivity path="/top.jsp" location="1550,2750" dimension="88,48" />
+  <StrutsActivity path="/notice/safenoticeview.jsp" location="350,2850" dimension="196,48" />
+  <StrutsActivity path="/notice/safenoticelist.jsp" location="650,2850" dimension="196,48" />
+  <StrutsActivity path="/notice/safenoticeadd.jsp" location="6050,2450" dimension="190,48" />
+  <StrutsActivity path="/notice/safenoticeupdate.jsp" location="950,2850" dimension="208,48" />
+  <StrutsActivity path="/notice/safenoticecfglist.jsp" location="2750,450" dimension="214,48" />
+  <StrutsActivity path="/notice/safemgrlist.jsp" location="5750,2850" dimension="178,48" />
+  <StrutsActivity path="/notice/awhjyview.jsp" location="6050,350" dimension="166,48" />
+  <StrutsActivity path="/notice/awhjylist.jsp" location="950,450" dimension="166,48" />
+  <StrutsActivity path="/notice/awhjyadd.jsp" location="1250,2850" dimension="160,48" />
+  <StrutsActivity path="/notice/awhjyupdate.jsp" location="1550,450" dimension="178,48" />
+  <StrutsActivity path="/notice/awhjycfglist.jsp" location="3950,2850" dimension="184,48" />
+  <StrutsActivity path="/notice/messagelist.jsp" location="2150,450" dimension="178,48" />
+  <StrutsActivity path="/notice/ksmgrlist.jsp" location="4550,450" dimension="166,48" />
+  <StrutsActivity path="/notice/messagechecklist.jsp" location="2450,450" dimension="208,48" />
+  <StrutsActivity path="/notice/jcmessagelist.jsp" location="950,750" dimension="190,48" />
+  <StrutsActivity path="/notice/jcksmgrlist.jsp" location="1550,750" dimension="178,48" />
+  <StrutsActivity path="/notice/jcmessagechecklist.jsp" location="1850,750" dimension="220,48" />
+  <StrutsActivity path="/notice/safedayslist.jsp" location="1550,2850" dimension="184,48" />
+  <StrutsActivity path="/notice/safedaysupdate.jsp" location="1850,2850" dimension="196,48" />
+  <StrutsActivity path="/notice/safedayscfglist.jsp" location="1850,450" dimension="202,48" />
+  <StrutsActivity path="/notice/workplanview.jsp" location="2450,2850" dimension="184,48" />
+  <StrutsActivity path="/notice/workplanlist.jsp" location="2750,2850" dimension="184,48" />
+  <StrutsActivity path="/notice/workplanback.jsp" location="3650,2850" dimension="184,48" />
+  <StrutsActivity path="/notice/workplanadd.jsp" location="2150,2850" dimension="178,48" />
+  <StrutsActivity path="/notice/workplanupdate.jsp" location="3050,2850" dimension="196,48" />
+  <StrutsActivity path="/notice/workplancfglist.jsp" location="3350,2850" dimension="202,48" />
+  <StrutsActivity path="/notice/jcworkplanview.jsp" location="5150,750" dimension="196,48" />
+  <StrutsActivity path="/notice/jcworkplanlist.jsp" location="5450,750" dimension="196,48" />
+  <StrutsActivity path="/notice/jcworkplanback.jsp" location="5750,750" dimension="196,48" />
+  <StrutsActivity path="/notice/jcworkplanadd.jsp" location="6050,750" dimension="190,48" />
+  <StrutsActivity path="/notice/jcworkplanupdate.jsp" location="6350,750" dimension="208,48" />
+  <StrutsActivity path="/notice/jcworkplancfglist.jsp" location="350,850" dimension="214,48" />
+  <StrutsActivity path="/notice/NewList.jsp" location="6350,2450" dimension="154,48" />
+  <StrutsActivity path="/notice/receivetotallist.jsp" location="650,450" dimension="208,48" />
+  <StrutsActivity path="/system/sysorgcheckcfgtree.jsp" location="3350,50" dimension="220,48" />
+  <StrutsActivity path="/system/sysorgcheckcfglist.jsp" location="5450,2050" dimension="220,48" />
+  <StrutsActivity path="/mainfrm.jsp" location="2750,150" dimension="112,48" />
+  <StrutsActivity path="/system/roleview.jsp" location="688,3559" dimension="129,49" />
+  <StrutsActivity path="/system/sysroletree.jsp" location="1850,2750" dimension="178,48" />
+  <StrutsActivity path="/system/orgtypecfg.jsp" location="5450,50" dimension="172,48" />
+  <StrutsActivity path="/system/orgauditadvicetree.jsp" location="3050,2750" dimension="220,48" />
+  <StrutsActivity path="/system/orgauditadvicelist.jsp" location="3350,2750" dimension="220,48" />
+  <StrutsActivity path="/system/userauditadvicetree.jsp" location="2450,2750" dimension="226,48" />
+  <StrutsActivity path="/system/userauditadvicelist.jsp" location="1550,150" dimension="226,48" />
+  <StrutsActivity path="/system/noticelist.jsp" location="4550,250" dimension="172,48" />
+  <StrutsActivity path="/ckmt/ckmttypelist.jsp" location="50,2450" dimension="172,48" />
+  <StrutsActivity path="/ckmt/ckmttypeadd.jsp" location="3050,2350" dimension="166,48" />
+  <StrutsActivity path="/ckmt/ckmttypeupdate.jsp" location="350,2450" dimension="184,48" />
+  <StrutsActivity path="/ckmt/workshopckmttypetree.jsp" location="3650,2750" dimension="220,48" />
+  <StrutsActivity path="/ckmt/areackmttypetree.jsp" location="3950,2750" dimension="196,48" />
+  <StrutsActivity path="/ckmt/ckmttemplist.jsp" location="1250,2450" dimension="172,48" />
+  <StrutsActivity path="/ckmt/ckmttempadd.jsp" location="950,2450" dimension="166,48" />
+  <StrutsActivity path="/ckmt/ckmttemptree.jsp" location="1250,250" dimension="172,48" />
+  <StrutsActivity path="/ckmt/ckmtlist.jsp" location="3350,2450" dimension="148,48" />
+  <StrutsActivity path="/ckmt/ckmtadd.jsp" location="3650,2450" dimension="142,48" />
+  <StrutsActivity path="/ckmt/mergeorgcfg.jsp" location="2450,250" dimension="166,48" />
+  <StrutsActivity path="/ckmt/ckmtcheckcfgtree.jsp" location="650,2750" dimension="196,48" />
+  <StrutsActivity path="/ckmt/ckmtupdate.jsp" location="3950,2450" dimension="160,48" />
+  <StrutsActivity path="/ckmt/ckmttree.jsp" location="4250,2450" dimension="148,48" />
+  <StrutsActivity path="/ckmt/ckmtmergelist.jsp" location="4850,2650" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtsystree.jsp" location="3650,350" dimension="166,48" />
+  <StrutsActivity path="/ckmt/ckmtcheckcfglist.jsp" location="950,2750" dimension="196,48" />
+  <StrutsActivity path="/ckmt/ckmtmergetree.jsp" location="5150,2650" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtauditlist.jsp" location="4550,2650" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtauditadviceadd.jsp" location="3350,250" dimension="208,48" />
+  <StrutsActivity path="/mainckmttypetree.jsp" location="5750,2250" dimension="166,48" />
+  <StrutsActivity path="/ckmt/ckmtaudittree.jsp" location="4250,2650" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtuserauditviewlist.jsp" location="5150,350" dimension="226,48" />
+  <StrutsActivity path="/ckmt/ckmtorgauditlist.jsp" location="4550,350" dimension="196,48" />
+  <StrutsActivity path="/ckmt/ckmtexptree.jsp" location="4850,250" dimension="166,48" />
+  <StrutsActivity path="/ckmt/ckmtorgauditviewlist.jsp" location="5750,2550" dimension="220,48" />
+  <StrutsActivity path="/ckmt/ckmtauditadvicelist.jsp" location="3950,2650" dimension="214,48" />
+  <StrutsActivity path="/ckmt/ckmtorgexplist.jsp" location="350,450" dimension="184,48" />
+  <StrutsActivity path="/ckmt/ckmtexplist.jsp" location="2150,2750" dimension="166,48" />
+  <StrutsActivity path="/ckmt/ckmtchecklist.jsp" location="2150,350" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtorgchecklist.jsp" location="5750,2350" dimension="196,48" />
+  <StrutsActivity path="/ckmt/ckmtcheckbackview.jsp" location="50,450" dimension="202,48" />
+  <StrutsActivity path="/ckmt/ckmtchecktree.jsp" location="2750,350" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtcheckwstree.jsp" location="5750,2450" dimension="190,48" />
+  <StrutsActivity path="/ckmt/ckmtusercheckviewlist.jsp" location="3050,450" dimension="226,48" />
+  <StrutsActivity path="/ckmt/ckmtorgcheckviewlist.jsp" location="5750,2650" dimension="220,48" />
+  <StrutsActivity path="/ckmt/ckmtcheckback.jsp" location="5750,2150" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtexptree1.jsp" location="650,350" dimension="172,48" />
+  <StrutsActivity path="/maintree.jsp" location="5450,350" dimension="118,48" />
+  <StrutsActivity path="/ckmt/ckmttypeview.jsp" location="4850,2350" dimension="172,48" />
+  <StrutsActivity path="/ckmt/ckmttypetree.jsp" location="5150,250" dimension="172,48" />
+  <StrutsActivity path="/ckmt/ckmtcheckadviceadd.jsp" location="2450,350" dimension="208,48" />
+  <StrutsActivity path="/ckmt/ckmtcheckadvicelist.jsp" location="3050,350" dimension="214,48" />
+  <StrutsActivity path="/ckmt/userauditadvicetree.jsp" location="3350,350" dimension="214,48" />
+  <StrutsActivity path="/News/newsview.jsp" location="1550,250" dimension="148,48" />
+  <StrutsActivity path="/News/Newslist.jsp" location="1850,250" dimension="148,48" />
+  <StrutsActivity path="/News/newsadd.jsp" location="2150,250" dimension="142,48" />
+  <StrutsActivity path="/News/newsupdate.jsp" location="2750,250" dimension="160,48" />
+  <StrutsActivity path="/News/noticeview.jsp" location="3050,250" dimension="160,48" />
+  <StrutsActivity path="/News/Noticelist.jsp" location="3650,250" dimension="160,48" />
+  <StrutsActivity path="/News/noticeadd.jsp" location="3950,250" dimension="154,48" />
+  <StrutsActivity path="/News/noticeupdate.jsp" location="4250,250" dimension="172,48" />
+  <StrutsActivity path="/ckmt/ckmttempupdate.jsp" location="950,250" dimension="184,48" />
+  <StrutsActivity path="/success.jsp" location="2750,2450" dimension="112,48" />
+  <StrutsActivity path="/fail.jsp" location="3050,2450" dimension="94,48" />
+  <StrutsActivity path="/system/orgposcfg.jsp" location="2078,3257" dimension="137,49" />
+  <StrutsActivity path="/system/sysuserpassword.jsp" location="1774,1929" dimension="172,49" />
+  <StrutsActivity path="/system/sysusercfgright.jsp" location="2549,1929" dimension="163,49" />
+  <StrutsActivity path="/system/sysusercfgpos.jsp" location="514,1929" dimension="158,49" />
+  <StrutsActivity path="/system/sysusercfgrole.jsp" location="1515,1929" dimension="159,49" />
+  <StrutsActivity path="/system/sysuserposcfg.jsp" location="3329,1929" dimension="158,49" />
+  <StrutsActivity path="/system/sysuserportal.jsp" location="260,1929" dimension="154,49" />
+  <StrutsActivity path="/system/resetpassword.jsp" location="1255,1929" dimension="160,49" />
+  <StrutsActivity path="/system/sysusercfgportal.jsp" location="2812,1929" dimension="169,49" />
+  <StrutsActivity path="/system/sysusercfgfun.jsp" location="2292,1929" dimension="157,49" />
+  <StrutsActivity path="/left.jsp" location="350,750" dimension="67,49" />
+  <StrutsActivity path="/system/sysuserview.jsp" location="3081,1929" dimension="148,49" />
+  <StrutsActivity path="/system/sysposview.jsp" location="3574,2955" dimension="144,49" />
+  <StrutsActivity path="/system/sysposlist.jsp" location="3339,2955" dimension="135,49" />
+  <StrutsActivity path="/system/poscfgright.jsp" location="3096,2955" dimension="143,49" />
+  <StrutsActivity path="/system/postree.jsp" location="2633,2955" dimension="126,49" />
+  <StrutsActivity path="/system/sysposadd.jsp" location="3818,2955" dimension="140,49" />
+  <StrutsActivity path="/system/sysposupdate.jsp" location="2377,2955" dimension="156,49" />
+  <StrutsActivity path="/system/poscfgrole.jsp" location="4058,2955" dimension="139,49" />
+  <StrutsActivity path="/system/poscfgfun.jsp" location="2859,2955" dimension="137,49" />
+  <StrutsActivity path="/system/roletree.jsp" location="241,3559" dimension="127,49" />
+  <StrutsActivity path="/system/roletypeview.jsp" location="3351,3559" dimension="151,49" />
+  <StrutsActivity path="/system/roletypelist.jsp" location="3109,3559" dimension="142,49" />
+  <StrutsActivity path="/system/roletypeadd.jsp" location="3602,3559" dimension="147,49" />
+  <StrutsActivity path="/system/roletypeupdate.jsp" location="2597,3559" dimension="163,49" />
+  <StrutsActivity path="/system/roletypetree.jsp" location="2860,3559" dimension="149,49" />
+  <StrutsActivity path="/system/sysindextypeview.jsp" location="826,4123" dimension="175,49" />
+  <StrutsActivity path="/system/sysindextypelist.jsp" location="560,4123" dimension="166,49" />
+  <StrutsActivity path="/system/sysindextypeadd.jsp" location="1101,4123" dimension="171,49" />
+  <StrutsActivity path="/system/sysindextypeupdate.jsp" location="0,4123" dimension="187,49" />
+  <StrutsActivity path="/system/sysindextypetree.jsp" location="287,4123" dimension="173,49" />
+  <StrutsActivity path="/system/sysindexdefview.jsp" location="1103,3257" dimension="169,49" />
+  <StrutsActivity path="/system/sysindexdeflist.jsp" location="843,3257" dimension="160,49" />
+  <StrutsActivity path="/system/sysindexdefadd.jsp" location="1372,3257" dimension="165,49" />
+  <StrutsActivity path="/system/sysindexdeforgposcfg.jsp" location="548,3257" dimension="195,49" />
+  <StrutsActivity path="/system/sysindexdefupdate.jsp" location="0,3257" dimension="181,49" />
+  <StrutsActivity path="/system/sysindexdeftree.jsp" location="281,3257" dimension="167,49" />
+  <StrutsActivity path="/system/sysstyleview.jsp" location="503,4969" dimension="150,49" />
+  <StrutsActivity path="/system/sysstylelist.jsp" location="262,4969" dimension="141,49" />
+  <StrutsActivity path="/system/sysstyleadd.jsp" location="753,4969" dimension="146,49" />
+  <StrutsActivity path="/system/sysstyleupdate.jsp" location="0,4969" dimension="162,49" />
+  <StrutsActivity path="/system/syscodeview.jsp" location="3213,4405" dimension="150,49" />
+  <StrutsActivity path="/system/syscodelist.jsp" location="2972,4405" dimension="141,49" />
+  <StrutsActivity path="/system/syscodeadd.jsp" location="3463,4405" dimension="146,49" />
+  <StrutsActivity path="/system/syscodeupdate.jsp" location="2462,4405" dimension="162,49" />
+  <StrutsActivity path="/system/syscodetree.jsp" location="2724,4405" dimension="148,49" />
+  <StrutsActivity path="/system/syscodetypeview.jsp" location="2134,4123" dimension="172,49" />
+  <StrutsActivity path="/system/syscodetypelist.jsp" location="1871,4123" dimension="163,49" />
+  <StrutsActivity path="/system/syscodetypeadd.jsp" location="2406,4123" dimension="168,49" />
+  <StrutsActivity path="/system/syscodetypeupdate.jsp" location="1317,4123" dimension="184,49" />
+  <StrutsActivity path="/system/syscodetypetree.jsp" location="1601,4123" dimension="170,49" />
+  <StrutsActivity path="/system/systypeview.jsp" location="748,4687" dimension="149,49" />
+  <StrutsActivity path="/system/systypelist.jsp" location="508,4687" dimension="140,49" />
+  <StrutsActivity path="/system/systypeadd.jsp" location="997,4687" dimension="145,49" />
+  <StrutsActivity path="/system/systypeupdate.jsp" location="0,4687" dimension="161,49" />
+  <StrutsActivity path="/system/systypetree.jsp" location="261,4687" dimension="147,49" />
+  <StrutsActivity path="/system/sysfieldview.jsp" location="1929,4687" dimension="147,49" />
+  <StrutsActivity path="/system/sysfieldtree.jsp" location="1446,4687" dimension="145,49" />
+  <StrutsActivity path="/workflow/processDefinitionList.jsp" location="1149,5251" dimension="196,49" />
+  <StrutsActivity path="/workflow/deployProcessDefinition.jsp" location="837,5251" dimension="212,49" />
+  <StrutsActivity path="/workflow/funPooledTaskList.jsp" location="5150,2150" dimension="184,49" />
+  <StrutsActivity path="/workflow/privateTaskList.jsp" location="2364,4687" dimension="170,49" />
+  <StrutsActivity path="/workflow/pooledTaskList.jsp" location="2634,4687" dimension="168,49" />
+  <StrutsActivity path="/workflow/persontasklist.jsp" location="3187,4687" dimension="164,49" />
+  <StrutsActivity path="/workflow/funTasklist.jsp" location="5150,2050" dimension="149,49" />
+  <StrutsActivity path="/workflow/funPrivateTaskList.jsp" location="3950,2250" dimension="186,49" />
+  <StrutsActivity path="/workflow/completedTaskList.jsp" location="2902,4687" dimension="185,49" />
+  <StrutsActivity path="/workflow/taskcfginfo.jsp" location="527,4405" dimension="151,49" />
+  <StrutsActivity path="/workflow/taskfuntree.jsp" location="1850,1650" dimension="154,49" />
+  <StrutsActivity path="/workflow/taskcfgtree.jsp" location="274,4405" dimension="153,49" />
+  <StrutsActivity path="/workflow/taskcfgurl.jsp" location="2150,1650" dimension="145,49" />
+  <StrutsActivity path="/workflow/taskcfgfrm.jsp" location="1850,850" dimension="149,49" />
+  <StrutsActivity path="/workflow/cfgactor.jsp" location="3709,4123" dimension="138,49" />
+  <StrutsActivity path="/workflow/sysorgposcfgtree.jsp" location="3427,4123" dimension="182,49" />
+  <StrutsActivity path="/workflow/sysorgusercfgtree.jsp" location="2619,4123" dimension="186,49" />
+  <StrutsActivity path="/workflow/syscfgposlist.jsp" location="3168,4123" dimension="159,49" />
+  <StrutsActivity path="/workflow/taskcfgactorfrm.jsp" location="0,4405" dimension="174,49" />
+  <StrutsActivity path="/workflow/syscfguserlist.jsp" location="2905,4123" dimension="163,49" />
+  <StrutsActivity path="/workflow/taskactortree.jsp" location="778,4405" dimension="163,49" />
+  <StrutsActivity path="/standard/mode/partbooklist.jsp" location="4850,750" dimension="184,49" />
+  <StrutsActivity path="/standard/mode/booklistmode.jsp" location="2641,1507" dimension="190,49" />
+  <StrutsActivity path="/standard/mode/modebookview.jsp" location="3803,1507" dimension="199,49" />
+  <StrutsActivity path="/standard/mode/partsheetlist.jsp" location="2353,1507" dimension="188,49" />
+  <StrutsActivity path="/standard/mode/modebookadd2.jsp" location="1787,1507" dimension="201,49" />
+  <StrutsActivity path="/standard/mode/modebookadd.jsp" location="1492,1507" dimension="195,49" />
+  <StrutsActivity path="/standard/mode/bookword.jsp" location="3528,1507" dimension="175,49" />
+  <StrutsActivity path="/standard/mode/modebookupdate.jsp" location="0,1507" dimension="211,49" />
+  <StrutsActivity path="/standard/mode/modebookupdate2.jsp" location="311,1507" dimension="217,49" />
+  <StrutsActivity path="/standard/mode/booktree.jsp" location="2931,1507" dimension="171,49" />
+  <StrutsActivity path="/standard/mode/booklistmode2.jsp" location="4102,1507" dimension="196,49" />
+  <StrutsActivity path="/standard/mode/listsheetview.jsp" location="892,1507" dimension="190,49" />
+  <StrutsActivity path="/standard/mode/booktxt.jsp" location="2088,1507" dimension="165,49" />
+  <StrutsActivity path="/standard/mode/modebookshtadd.jsp" location="1182,1507" dimension="210,49" />
+  <StrutsActivity path="/standard/mode/modebookshtupdate.jsp" location="3202,1507" dimension="226,49" />
+  <StrutsActivity path="/standard/mode/booklist.jsp" location="628,1507" dimension="164,49" />
+  <StrutsActivity path="/standard/mode/columview.jsp" location="289,3841" dimension="177,49" />
+  <StrutsActivity path="/standard/mode/columlist.jsp" location="839,3841" dimension="168,49" />
+  <StrutsActivity path="/standard/mode/columadd.jsp" location="566,3841" dimension="173,49" />
+  <StrutsActivity path="/standard/mode/columupdate.jsp" location="0,3841" dimension="189,49" />
+  <StrutsActivity path="/standard/mode/tableview.jsp" location="1372,3841" dimension="174,49" />
+  <StrutsActivity path="/standard/mode/tablelist.jsp" location="1107,3841" dimension="165,49" />
+  <StrutsActivity path="/standard/mode/tableadd.jsp" location="1646,3841" dimension="170,49" />
+  <StrutsActivity path="/standard/mode/moduleview.jsp" location="571,2623" dimension="184,49" />
+  <StrutsActivity path="/standard/mode/modulelist.jsp" location="296,2623" dimension="175,49" />
+  <StrutsActivity path="/standard/mode/structfrm.jsp" location="1429,2623" dimension="172,49" />
+  <StrutsActivity path="/standard/mode/moduleadd.jsp" location="1149,2623" dimension="180,49" />
+  <StrutsActivity path="/standard/mode/moduleupdate.jsp" location="0,2623" dimension="196,49" />
+  <StrutsActivity path="/standard/mode/structfrmview.jsp" location="855,2623" dimension="194,49" />
+  <StrutsActivity path="/standard/mode/sheetsimplemoudlelist.jsp" location="2891,3841" dimension="231,49" />
+  <StrutsActivity path="/standard/mode/sheetsimplemoudleadd.jsp" location="3222,3841" dimension="236,49" />
+  <StrutsActivity path="/standard/mode/sheetsimplemoudleupdate.jsp" location="1861,3841" dimension="252,49" />
+  <StrutsActivity path="/standard/mode/xzsheetsimplemoudlelist.jsp" location="2549,3841" dimension="242,49" />
+  <StrutsActivity path="/standard/mode/sheetsimplemoudleedit.jsp" location="2213,3841" dimension="236,49" />
+  <StrutsActivity path="/standard/bookedit/bzxzbookinfolist.jsp" location="3497,628" dimension="219,49" />
+  <StrutsActivity path="/standard/mode/simpleworksheetlist.jsp" location="1787,2955" dimension="220,49" />
+  <StrutsActivity path="/standard/mode/simpleworksheetadd.jsp" location="2107,2955" dimension="225,49" />
+  <StrutsActivity path="/standard/mode/xcsheetlist.jsp" location="5150,950" dimension="220,48" />
+  <StrutsActivity path="/standard/mode/simpleworksheetupdate.jsp" location="0,2955" dimension="241,49" />
+  <StrutsActivity path="/standard/mode/bookfrm.jsp" location="1520,2955" dimension="167,49" />
+  <StrutsActivity path="/standard/mode/evaluatelist.jsp" location="4550,2250" dimension="183,49" />
+  <StrutsActivity path="/standard/mode/bzworksheetupdate.jsp" location="341,2955" dimension="223,49" />
+  <StrutsActivity path="/standard/mode/test.jsp" location="971,2955" dimension="147,49" />
+  <StrutsActivity path="/standard/mode/bzworksheetadd.jsp" location="664,2955" dimension="207,49" />
+  <StrutsActivity path="/standard/mode/sheetsimpleedit.jsp" location="1218,2955" dimension="202,49" />
+  <StrutsActivity path="/standard/mode/structviewvw.jsp" location="2840,2623" dimension="192,49" />
+  <StrutsActivity path="/standard/mode/structview.jsp" location="3401,2623" dimension="178,49" />
+  <StrutsActivity path="/standard/mode/structlist.jsp" location="3132,2623" dimension="169,49" />
+  <StrutsActivity path="/standard/mode/structadd.jsp" location="3679,2623" dimension="174,49" />
+  <StrutsActivity path="/standard/mode/structtreeview.jsp" location="650,1050" dimension="198,49" />
+  <StrutsActivity path="/standard/mode/structupdate.jsp" location="1701,2623" dimension="190,49" />
+  <StrutsActivity path="/standard/mode/structlistview.jsp" location="2267,2623" dimension="191,49" />
+  <StrutsActivity path="/standard/mode/structtree.jsp" location="1991,2623" dimension="176,49" />
+  <StrutsActivity path="/standard/mode/structtree2.jsp" location="2558,2623" dimension="182,49" />
+  <StrutsActivity path="/standard/mode/sheetview.jsp" location="1363,2291" dimension="177,49" />
+  <StrutsActivity path="/standard/mode/sheetlist.jsp" location="831,2291" dimension="168,49" />
+  <StrutsActivity path="/standard/mode/typeupdate.jsp" location="2455,2291" dimension="184,49" />
+  <StrutsActivity path="/standard/mode/typeadd.jsp" location="289,2291" dimension="168,49" />
+  <StrutsActivity path="/standard/mode/sheetadd.jsp" location="2182,2291" dimension="173,49" />
+  <StrutsActivity path="/standard/mode/typeview.jsp" location="1640,2291" dimension="172,49" />
+  <StrutsActivity path="/standard/mode/sheetupdate.jsp" location="0,2291" dimension="189,49" />
+  <StrutsActivity path="/standard/mode/typelist.jsp" location="1100,2291" dimension="163,49" />
+  <StrutsActivity path="/standard/mode/sheettree.jsp" location="556,2291" dimension="175,49" />
+  <StrutsActivity path="/standard/mode/typetree.jsp" location="1912,2291" dimension="170,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfobooklist2.jsp" location="1907,628" dimension="226,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfotjoklist.jsp" location="10394,628" dimension="215,49" />
+  <StrutsActivity path="/standard/bookedit/shbookinfolist.jsp" location="1289,628" dimension="208,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoshlist.jsp" location="6331,628" dimension="208,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoviewfbtj.jsp" location="966,628" dimension="223,49" />
+  <StrutsActivity path="/standard/bookedit/BookEdit.jsp" location="6047,628" dimension="184,49" />
+  <StrutsActivity path="/standard/bookedit/pooledbzTaskList.jsp" location="3350,1650" dimension="224,49" />
+  <StrutsActivity path="/standard/bookedit/privateshpzTaskList.jsp" location="650,1650" dimension="237,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfobookadd.jsp" location="7878,628" dimension="225,49" />
+  <StrutsActivity path="/standard/bookedit/privatebzTaskList.jsp" location="3950,1650" dimension="226,49" />
+  <StrutsActivity path="/standard/bookedit/releaselist.jsp" location="4550,1450" dimension="191,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoupdatemod.jsp" location="2233,628" dimension="238,49" />
+  <StrutsActivity path="/standard/bookedit/moudlebookedit.jsp" location="8858,628" dimension="218,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoupdate2.jsp" location="4741,628" dimension="224,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoshbacklist.jsp" location="5065,628" dimension="230,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfotjlist.jsp" location="10090,628" dimension="204,49" />
+  <StrutsActivity path="/standard/bookedit/bookview2.jsp" location="9176,628" dimension="194,49" />
+  <StrutsActivity path="/standard/bookedit/modbookinfolist.jsp" location="649,628" dimension="217,49" />
+  <StrutsActivity path="/standard/bookedit/bookedithis.jsp" location="3650,1250" dimension="197,49" />
+  <StrutsActivity path="/standard/bookedit/shpztasklist.jsp" location="350,1650" dimension="198,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoviewll.jsp" location="1597,628" dimension="210,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfomoudlelist.jsp" location="318,628" dimension="231,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoaddlist.jsp" location="6639,628" dimension="215,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoadd2.jsp" location="3189,628" dimension="208,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfotab.jsp" location="2150,1350" dimension="200,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoupdate.jsp" location="0,628" dimension="218,49" />
+  <StrutsActivity path="/standard/bookedit/pooledshpzTaskList.jsp" location="1850,1750" dimension="235,49" />
+  <StrutsActivity path="/standard/bookedit/hisbookinfolist.jsp" location="50,1250" dimension="210,49" />
+  <StrutsActivity path="/standard/bookedit/shbookinfolist2.jsp" location="9470,628" dimension="214,49" />
+  <StrutsActivity path="/standard/bookedit/historybooklist.jsp" location="1250,1150" dimension="212,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfotjtab.jsp" location="1550,1150" dimension="207,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoviewfbsh.jsp" location="5395,628" dimension="227,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfofbshupdate.jsp" location="7242,628" dimension="239,49" />
+  <StrutsActivity path="/standard/bookedit/bookview.jsp" location="6954,628" dimension="188,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoview.jsp" location="9784,628" dimension="206,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfolist.jsp" location="7581,628" dimension="197,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoadd.jsp" location="2571,628" dimension="202,49" />
+  <StrutsActivity path="/standard/bookedit/bztasklist.jsp" location="50,1650" dimension="187,49" />
+  <StrutsActivity path="/standard/bookedit/hisbookinfoadd.jsp" location="1550,1350" dimension="215,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfobooklist.jsp" location="8203,628" dimension="220,49" />
+  <StrutsActivity path="/standard/bookedit/shbookinfoview.jsp" location="4116,628" dimension="217,49" />
+  <StrutsActivity path="/standard/bookedit/historybookinfotab.jsp" location="2450,1150" dimension="233,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfofbview.jsp" location="2873,628" dimension="216,49" />
+  <StrutsActivity path="/standard/bookedit/bookupdate.jsp" location="3816,628" dimension="200,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfosuggestlist.jsp" location="8523,628" dimension="235,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfoquerylist.jsp" location="5722,628" dimension="225,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfobooktab.jsp" location="4850,1150" dimension="223,49" />
+  <StrutsActivity path="/standard/bookedit/hisbookinfoupdatemod.jsp" location="3050,1150" dimension="251,49" />
+  <StrutsActivity path="/standard/bookedit/bookinfopzlist.jsp" location="4433,628" dimension="208,49" />
+  <StrutsActivity path="/standard/mode/baseEquipmentList.jsp" location="1280,4969" dimension="217,49" />
+  <StrutsActivity path="/standard/mode/baseEquipmentAdd.jsp" location="1597,4969" dimension="220,49" />
+  <StrutsActivity path="/standard/mode/baseEquipmentUpdate.jsp" location="944,4969" dimension="236,49" />
+  <StrutsActivity path="/standard/mode/baseSpecialList.jsp" location="1566,4405" dimension="200,49" />
+  <StrutsActivity path="/standard/mode/baseSpecialAdd.jsp" location="2214,4405" dimension="203,49" />
+  <StrutsActivity path="/standard/mode/gecprocessConfigUpdate.jsp" location="1866,4405" dimension="248,49" />
+  <StrutsActivity path="/standard/mode/baseSpecialUpdate.jsp" location="1247,4405" dimension="219,49" />
+  <StrutsActivity path="/standard/mode/gecSpeciallist.jsp" location="5150,1350" dimension="191,49" />
+  <StrutsActivity path="/standard/mode/baseVoltageList.jsp" location="3093,4969" dimension="203,49" />
+  <StrutsActivity path="/standard/mode/baseVoltageAdd.jsp" location="3396,4969" dimension="206,49" />
+  <StrutsActivity path="/standard/mode/baseVoltageUpdate.jsp" location="2771,4969" dimension="222,49" />
+  <StrutsActivity path="/standard/mode/baseAreaList.jsp" location="309,5251" dimension="190,49" />
+  <StrutsActivity path="/standard/mode/baseAreaAdd.jsp" location="599,5251" dimension="193,49" />
+  <StrutsActivity path="/standard/mode/baseAreaUpdate.jsp" location="0,5251" dimension="209,49" />
+  <StrutsActivity path="/standard/mode/baseWorktypeList.jsp" location="2195,4969" dimension="214,49" />
+  <StrutsActivity path="/standard/mode/baseWorktypeAdd.jsp" location="2509,4969" dimension="217,49" />
+  <StrutsActivity path="/standard/mode/baseWorktypeUpdate.jsp" location="1862,4969" dimension="233,49" />
+  <StrutsActivity path="/repository/condition14.jsp" location="2750,2150" dimension="159,49" />
+  <StrutsActivity path="/repository/condition9.jsp" location="1850,2050" dimension="153,49" />
+  <StrutsActivity path="/repository/condition1.jsp" location="4550,2050" dimension="153,49" />
+  <StrutsActivity path="/repository/condition6.jsp" location="4850,2050" dimension="153,49" />
+  <StrutsActivity path="/repository/condition13.jsp" location="3650,2150" dimension="159,49" />
+  <StrutsActivity path="/repository/category4.jsp" location="3950,2150" dimension="153,49" />
+  <StrutsActivity path="/repository/condition7.jsp" location="50,2150" dimension="153,49" />
+  <StrutsActivity path="/repository/condition2.jsp" location="3650,2050" dimension="153,49" />
+  <StrutsActivity path="/repository/condition12.jsp" location="1850,2150" dimension="159,49" />
+  <StrutsActivity path="/repository/condition8.jsp" location="2150,2050" dimension="153,49" />
+  <StrutsActivity path="/repository/condition11.jsp" location="2150,2150" dimension="159,49" />
+  <StrutsActivity path="/repository/condition16.jsp" location="4250,2150" dimension="159,49" />
+  <StrutsActivity path="/repository/category3.jsp" location="4550,2150" dimension="153,49" />
+  <StrutsActivity path="/repository/condition3.jsp" location="3950,2050" dimension="153,49" />
+  <StrutsActivity path="/repository/category1.jsp" location="3350,2150" dimension="153,49" />
+  <StrutsActivity path="/repository/condition15.jsp" location="4850,2150" dimension="159,49" />
+  <StrutsActivity path="/repository/condition10.jsp" location="650,2150" dimension="159,49" />
+  <StrutsActivity path="/repository/category2.jsp" location="2450,2150" dimension="153,49" />
+  <StrutsActivity path="/repository/condition5.jsp" location="950,2150" dimension="153,49" />
+  <StrutsActivity path="/repository/condition4.jsp" location="350,2150" dimension="153,49" />
+  <StrutsActivity path="/repository/conditionadd.jsp" location="4250,1950" dimension="165,49" />
+  <StrutsActivity path="/repository/repositorylist.jsp" location="3350,2250" dimension="166,49" />
+  <StrutsActivity path="/repository/repositoryadd.jsp" location="4850,1750" dimension="171,49" />
+  <StrutsActivity path="/repository/repositoryupdate.jsp" location="2750,2250" dimension="187,49" />
+  <StrutsActivity path="/repository/repositorytree.jsp" location="3050,2250" dimension="173,49" />
+  <StrutsActivity path="/repository/categorylist.jsp" location="4250,2050" dimension="160,49" />
+  <StrutsActivity path="/repository/categorytree.jsp" location="3050,2150" dimension="167,49" />
+  <StrutsActivity path="/repository/categoryupdate.jsp" location="3350,2050" dimension="181,49" />
+  <StrutsActivity path="/repository/categoryadd.jsp" location="2750,2050" dimension="165,49" />
+  <StrutsActivity path="/repository/conditionlist.jsp" location="2450,2050" dimension="160,49" />
+  <StrutsActivity path="/repository/conditiontree.jsp" location="950,2050" dimension="167,49" />
+  <StrutsActivity path="/repository/conditionupdate.jsp" location="3050,2050" dimension="181,49" />
+  <StrutsActivity path="/standard/bookedit/privateTaskList.jsp" location="650,1150" dimension="215,49" />
+  <StrutsActivity path="/standard/bookedit/pooledTaskList.jsp" location="4550,1150" dimension="213,49" />
+  <StrutsActivity path="/standard/bookedit/tasklist.jsp" location="4250,1350" dimension="176,49" />
+  <StrutsActivity path="/workflow/gecSpeciallist.jsp" location="650,750" dimension="161,49" />
+  <StrutsActivity path="/workflow/gecprocessConfigUpdate.jsp" location="1250,750" dimension="218,49" />
+  <StrutsActivity path="/workflow/taskcfgurlfrm.jsp" location="1041,4405" dimension="161,49" />
+  <StrutsActivity path="/workcard/conditiontree.jsp" location="950,1650" dimension="162,49" />
+  <StrutsActivity path="/workcard/condition9.jsp" location="1250,1650" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition8.jsp" location="2450,1650" dimension="148,49" />
+  <StrutsActivity path="/workcard/conditionlist.jsp" location="2750,1650" dimension="155,49" />
+  <StrutsActivity path="/workcard/categoryadd.jsp" location="3050,1650" dimension="160,49" />
+  <StrutsActivity path="/workcard/conditionupdate.jsp" location="3650,1650" dimension="176,49" />
+  <StrutsActivity path="/workcard/categoryupdate.jsp" location="4250,1650" dimension="176,49" />
+  <StrutsActivity path="/workcard/condition2.jsp" location="50,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition3.jsp" location="350,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/categorylist.jsp" location="650,1750" dimension="155,49" />
+  <StrutsActivity path="/workcard/condition1.jsp" location="950,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition6.jsp" location="1250,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition7.jsp" location="1550,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition4.jsp" location="2150,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition10.jsp" location="2450,1750" dimension="154,49" />
+  <StrutsActivity path="/workcard/condition5.jsp" location="2750,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition12.jsp" location="3050,1750" dimension="154,49" />
+  <StrutsActivity path="/workcard/condition11.jsp" location="3350,1750" dimension="154,49" />
+  <StrutsActivity path="/workcard/category2.jsp" location="3650,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition14.jsp" location="3950,1750" dimension="154,49" />
+  <StrutsActivity path="/workcard/categorytree.jsp" location="4250,1750" dimension="162,49" />
+  <StrutsActivity path="/workcard/category1.jsp" location="4550,1750" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition13.jsp" location="3650,1850" dimension="154,49" />
+  <StrutsActivity path="/workcard/category4.jsp" location="3950,1850" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition16.jsp" location="4250,1850" dimension="154,49" />
+  <StrutsActivity path="/workcard/category3.jsp" location="4550,1850" dimension="148,49" />
+  <StrutsActivity path="/workcard/condition15.jsp" location="3650,1950" dimension="154,49" />
+  <StrutsActivity path="/workcard/conditionadd.jsp" location="3950,1950" dimension="160,49" />
+  <StrutsActivity path="/workcard/repositoryupdate.jsp" location="4550,1950" dimension="182,49" />
+  <StrutsActivity path="/workcard/repositorytree.jsp" location="50,2050" dimension="168,49" />
+  <StrutsActivity path="/workcard/repositorylist.jsp" location="350,2050" dimension="161,49" />
+  <StrutsActivity path="/workcard/repositoryadd.jsp" location="650,2050" dimension="166,49" />
+  <StrutsActivity path="/s/conditionadd.jsp" location="4850,1650" dimension="121,49" />
+  <StrutsActivity path="/standard/mode/evalutelist.jsp" location="4250,2250" dimension="177,49" />
+  <StrutsActivity path="/system/sysfuntree.jsp" location="1550,2050" dimension="172,48" />
+  <StrutsActivity path="/ckmt/sysorgview.jsp" location="3350,2350" dimension="160,48" />
+  <StrutsActivity path="/ckmt/sysorglist.jsp" location="3650,2350" dimension="160,48" />
+  <StrutsActivity path="/ckmt/sysorgadd.jsp" location="3950,2350" dimension="154,48" />
+  <StrutsActivity path="/ckmt/sysorgupdate.jsp" location="4250,2350" dimension="172,48" />
+  <StrutsActivity path="/ckmt/sysorgtree.jsp" location="4550,2350" dimension="160,48" />
+  <StrutsActivity path="/ckmt/ckmttypeorgtree.jsp" location="650,2450" dimension="190,48" />
+  <StrutsActivity path="/ckmt/sysuserupdate.jsp" location="1550,2450" dimension="178,48" />
+  <StrutsActivity path="/ckmt/sysusertree.jsp" location="1850,2450" dimension="166,48" />
+  <StrutsActivity path="/ckmt/sysusercfgrolelist.jsp" location="2150,2450" dimension="208,48" />
+  <StrutsActivity path="/ckmt/ckmtAudit.jsp" location="5150,2450" dimension="154,48" />
+  <StrutsActivity path="/ckmt/ckmtAuditlist.jsp" location="3950,2550" dimension="178,48" />
+  <StrutsActivity path="/ckmt/ckmtAuditadvicelist.jsp" location="5150,2550" dimension="214,48" />
+  <StrutsActivity path="/system/Newslist.jsp" location="5450,2550" dimension="160,48" />
+  <StrutsActivity path="/ckmt/userauditadvicelist.jsp" location="2750,2750" dimension="214,48" />
+  <StrutsActivity path="/ckmtaudittree.jsp" location="4250,2750" dimension="148,48" />
+  <StrutsActivity path="/notice/sysorglist.jsp" location="2450,2450" dimension="172,48" />
+  <StrutsActivity path="/notice/newsadd.jsp" location="6050,2350" dimension="154,48" />
+  <StrutsActivity path="/notice/newsview.jsp" location="6050,2550" dimension="160,48" />
+  <StrutsActivity path="/notice/newslist.jsp" location="6050,2650" dimension="160,48" />
+  <StrutsActivity path="/notice/newsupdate.jsp" location="6050,2750" dimension="172,48" />
+  <StrutsActivity path="/notice/noticelist.jsp" location="50,2850" dimension="172,48" />
+  <StrutsActivity path="/sqtplat/htIndex.jsp" location="6350,2250" dimension="160,48" />
+  <StrutsActivity path="/sqt/noticeupdate.jsp" location="6350,2350" dimension="166,48" />
+  <StrutsActivity path="/sqt/fileuploadlist.jsp" location="4550,2550" dimension="178,48" />
+  <StrutsActivity path="/sqt/sourceshare" location="5450,2850" dimension="136,48" />
+  <StrutsActivity path="/system/smsfrm.jsp" location="6650,2450" dimension="148,48" />
+  <StrutsActivity path="/sqtplat/email.jsp" location="6650,2550" dimension="148,48" />
+  <StrutsActivity path="/sqtplat/sqt/logoadd.jsp" location="6650,2750" dimension="184,48" />
+  <StrutsActivity path="/sqt/noticesms.jsp" location="6050,2950" dimension="148,48" />
+  <StrutsActivity path="/system/surverProManager" location="6050,3050" dimension="184,48" />
+  <StrutsActivity path="/sqtplat/system/surverProManager" location="6350,3050" dimension="232,48" />
+  <StrutsActivity path="/front/login.jsp" location="6950,3150" dimension="119,53" />
+  <StrutsActivity path="/main_" location="2150,3150" dimension="70,53" />
+  <StrutsActivity path="/ipad/cp_rc.jsp" location="3350,3350" dimension="118,53" />
+  <StrutsActivity path="cp_rc.jsp" location="3650,3350" dimension="82,53" />
+  <StrutsActivity path="/cusorder.jsp" location="4850,2850" dimension="109,53" />
+  <StrutsActivity path="/cusorderview.jsp" location="3050,3150" dimension="134,53" />
+  <StrutsActivity path="/ipad/cusorder.jsp" location="3350,3150" dimension="140,53" />
+  <StrutsActivity path="/ipad/cusorderview.jsp" location="5150,3350" dimension="165,53" />
+  <StrutsActivity path="mainFrame.html" location="5450,3350" dimension="124,53" />
+  <StrutsActivity path="/ipad/orderlist.jsp" location="5750,3350" dimension="137,53" />
+  <StrutsActivity path="/management/giftList.jsp" location="6050,3550" dimension="176,53" />
+  <StrutsActivity path="/manage/class_tylb.jsp" location="4250,3850" dimension="163,53" />
+  <StrutsActivity path="/templete/listtype_list.jsp" location="6650,3850" dimension="175,53" />
+  <StrutsActivity path="/templete/listtype_add.jsp" location="50,3950" dimension="182,53" />
+  <StrutsActivity path="/adminindex.jsp" location="6350,3550" dimension="124,53" />
+  <StrutsActivity path="/management/userselfsuccess.jsp" location="3350,3950" dimension="227,53" />
+  <StrutsActivity path="/findresult.jsp" location="7250,3750" dimension="111,53" />
+  <StrutsActivity path="/findnameresult.jsp" location="1550,3950" dimension="143,53" />
+  <StrutsActivity path="/fbnameresult.jsp" location="1850,3950" dimension="133,53" />
+  <StrutsActivity path="/khfbnameresult.jsp" location="2750,3950" dimension="147,53" />
+  <StrutsActivity path="/khdetail.jsp" location="3050,3950" dimension="103,53" />
+  <StrutsActivity path="/consumerInviteAdds.jsp" location="6950,4150" dimension="175,53" />
+  <StrutsTransition id="/system/sysUser.do,view,/system/dzbgsview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1483,1665" />
+      <AbsolutePoint location="1475,1665" />
+      <AbsolutePoint location="1475,971" />
+      <AbsolutePoint location="1518,971" />
+      <AbsolutePoint location="1518,174" />
+      <AbsolutePoint location="516,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,modifypd,/system/modifypd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1500,1689" />
+      <AbsolutePoint location="1500,2218" />
+      <AbsolutePoint location="7024,2218" />
+      <AbsolutePoint location="7024,2450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/countSysUser.do,list,/system/count_gs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7194,342" />
+      <AbsolutePoint location="7194,1115" />
+      <AbsolutePoint location="1924,1115" />
+      <AbsolutePoint location="1924,1100" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/roleadd.jsp,null,/system/sysrole.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="917,3583" />
+      <AbsolutePoint location="854,3583" />
+      <AbsolutePoint location="854,3439" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,selectqyuser,/system/displayqyuser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1706,1665" />
+      <AbsolutePoint location="1781,1665" />
+      <AbsolutePoint location="1781,1024" />
+      <AbsolutePoint location="7172,1024" />
+      <AbsolutePoint location="7172,475" />
+      <AbsolutePoint location="7119,475" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/eardetails.do,list,/earningsdetailslist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8530,3554" />
+      <AbsolutePoint location="8530,3650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/sanction.do,plist,/userlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8418,1202" />
+      <AbsolutePoint location="10195,1202" />
+      <AbsolutePoint location="10195,4841" />
+      <AbsolutePoint location="5199,4841" />
+      <AbsolutePoint location="5199,4203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,logoadd,/system/sysOrg.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2411,3137" />
+      <AbsolutePoint location="2411,3165" />
+      <AbsolutePoint location="2594,3165" />
+      <AbsolutePoint location="2594,3118" />
+      <AbsolutePoint location="2491,3118" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,logolist,/sqt/logolist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2272,3063" />
+      <AbsolutePoint location="275,3063" />
+      <AbsolutePoint location="275,2537" />
+      <AbsolutePoint location="4321,2537" />
+      <AbsolutePoint location="4321,2550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,list0,/system/sysorgfrm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2272,3093" />
+      <AbsolutePoint location="-75,3093" />
+      <AbsolutePoint location="-75,1414" />
+      <AbsolutePoint location="2526,1414" />
+      <AbsolutePoint location="2526,1303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysFunction.do,list,/system/sysfunctionlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1970,3439" />
+      <AbsolutePoint location="1970,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/search.do,mlist,/searchmeeting.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7383,3950" />
+      <AbsolutePoint location="7383,3665" />
+      <AbsolutePoint location="6932,3665" />
+      <AbsolutePoint location="6932,1176" />
+      <AbsolutePoint location="6792,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysFunction.do,add,/system/sysfunctionadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2197,3396" />
+      <AbsolutePoint location="2434,3396" />
+      <AbsolutePoint location="2434,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/search.do,mlists,/searchmeetingone.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7517,4032" />
+      <AbsolutePoint location="9575,4032" />
+      <AbsolutePoint location="9575,3276" />
+      <AbsolutePoint location="8614,3276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,allotupdate,sysUser.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1572,1689" />
+      <AbsolutePoint location="1572,1740" />
+      <AbsolutePoint location="-9,1740" />
+      <AbsolutePoint location="-9,2505" />
+      <AbsolutePoint location="4850,2505" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/home.do,manage_home,/include/manage_home.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3904,1438" />
+      <AbsolutePoint location="8392,1438" />
+      <AbsolutePoint location="8392,2076" />
+      <AbsolutePoint location="8450,2076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/checkSec.do,alist,/sanctionCheckList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8753,132" />
+      <AbsolutePoint location="8826,132" />
+      <AbsolutePoint location="8826,1522" />
+      <AbsolutePoint location="4809,1522" />
+      <AbsolutePoint location="4809,1276" />
+      <AbsolutePoint location="4709,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,importExcel,/system/importExcel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1485,1601" />
+      <AbsolutePoint location="1485,1224" />
+      <AbsolutePoint location="435,1224" />
+      <AbsolutePoint location="435,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/vipcount.do,list,/vipconsumercountlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7550,1188" />
+      <AbsolutePoint location="7532,1188" />
+      <AbsolutePoint location="7532,4248" />
+      <AbsolutePoint location="6439,4248" />
+      <AbsolutePoint location="6439,4203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,adminlogin,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="59,985" />
+      <AbsolutePoint location="59,1085" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/sanction.do,alllist,/sanctionListAll.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8335,1254" />
+      <AbsolutePoint location="8335,1635" />
+      <AbsolutePoint location="3443,1635" />
+      <AbsolutePoint location="3443,1303" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/sanction.do,view,/sanctionView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8265,1150" />
+      <AbsolutePoint location="8265,1065" />
+      <AbsolutePoint location="9023,1065" />
+      <AbsolutePoint location="9023,4138" />
+      <AbsolutePoint location="5516,4138" />
+      <AbsolutePoint location="5516,4150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,ylist,/userlist1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4706,154" />
+      <AbsolutePoint location="4706,218" />
+      <AbsolutePoint location="8502,218" />
+      <AbsolutePoint location="8502,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,add,/system/sysuseradd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1572,1601" />
+      <AbsolutePoint location="1572,1571" />
+      <AbsolutePoint location="1136,1571" />
+      <AbsolutePoint location="1136,1929" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysrole.do,cfgfunview,/system/rolefunview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="752,3439" />
+      <AbsolutePoint location="752,3518" />
+      <AbsolutePoint location="5691,3518" />
+      <AbsolutePoint location="5691,174" />
+      <AbsolutePoint location="5628,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysFunction.do,update,/system/sysfunctionupdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1955,3365" />
+      <AbsolutePoint location="1414,3365" />
+      <AbsolutePoint location="1414,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/search.do,clist,/searchconsumer.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7383,4054" />
+      <AbsolutePoint location="7383,4278" />
+      <AbsolutePoint location="4326,4278" />
+      <AbsolutePoint location="4326,4103" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,add,/system/sysorgadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2275,3137" />
+      <AbsolutePoint location="2275,3366" />
+      <AbsolutePoint location="2888,3366" />
+      <AbsolutePoint location="2888,3306" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,getorg,/system/org_tree.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1594,1689" />
+      <AbsolutePoint location="1594,1740" />
+      <AbsolutePoint location="6011,1740" />
+      <AbsolutePoint location="6011,174" />
+      <AbsolutePoint location="5881,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,list,/consumerOrderlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4863,113" />
+      <AbsolutePoint location="5713,113" />
+      <AbsolutePoint location="5713,1424" />
+      <AbsolutePoint location="4032,1424" />
+      <AbsolutePoint location="4032,1203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,userManagerView,/sqt/usermanager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1483,1605" />
+      <AbsolutePoint location="609,1605" />
+      <AbsolutePoint location="609,578" />
+      <AbsolutePoint location="3130,578" />
+      <AbsolutePoint location="3130,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/search.do,ulists,/searchuserone.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7517,3972" />
+      <AbsolutePoint location="8963,3972" />
+      <AbsolutePoint location="8963,2876" />
+      <AbsolutePoint location="8592,2876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumer.do,findbyname,/consumerSearchResult.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5589,3654" />
+      <AbsolutePoint location="5589,3718" />
+      <AbsolutePoint location="6893,3718" />
+      <AbsolutePoint location="6893,376" />
+      <AbsolutePoint location="7550,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysFunction.do,tree,/system/sysfunctiontree.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1955,3395" />
+      <AbsolutePoint location="1718,3395" />
+      <AbsolutePoint location="1718,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumerin.do,update,/consumerInviteUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3928,4018" />
+      <AbsolutePoint location="5233,4018" />
+      <AbsolutePoint location="5233,4003" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,selectuser,/system/selectenterprise.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1706,1604" />
+      <AbsolutePoint location="4748,1604" />
+      <AbsolutePoint location="4748,2450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/achiev.do,alist,/achievementComAll.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="911,1250" />
+      <AbsolutePoint location="911,1238" />
+      <AbsolutePoint location="5954,1238" />
+      <AbsolutePoint location="5954,1476" />
+      <AbsolutePoint location="8150,1476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,initModifypd,sysUser.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1706,1687" />
+      <AbsolutePoint location="1832,1687" />
+      <AbsolutePoint location="1832,1818" />
+      <AbsolutePoint location="5128,1818" />
+      <AbsolutePoint location="5128,2483" />
+      <AbsolutePoint location="4956,2483" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysfunctionadd.jsp,null,/system/sysFunction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2404,3559" />
+      <AbsolutePoint location="2404,3418" />
+      <AbsolutePoint location="2197,3418" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysFunction.do,view,/system/sysfunctionview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2182,3439" />
+      <AbsolutePoint location="2182,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysrole.do,add,/system/roleadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="863,3395" />
+      <AbsolutePoint location="935,3395" />
+      <AbsolutePoint location="935,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/home.do,my_order_list,/include/my_order_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3854,1350" />
+      <AbsolutePoint location="3854,1038" />
+      <AbsolutePoint location="9225,1038" />
+      <AbsolutePoint location="9225,3876" />
+      <AbsolutePoint location="8629,3876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumerme.do,update,/consumerMeetingUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5776,3976" />
+      <AbsolutePoint location="6050,3976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/excel.do,import04,/excelimport/sources_import04.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3174,1354" />
+      <AbsolutePoint location="3174,1469" />
+      <AbsolutePoint location="4451,1469" />
+      <AbsolutePoint location="4451,4069" />
+      <AbsolutePoint location="6166,4069" />
+      <AbsolutePoint location="6166,4150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,homepage,/login.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,1601" />
+      <AbsolutePoint location="1702,1469" />
+      <AbsolutePoint location="-45,1469" />
+      <AbsolutePoint location="-45,971" />
+      <AbsolutePoint location="44,971" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,admin,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="253,935" />
+      <AbsolutePoint location="1594,935" />
+      <AbsolutePoint location="1594,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/meeting.do,update,/meetingUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="6650,83" />
+      <AbsolutePoint location="6298,83" />
+      <AbsolutePoint location="6298,1269" />
+      <AbsolutePoint location="5823,1269" />
+      <AbsolutePoint location="5823,1203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/product.do,list,/productlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4185,154" />
+      <AbsolutePoint location="4185,418" />
+      <AbsolutePoint location="8158,418" />
+      <AbsolutePoint location="8158,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,clist,/consumerAlllist1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4676,50" />
+      <AbsolutePoint location="4676,35" />
+      <AbsolutePoint location="1822,35" />
+      <AbsolutePoint location="1822,1176" />
+      <AbsolutePoint location="1850,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumer.do,view,/consumerDetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5450,3588" />
+      <AbsolutePoint location="5410,3588" />
+      <AbsolutePoint location="5410,692" />
+      <AbsolutePoint location="8188,692" />
+      <AbsolutePoint location="8188,403" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysrole.do,precfgfun,/system/rolefuncfg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="863,3365" />
+      <AbsolutePoint location="1211,3365" />
+      <AbsolutePoint location="1211,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumer.do,list,/consumerAlllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5589,3550" />
+      <AbsolutePoint location="5589,3218" />
+      <AbsolutePoint location="8118,3218" />
+      <AbsolutePoint location="8118,376" />
+      <AbsolutePoint location="7994,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,deleteuser,sysUser.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1624,1689" />
+      <AbsolutePoint location="1624,1718" />
+      <AbsolutePoint location="4809,1718" />
+      <AbsolutePoint location="4809,2465" />
+      <AbsolutePoint location="4850,2465" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/eardetails.do,update,/earningsUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8705,3450" />
+      <AbsolutePoint location="8705,1676" />
+      <AbsolutePoint location="8600,1676" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumerme.do,add,/consumerInviteAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5613,3950" />
+      <AbsolutePoint location="5613,3918" />
+      <AbsolutePoint location="7004,3918" />
+      <AbsolutePoint location="7004,3950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,view,/consumerOrderView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4863,105" />
+      <AbsolutePoint location="5991,105" />
+      <AbsolutePoint location="5991,1318" />
+      <AbsolutePoint location="4338,1318" />
+      <AbsolutePoint location="4338,1203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/onlineuser.do,list,/onlineuserlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8733,1402" />
+      <AbsolutePoint location="9635,1402" />
+      <AbsolutePoint location="9635,4076" />
+      <AbsolutePoint location="8583,4076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysrole.do,update,/system/roleupdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="641,3395" />
+      <AbsolutePoint location="35,3395" />
+      <AbsolutePoint location="35,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/checkSec.do,plist,/userlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8631,154" />
+      <AbsolutePoint location="8631,295" />
+      <AbsolutePoint location="10035,295" />
+      <AbsolutePoint location="10035,4901" />
+      <AbsolutePoint location="5169,4901" />
+      <AbsolutePoint location="5169,4203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,add,/consumerOrderAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4863,91" />
+      <AbsolutePoint location="5383,91" />
+      <AbsolutePoint location="5383,1176" />
+      <AbsolutePoint location="5323,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/vipcount.do,alist,/vipconsumercount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7806,1254" />
+      <AbsolutePoint location="7806,4076" />
+      <AbsolutePoint location="6813,4076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,list,/system/sysorglist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2381,3137" />
+      <AbsolutePoint location="2381,3257" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysorgadd.jsp,null,/system/sysOrg.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2858,3306" />
+      <AbsolutePoint location="2858,3321" />
+      <AbsolutePoint location="2465,3321" />
+      <AbsolutePoint location="2465,3137" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,checkcfglist,/system/sysusercheckcfglist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1558,1689" />
+      <AbsolutePoint location="1558,1718" />
+      <AbsolutePoint location="579,1718" />
+      <AbsolutePoint location="579,218" />
+      <AbsolutePoint location="3163,218" />
+      <AbsolutePoint location="3163,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumerme.do,list,/consumerMeetingAlllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5776,4018" />
+      <AbsolutePoint location="6446,4018" />
+      <AbsolutePoint location="6446,4003" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/checkSec.do,view,/sanctionCheckView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8450,102" />
+      <AbsolutePoint location="8430,102" />
+      <AbsolutePoint location="8430,1291" />
+      <AbsolutePoint location="5017,1291" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,rolelist,/system/sysusercfgrolelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1706,1635" />
+      <AbsolutePoint location="2996,1635" />
+      <AbsolutePoint location="2996,2374" />
+      <AbsolutePoint location="2970,2374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/product.do,add,/productAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4112,50" />
+      <AbsolutePoint location="4112,5" />
+      <AbsolutePoint location="7532,5" />
+      <AbsolutePoint location="7532,1158" />
+      <AbsolutePoint location="7377,1158" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumerin.do,add,/consumerInviteAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3789,3950" />
+      <AbsolutePoint location="3789,3818" />
+      <AbsolutePoint location="7034,3818" />
+      <AbsolutePoint location="7034,3950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/product.do,update,/productUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4155,154" />
+      <AbsolutePoint location="4155,518" />
+      <AbsolutePoint location="7863,518" />
+      <AbsolutePoint location="7863,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/count_gs.jsp,null,/countSysUser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1075" />
+      <AbsolutePoint location="911,1075" />
+      <AbsolutePoint location="911,313" />
+      <AbsolutePoint location="6950,313" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/product.do,view,/productView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4082,50" />
+      <AbsolutePoint location="4082,-25" />
+      <AbsolutePoint location="7823,-25" />
+      <AbsolutePoint location="7823,976" />
+      <AbsolutePoint location="7680,976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,view,/system/sysorgview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2491,3088" />
+      <AbsolutePoint location="2624,3088" />
+      <AbsolutePoint location="2624,3257" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/sanction.do,alist,/sanctionlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8418,1172" />
+      <AbsolutePoint location="10499,1172" />
+      <AbsolutePoint location="10499,4308" />
+      <AbsolutePoint location="4910,4308" />
+      <AbsolutePoint location="4910,4203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/sanction.do,add,/sanctionAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8410,1254" />
+      <AbsolutePoint location="8410,5377" />
+      <AbsolutePoint location="5814,5377" />
+      <AbsolutePoint location="5814,4203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/achiev.do,list,/achievementDep.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,1250" />
+      <AbsolutePoint location="810,1210" />
+      <AbsolutePoint location="6565,1210" />
+      <AbsolutePoint location="6565,1676" />
+      <AbsolutePoint location="8150,1676" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,checkcfgtree,/system/sysusercheckcfgtree.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1594,1601" />
+      <AbsolutePoint location="1594,1571" />
+      <AbsolutePoint location="4481,1571" />
+      <AbsolutePoint location="4481,2318" />
+      <AbsolutePoint location="5263,2318" />
+      <AbsolutePoint location="5263,2350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumerin.do,list,/consumerInviteAlllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3819,3950" />
+      <AbsolutePoint location="3819,3918" />
+      <AbsolutePoint location="4937,3918" />
+      <AbsolutePoint location="4937,3950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumer.do,update,/consumerUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5728,3618" />
+      <AbsolutePoint location="10684,3618" />
+      <AbsolutePoint location="10684,176" />
+      <AbsolutePoint location="8307,176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,enterpriselist,/system/enterpriselist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1706,1645" />
+      <AbsolutePoint location="6040,1645" />
+      <AbsolutePoint location="6040,74" />
+      <AbsolutePoint location="6050,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/checkSec.do,alllist,/sanctionCheckListAll.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8753,72" />
+      <AbsolutePoint location="9729,72" />
+      <AbsolutePoint location="9729,976" />
+      <AbsolutePoint location="8623,976" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/home.do,result_list,/include/result_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3904,1410" />
+      <AbsolutePoint location="8430,1410" />
+      <AbsolutePoint location="8430,2476" />
+      <AbsolutePoint location="8450,2476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,update,/system/sysuserupdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1483,1635" />
+      <AbsolutePoint location="35,1635" />
+      <AbsolutePoint location="35,1929" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,tree,/system/sysusertree.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1624,1601" />
+      <AbsolutePoint location="1624,1597" />
+      <AbsolutePoint location="2119,1597" />
+      <AbsolutePoint location="2119,1929" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,orderlog,/orderlog.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4863,127" />
+      <AbsolutePoint location="5047,127" />
+      <AbsolutePoint location="5047,1141" />
+      <AbsolutePoint location="5504,1141" />
+      <AbsolutePoint location="5504,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/sanction.do,update,/sanctionUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8418,1232" />
+      <AbsolutePoint location="9889,1232" />
+      <AbsolutePoint location="9889,4218" />
+      <AbsolutePoint location="4624,4218" />
+      <AbsolutePoint location="4624,4203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysuseradd.jsp,null,/system/sysUser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1083,1929" />
+      <AbsolutePoint location="1083,1817" />
+      <AbsolutePoint location="1518,1817" />
+      <AbsolutePoint location="1518,1689" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,update,/system/sysorgupdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2351,3137" />
+      <AbsolutePoint location="2351,3218" />
+      <AbsolutePoint location="1659,3218" />
+      <AbsolutePoint location="1659,3257" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,list,/system/sysuserlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1535,1689" />
+      <AbsolutePoint location="1535,1865" />
+      <AbsolutePoint location="841,1865" />
+      <AbsolutePoint location="841,1929" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumerme.do,add,/consumerMeetingAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5613,4002" />
+      <AbsolutePoint location="7043,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/eardetails.do,alist,/earningsdetailscount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8675,3450" />
+      <AbsolutePoint location="8675,1876" />
+      <AbsolutePoint location="8627,1876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,logopreadd,/sqt/logoadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2392,3049" />
+      <AbsolutePoint location="2392,3019" />
+      <AbsolutePoint location="6748,3019" />
+      <AbsolutePoint location="6748,2898" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/checkSec.do,update,/sanctionCheckUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8753,102" />
+      <AbsolutePoint location="9415,102" />
+      <AbsolutePoint location="9415,776" />
+      <AbsolutePoint location="8633,776" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/meeting.do,list,/meetingAlllist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="6650,105" />
+      <AbsolutePoint location="6597,105" />
+      <AbsolutePoint location="6597,1318" />
+      <AbsolutePoint location="6117,1318" />
+      <AbsolutePoint location="6117,1203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/search.do,meetingadd,/consumerMeetingAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7250,3988" />
+      <AbsolutePoint location="7224,3988" />
+      <AbsolutePoint location="7224,1176" />
+      <AbsolutePoint location="7136,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,updatepd,sysUser.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1642,1689" />
+      <AbsolutePoint location="1642,1697" />
+      <AbsolutePoint location="1731,1697" />
+      <AbsolutePoint location="1731,2124" />
+      <AbsolutePoint location="4779,2124" />
+      <AbsolutePoint location="4779,2483" />
+      <AbsolutePoint location="4850,2483" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,plist,/productOrderList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4706,50" />
+      <AbsolutePoint location="4706,-55" />
+      <AbsolutePoint location="1234,-55" />
+      <AbsolutePoint location="1234,1318" />
+      <AbsolutePoint location="2816,1318" />
+      <AbsolutePoint location="2816,1203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,ordersyslog,/systemDetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4766,50" />
+      <AbsolutePoint location="4766,35" />
+      <AbsolutePoint location="6932,35" />
+      <AbsolutePoint location="6932,818" />
+      <AbsolutePoint location="8215,818" />
+      <AbsolutePoint location="8215,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,tree,/system/sysorgtree.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2272,3123" />
+      <AbsolutePoint location="1752,3123" />
+      <AbsolutePoint location="1752,3281" />
+      <AbsolutePoint location="1837,3281" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/search.do,clists,/searchconsumerone.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7517,4002" />
+      <AbsolutePoint location="9281,4002" />
+      <AbsolutePoint location="9281,3076" />
+      <AbsolutePoint location="8624,3076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/checkSec.do,findbyname,/userlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8601,154" />
+      <AbsolutePoint location="8601,365" />
+      <AbsolutePoint location="10339,365" />
+      <AbsolutePoint location="10339,4781" />
+      <AbsolutePoint location="5229,4781" />
+      <AbsolutePoint location="5229,4203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,main,/login.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1483,1687" />
+      <AbsolutePoint location="1413,1687" />
+      <AbsolutePoint location="1413,1369" />
+      <AbsolutePoint location="-135,1369" />
+      <AbsolutePoint location="-135,941" />
+      <AbsolutePoint location="44,941" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/achiev.do,dlist,/achievementDepAll.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="881,1250" />
+      <AbsolutePoint location="881,737" />
+      <AbsolutePoint location="8086,737" />
+      <AbsolutePoint location="8086,4076" />
+      <AbsolutePoint location="8150,4076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,mainupdate,/system/sysmainuserupdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1706,1613" />
+      <AbsolutePoint location="4522,1613" />
+      <AbsolutePoint location="4522,2774" />
+      <AbsolutePoint location="4550,2774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/consumer.do,add,/consumerAdd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5713,3550" />
+      <AbsolutePoint location="5713,3418" />
+      <AbsolutePoint location="7496,3418" />
+      <AbsolutePoint location="7496,776" />
+      <AbsolutePoint location="7550,776" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysrole.do,list,/system/rolelist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="641,3425" />
+      <AbsolutePoint location="531,3425" />
+      <AbsolutePoint location="531,3559" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysOrg.do,prelogoadd,/sqt/logoadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2362,3049" />
+      <AbsolutePoint location="2362,2918" />
+      <AbsolutePoint location="6718,2918" />
+      <AbsolutePoint location="6718,2898" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/sanction.do,findbyname,/userlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="8295,1150" />
+      <AbsolutePoint location="8295,935" />
+      <AbsolutePoint location="5098,935" />
+      <AbsolutePoint location="5098,4176" />
+      <AbsolutePoint location="5150,4176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="prelogin;6,null,/login.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="148,797" />
+      <AbsolutePoint location="148,897" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="DialogBox;6,null,/include/dialog.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1453,5138" />
+      <AbsolutePoint location="1453,5238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,qyview,/system/dzbqyview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1705,1689" />
+      <AbsolutePoint location="1705,2024" />
+      <AbsolutePoint location="6039,2024" />
+      <AbsolutePoint location="6039,174" />
+      <AbsolutePoint location="6050,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/search.do,ulist,/searchuser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="7250,4018" />
+      <AbsolutePoint location="6627,4018" />
+      <AbsolutePoint location="6627,1176" />
+      <AbsolutePoint location="6470,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/system/sysUser.do,insertuser,/system/insertuserback.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1483,1645" />
+      <AbsolutePoint location="1473,1645" />
+      <AbsolutePoint location="1473,808" />
+      <AbsolutePoint location="4648,808" />
+      <AbsolutePoint location="4648,798" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/home.do,superadmin_home,/include/superadmin_home.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3777,1350" />
+      <AbsolutePoint location="3777,1340" />
+      <AbsolutePoint location="8907,1340" />
+      <AbsolutePoint location="8907,2676" />
+      <AbsolutePoint location="8660,2676" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/base/order.do,update,/consumerOrderUpdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4736,50" />
+      <AbsolutePoint location="4736,-85" />
+      <AbsolutePoint location="9121,-85" />
+      <AbsolutePoint location="9121,865" />
+      <AbsolutePoint location="7946,865" />
+      <AbsolutePoint location="7946,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

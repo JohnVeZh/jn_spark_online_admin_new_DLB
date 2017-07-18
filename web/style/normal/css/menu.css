@@ -1,0 +1,280 @@
+﻿/* menu body */
+
+.menu-body {font-size:12px;
+	color:		Black;
+	margin:		0;
+	padding:	0;
+	overflow:	hidden;
+	border:		0;
+	cursor:		default;
+}
+
+.menu-body .outer-border {font-size:12px;
+	border:		1px solid #ffffff;
+	margin:		0;
+	padding:	0;
+}
+
+
+.menu-body .inner-border {font-size:12px;
+	width:			100%;
+	border:			1px solid #f9f8f7;
+	border-width:	1px 0 1px 0;
+	padding:		0 1px 0 1px;
+	margin:			0;
+	background:		#CFE5FD ;/*#f9f8f7 url("background.gif") repeat-y;*/
+}
+
+
+/* menu body */
+
+/*****************************************************************************/
+
+/* menu items */
+
+.menu-body td {font-size:12px;
+	font:			Menu;
+	color:			Black;
+}
+
+.menu-body .hover td {font-size:12px;
+	background-color:	#ACD0F6;
+}
+
+.menu-body .disabled-hover td {font-size:12px;
+	background-color:	white;
+}
+
+.menu-body td.empty-icon-cell {font-size:12px;
+	padding:		2px;
+	border:		0;
+}
+
+.menu-body td.empty-icon-cell span {font-size:12px;
+	width:	16px;
+}
+
+.menu-body td.icon-cell {font-size:12px;
+	padding:	2px;
+	border:		0;
+}
+
+
+.menu-body td.icon-cell img {font-size:12px;
+	width:	16px;
+	height:	16px;
+	margin:	0;
+	filter:	Alpha(Opacity=70);
+}
+
+.menu-body .hover td.icon-cell img {font-size:12px;
+	filter:	none;
+	position:	relative;
+	left:		-1px;
+	top:		-1px;
+}
+
+
+.menu-body .disabled-hover td.icon-cell img,
+.menu-body .disabled td.icon-cell img {font-size:12px;
+	display:	static;
+	filter:		Gray() Alpha(Opacity=40);
+}
+
+
+.menu-body .disabled-hover td.empty-icon-cell,
+.menu-body .hover td.empty-icon-cell,
+.menu-body .disabled-hover td.icon-cell,
+.menu-body .hover td.icon-cell {font-size:12px;
+	border:			1px solid #6FA4F3;
+	border-right:	0;
+	padding:		1px 2px 1px 1px;
+}
+
+.menu-body td.label-cell {font-size:12px;
+	width:		100%;
+	padding:	2px 5px 2px 5px;
+	border:		0;
+}
+
+.menu-body .disabled-hover td.label-cell,
+.menu-body .hover td.label-cell,
+.menu-body .disabled-hover td.shortcut-cell,
+.menu-body .hover td.shortcut-cell {font-size:12px;
+	padding:		1px 5px 1px 5px;
+	border:			1px solid #6FA4F3;
+	border-left:	0;
+	border-right:	0;
+}
+
+.menu-body td.shortcut-cell {font-size:12px;
+	padding:	2px 5px 2px 5px;
+}
+
+.menu-body td.arrow-cell {font-size:12px;
+	width:			20px;
+	padding:		2px 2px 2px 0px;
+	font-family:	Webdings;
+}
+
+/* end menu items */
+
+/*****************************************************************************/
+
+/* disabled items */
+
+.menu-body .disabled-hover td.arrow-cell,
+.menu-body .hover td.arrow-cell {font-size:12px;
+	padding:		1px 1px 1px 0px;
+	border:			1px solid #6FA4F3;
+	border-left:	0;
+}
+
+.menu-body #scroll-up-item td,
+.menu-body #scroll-down-item td {font-size:12px;
+	font-family:	Webdings !important;
+	text-align:		center;
+	padding:		10px;
+}
+
+.menu-body .disabled td {font-size:12px;
+	color:				#cccccc;
+}
+
+.menu-body .disabled-hover td {font-size:12px;
+	background-color:	white;
+	color:				#cccccc;
+}
+
+/* end disabled items */
+
+/*****************************************************************************/
+
+/* separator */
+
+.menu-body .separator td {font-size:12px;
+	font-size:	0.001mm;
+	padding:	1px 0px 1px 27px;
+}
+
+.menu-body .separator-line {font-size:12px;
+	overflow:		hidden;
+	border-top:		1px solid #dbd8d1;
+	height:			1px;
+}
+
+/* end separator */
+
+/*****************************************************************************/
+
+/* Scroll buttons */
+
+.menu-body #scroll-up-item,
+.menu-body #scroll-down-item {font-size:12px;
+	width:		100%;
+}
+
+.menu-body #scroll-up-item td,
+.menu-body #scroll-down-item td {font-size:12px;
+	font-family:	Webdings;
+	text-align:		center;
+	padding:		1px 5px 1px 5px;
+}
+
+.menu-body #scroll-up-item .disabled-hover td,
+.menu-body #scroll-up-item .hover td,
+.menu-body #scroll-down-item .disabled-hover td,
+.menu-body #scroll-down-item .hover td {font-size:12px;
+	border:		1px solid #6FA4F3;
+	padding:	0px 4px 0px 4px;
+}
+
+/* End scroll buttons */
+
+/*****************************************************************************/
+
+/* radio and check box items */
+
+.menu-body .checked {font-size:12px;
+	padding:	0px;
+}
+
+.menu-body .checked.hover {font-size:12px;
+	padding:	0px;
+}
+
+.menu-body .checked .check-box,
+.menu-body .checked .radio-button {font-size:12px;
+	display:		inline-block;
+	font-family:	Webdings;
+	overflow:		hidden;
+	color:			MenuText;
+	text-align:		center;
+	vertical-align:	center;
+	background-color:	#b6bdd2;
+	border:				1px solid #6FA4F3;
+}
+
+.menu-body .check-box {font-size:12px;
+	width:			19px;
+	height:			19px;
+	font-size:		133%;
+	padding-bottom:	5px;
+	padding-left:	1px;
+}
+
+.menu-body .radio-button {font-size:12px;
+	width:			19px;
+	height:			19px;
+	font-size:		50%;
+	padding:		5px;
+}
+
+/* end radio and check box items */
+
+/*****************************************************************************/
+
+/* Menu Bar mian.jpg*/
+
+.menu-bar {font-size:12px;
+background-image:url(../images/mian.jpg);
+	cursor:			default;
+	padding:		1px;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#ffffff;
+}
+
+.menu-bar .menu-button {font-size:12px;
+	
+background-image:url(../images/mian.jpg);
+	color:		ButtonText;
+	font:		Menu;
+	padding:	3px 7px 3px 7px;
+	border:		0;
+	margin:		0;
+	display:	inline-block;
+	white-space:	nowrap;
+	cursor:			default;
+}
+
+
+.menu-bar .menu-button.active {font-size:12px;
+	background:		#dbd8d1;
+	padding:		2px 6px 3px 6px;
+	border:			1px solid #666666;
+	border-bottom:	0;
+}
+
+.menu-bar .menu-button.hover {font-size:12px;
+	background:		#b6bdd2;
+	padding:		2px 6px 2px 6px;
+	
+	border-width:	1px;
+	
+	border-style:	solid;
+	
+	border-color:	#6FA4F3;
+}
+
+/* End Menu Bar */
