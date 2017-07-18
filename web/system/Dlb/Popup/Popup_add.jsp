@@ -50,6 +50,8 @@
      })
 
 	 function submitForm() {
+
+
 	     var startTimeStr = $("#startTimeStr").val();
          var endTimeStr = $("#endTimeStr").val();
          if (startTimeStr >= endTimeStr){
@@ -57,12 +59,13 @@
              return;
 		 }
 
-		 if(!($("#imgPath").val())){
+		 if(!($("#img").val())){
              top.Dialog.alert("请上传图片");
              return;
 		 }
 
 
+         $("#submitBtn").attr("disabled","disabled");
          $('#addForm').ajaxSubmit(function(data){
              if(data.success){
 //                 alert("添加成功，请刷新页面");
@@ -72,6 +75,7 @@
                  top.Dialog.close();
 
              }else{
+                 $("#submitBtn").removeAttr("disabled");
                  top.Dialog.alert(data.msg);
 			 }
          })
@@ -115,7 +119,7 @@
 									上传图片：
 								</td>
 								<td width="40%" align="left">
-									<input id="imgPath" type="text" style="display: none" name="img" id="img" class="validate[required] iptClass" required="required"/>
+									<input  type="text" style="display: none" name="img" id="img" class="validate[required] iptClass" required="required"/>
 									<div style="float: left">
 										<input id="uploadImgBtn" type="button" value="上传并预览" />
 										<span class="star">最大为3M</span>&nbsp;
@@ -207,7 +211,7 @@
 					formMode="true">
 					<tr>
 						<td colspan="2" style="border: none;">
-							<input type="button" value=" 提 交 " onclick="submitForm()"/>
+							<input id="submitBtn" type="button" value=" 提 交 " onclick="submitForm()"/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<%--<input type="reset" value=" 重 置 " />--%>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

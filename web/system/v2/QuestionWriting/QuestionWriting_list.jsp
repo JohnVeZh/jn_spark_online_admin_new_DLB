@@ -83,19 +83,18 @@
 				<table style="width:100%">
 				<tr>
 					<td>
-					<div style="float: left;">
 					<a href="javascript:;" onclick="preAdd()" title="新增写作题"> <span
 							class="img_add"></span>
-					</a>
-					</div> &nbsp;&nbsp; 
-					<div style="float: left;">
-						<a id="a1" title="批量导入"
-							href="javascript:;" onclick="batchAdd()"> <span class="img_xls"></span>
-						</a>
-					</div> &nbsp;&nbsp; 
-					<div style="float: left;">
-						<a href="javascript:;" onclick="preDown()" > <span>下载模板</span></a>
-					</div>
+					</a> &nbsp;&nbsp;
+					<a id="a1" title="专项批量导入"
+						href="javascript:;" onclick="top.Dialog.open({URL:'<%=path%>/system/v2/QuestionWriting/QuestionWriting_export.jsp',Title:'写作导入',Width:600,Height:200});"> <span
+							class="img_xls"></span>专项批量导入
+					</a>&nbsp;&nbsp;
+					<a id="a1" title="阅读批量导入"
+					   href="javascript:;" onclick="top.Dialog.open({URL:'<%=path%>/system/v2/QuestionWriting/HomeworkWriting_export.jsp',Title:'写作导入',Width:600,Height:200});"> <span
+							class="img_xls"></span>阅读批量导入
+					</a>&nbsp;&nbsp;
+					<a href="javascript:;" onclick="preDown()" > <span>下载模板</span></a>
 				</table>
 			</div>
 			<table  class="tableStyle" mode="list" useCheckbox="true" selectRowButtonOnly="false" id="listTable">
