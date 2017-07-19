@@ -22,7 +22,7 @@ public class HomeworkQuestionAction extends BaseAction implements Serializable {
     HomeworkQuestionMgr mgr = new HomeworkQuestionMgr();
     HomeworkMgr homeworkMgr = new HomeworkMgr();
     /**
-     * 获取听力作业列表
+     * 获取作业列表
      * @param mapping
      * @param form
      * @param request
@@ -61,7 +61,7 @@ public class HomeworkQuestionAction extends BaseAction implements Serializable {
                 queryConds.add(new QueryCond("deq.execrise_id", "String", "=", execriseId));
             }
             if (!"".equals(questionName)){
-                queryConds.add(new QueryCond("title", "String", "like", questionName));
+                queryConds.add(new QueryCond("deq.question_name", "String", "like", questionName));
             }
             ListContainer lc = mgr.listentList(queryConds, currentPageInt,
                     itemsInPage, action, jumpPage,questionType);

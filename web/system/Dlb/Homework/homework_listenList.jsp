@@ -143,6 +143,7 @@
     </div>
     <form name="listForm" scope="request" action="<%=path%>/business/Dlb/HomeworkQuestion.do?act=listenList" method="post" >
         <input type="text" id="execriseId" name="execriseId" value="${execriseId }" style="display: none"/>
+        <input type="text" id="questionType" name="questionType" value="${questionType }" style="display: none"/>
         <div class="box2" panelTitle="功能面板" roller="false">
             <table style="width:100%">
                 <tr>

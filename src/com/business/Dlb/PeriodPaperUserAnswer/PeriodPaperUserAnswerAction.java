@@ -7,11 +7,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,6 +25,7 @@ import org.apache.struts.action.ActionMapping;
 import com.business.Dlb.PeriodPaperQrcode.PeriodPaperAnswer;
 import com.easecom.common.framework.struts.BaseAction;
 import com.easecom.common.util.DateUtils;
+import com.easecom.common.util.ExcelUtil;
 import com.easecom.common.util.IpAddressUtil;
 import com.easecom.common.util.ListContainer;
 import com.easecom.common.util.PageAction;
@@ -36,7 +40,14 @@ import com.easecom.system.exception.SystemException;
 public class PeriodPaperUserAnswerAction extends BaseAction{
 
 	PeriodPaperUserAnswerActionMgr mgr=new PeriodPaperUserAnswerActionMgr();
-	
+	/**
+	 * 用户提交答案列表
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	public ActionForward list(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
 		SessionContainer sessionContainer=(SessionContainer)request.getSession().getAttribute("SessionContainer");
 		if(null==sessionContainer)
@@ -246,24 +257,40 @@ public class PeriodPaperUserAnswerAction extends BaseAction{
 		String substring = user_answer_evaluate_sql.toString().substring(0, user_answer_evaluate_sql.length()-1);
 		String user_answer="";
 		String report_sql="";
+		String teacher_submit_sql="";
 		if(pertinence==0){
 			user_answer="UPDATE dlb_period_paper_user_answer SET score='"+sumScore+"',reply_content='"+translate+"',reply_user_id='"+sessionContainer.getUserId()+"',reply_date='"+DateUtils.getCurrDateTimeStr()+"' WHERE id='"+id+"'";
 			//同步测评报告分数
 			if(vo.getQuestionType()==3){
 				//翻译
 				report_sql="UPDATE dlb_evaluation_report SET user_total_score=user_total_score+'"+sumScore+"',user_score_translate='"+sumScore+"' WHERE id='"+vo.getReportId()+"'";
+				String writeValue = Tool.getValue("SELECT user_score_write FROM dlb_evaluation_report WHERE id='"+vo.getReportId()+"'");
+				if(!writeValue.equals("") && writeValue!=null){
+					//批改翻译的时候判断写作是否批改，如果批改完成，测测评报告状态改成：2老师评分已提交
+					teacher_submit_sql="UPDATE dlb_evaluation_report SET teacher_submit =2 WHERE id='"+vo.getReportId()+"'";
+				}
 				
 			}else if(vo.getQuestionType()==4){
 				//写作
 				report_sql="UPDATE dlb_evaluation_report SET user_total_score=user_total_score+'"+sumScore+"',user_score_write='"+sumScore+"' WHERE id='"+vo.getReportId()+"'";
+				
 			}
 		}else{
 			user_answer="UPDATE dlb_period_paper_user_answer SET score='0',reply_content='"+translate+"',reply_user_id='"+sessionContainer.getUserId()+"',reply_date='"+DateUtils.getCurrDateTimeStr()+"' WHERE id='"+id+"'";
+			report_sql="UPDATE dlb_evaluation_report SET user_score_write='0' WHERE id='"+vo.getReportId()+"'";
+			String translateValue = Tool.getValue("SELECT user_score_translate FROM dlb_evaluation_report WHERE id='"+vo.getReportId()+"'");
+			if(!translateValue.equals("") && translateValue!=null){
+				//批改翻译的时候判断写作是否批改，如果批改完成，测测评报告状态改成：2老师评分已提交
+				teacher_submit_sql="UPDATE dlb_evaluation_report SET teacher_submit =2 WHERE id='"+vo.getReportId()+"'";
+			}
 		}
 		//添加批改老师信息
 		boolean execute = Tool.execute(user_answer);
 		if(execute){
 			Tool.execute(report_sql);
+			if(!teacher_submit_sql.equals("")){
+				Tool.execute(teacher_submit_sql);
+			}
 			//添加批改老师规则信息
 			Tool.execute(substring);
 		}
@@ -311,6 +338,63 @@ public class PeriodPaperUserAnswerAction extends BaseAction{
 				log.error(ex.getMessage(), ex);
 			}
 	 }
-	 public static void main(String[] args) {
-	}
+	 
+	 /**
+		 * 导出用户提交答案当前页面
+		 * @param mapping
+		 * @param form
+		 * @param request
+		 * @param response
+		 * @return
+		 */
+		public void exportPageExcel(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
+			SessionContainer sessionContainer=(SessionContainer)request.getSession().getAttribute("SessionContainer");
+			if(null==sessionContainer)
+				sessionContainer=new SessionContainer();
+			try {
+				//导出类型  0 当前页 1 是全部
+				String exportID = ParamUtils.getParameter(request, "exportID", false);
+				// 接收传值
+				String mobile = ParamUtils.getParameter(request, "mobile", false);
+				String section = ParamUtils.getParameter(request, "section", false);
+				String period = ParamUtils.getParameter(request, "period", false);
+				//批改状态
+				String state = ParamUtils.getParameter(request, "state", false);
+				//作业类型（翻译  写作）
+				String type = ParamUtils.getParameter(request, "type", false);
+				String createstarttime = ParamUtils.getParameter(request, "createstarttime", false);
+				String createendtime = ParamUtils.getParameter(request, "createendtime", false);
+				String replystarttime = ParamUtils.getParameter(request, "replystarttime", false);
+				String replyendtime = ParamUtils.getParameter(request, "replyendtime", false);
+				// 设置查询条件
+				Collection queryConds = new ArrayList();
+				queryConds.add(new QueryCond("b.mobile", "String", "=", mobile));
+				queryConds.add(new QueryCond("a.section", "String", "=", section));
+				queryConds.add(new QueryCond("a.period", "String", "=", period));
+				queryConds.add(new QueryCond("a.question_type", "String", "=", type));
+				queryConds.add(new QueryCond("a.reply_date", "String", ">=", replystarttime));
+				queryConds.add(new QueryCond("a.reply_date", "String", "<=", replyendtime));
+				queryConds.add(new QueryCond("a.create_date", "String", ">=", createstarttime));
+				queryConds.add(new QueryCond("a.create_date", "String", "<=", createendtime));
+				
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+	            String timestr = sdf.format(new Date());
+	            String fileName=new String(("用户提交答案列表-"+timestr).getBytes("gb2312"), "iso8859-1")+ ".xls";
+	            response.setContentType("application/vnd.ms-excel;charset=UTF-8");
+	            response.setHeader("Content-Disposition", "attachment;filename=" + fileName);
+	            response.setCharacterEncoding("utf-8");
+	            ServletOutputStream outputStream = response.getOutputStream();
+	            List list = new ArrayList ();
+	            ExcelUtil eu = new ExcelUtil();
+                String[] titles = { "用户手机号 ", "学段","考试", "题目类型", "题号", "正确答案","是否需要老师批改","用户答案","得分","老师批改内容","批改老师","批改时间","做题时间"};
+                String[] column = {"mobile","section","period", "questionType","question_no","right_answer","isTeacherEvaluate","user_answer","score","reply_content","replyName","reply_date","create_date"};
+                list = mgr.exportPageExcel(queryConds,state,exportID);
+                eu.ExportExcelConmon(titles,column,list,fileName,response);
+			} catch (Exception ex) {
+				log.error(ex.getMessage(), ex);
+				WebDialogBox dialog = new WebDialogBox(1, "错误", "获取列表时出错", "返回",
+						"javascript:window.history.back()");
+				request.setAttribute("DialogBox", dialog);
+			}
+		}
 }

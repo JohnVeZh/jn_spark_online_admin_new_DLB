@@ -39,16 +39,6 @@
 				top.Dialog.close();
 			}
 		})
-		//添加
-		function preAdd(){       
-		    top.Dialog.open({URL:"<%=path%>/system/Dlb/PeriodPaperQrcode/PaperQrcodeAnswer_add.jsp",ID:"a1",Width:1080,Height:768,Title:"添加试卷信息"});
-		}
-		//清空查询数据
-		function qing(){
-			document.getElementById("name").value="";
-			document.getElementById("starttime").value="";
-			document.getElementById("endtime").value="";
-		}
 		//修改详情
 		function preUpdate(id){
 			if(id!=""){
@@ -60,16 +50,17 @@
 				top.Dialog.open({URL:"<%=path%>/business/PeriodPaperUserAnswer.do?act=preView&id="+id,ID:"a1",Width:1080,Height:768,Title:"查看信息"});
 			}
 		}
-		//逻辑删除
-		function preDel(id){
-			if(id!=""){
-				top.Dialog.confirm("您确信要删除吗?",
-				   	function() {
-					listForm.action="PeriodPaperQrcode.do?act=preDel&id="+id;
-						listForm.submit();
-					}
-				)
-			}
+		function exportPage(){
+			listForm.action = "PeriodPaperUserAnswer.do?act=exportPageExcel&exportID="+0;
+			listForm.submit()
+		}
+		function exportAll(){
+			listForm.action = "PeriodPaperUserAnswer.do?act=exportPageExcel&exportID="+1;
+			listForm.submit()
+		}
+		function sub(){
+			listForm.action = "PeriodPaperUserAnswer.do?act=list";
+			listForm.submit()
 		}
 	</script>
 	<body>
@@ -137,7 +128,10 @@
 						</div>
 							
 						<div style="float: left">
-						&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="查询" />&nbsp;&nbsp; <input type="button" value="清空" onclick="qing()" /></td>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="button" value="查询" onclick="sub()"/>&nbsp;&nbsp;
+						<input type="button" value="导出本页" onclick="exportPage()" />&nbsp;&nbsp;
+						<input type="button" value="导出全部" onclick="exportAll()" /></td>
 						</div>
 					</tr>
 				</table>

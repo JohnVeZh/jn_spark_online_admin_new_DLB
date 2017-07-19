@@ -256,6 +256,7 @@ public class HomeworkAction extends BaseAction implements Serializable {
             String courseCatalogId = ParamUtils.getParameter(request,"videoId",true);
             String courseId = ParamUtils.getParameter(request,"ncId",true);
             String titleLike = ParamUtils.getParameter(request,"titleLike",true);
+            String questionType = ParamUtils.getParameter(request,"questionType",true);
 
             // 设置查询条件
             Collection queryConds = new ArrayList();
@@ -277,6 +278,7 @@ public class HomeworkAction extends BaseAction implements Serializable {
             }
 
             request.setAttribute("homeworkList",list);
+            request.setAttribute("questionType",questionType);
             request.setAttribute("courseId",courseId);
             request.setAttribute("courseCatalogId",courseCatalogId);
             request.setAttribute("titleLike",titleLike);

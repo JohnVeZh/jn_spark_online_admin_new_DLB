@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+     <class name="com.business.Dlb.PeriodVideoQrcode.PeriodVideoDetail" table="dlb_period_video_detail" schema="jn_spark_online">
+        <id name="id">
+            <column name="id" sql-type="varchar(32)" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="videoQrcodeId">
+            <column name="video_qrcode_id" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="title">
+            <column name="title" sql-type="varchar(64)" not-null="true"/>
+        </property>
+        <property name="sort">
+            <column name="sort" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="detail">
+            <column name="detail" sql-type="longtext" not-null="true"/>
+        </property>
+        <property name="videoCcid">
+            <column name="video_ccid" sql-type="varchar(32)" not-null="true"/>
+        </property>
+        <property name="createBy">
+            <column name="create_by" sql-type="varchar(32)" not-null="true"/>
+        </property>
+        <property name="delFlag">
+            <column name="del_flag" sql-type="tinyint(4)" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="create_date" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="username"></property>
+    </class>
+</hibernate-mapping>

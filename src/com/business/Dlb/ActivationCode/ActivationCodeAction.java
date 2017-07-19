@@ -33,7 +33,11 @@ import com.easecom.common.util.SessionUtils;
 import com.easecom.common.util.Tool;
 import com.easecom.common.util.WebDialogBox;
 
-
+/**
+ * 大礼包
+ * @author sparke
+ *
+ */
 public class ActivationCodeAction extends BaseAction{
 	
 	ActivationCodeActionMgr mgr=new ActivationCodeActionMgr();

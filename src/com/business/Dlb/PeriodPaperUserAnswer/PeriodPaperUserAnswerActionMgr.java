@@ -20,9 +20,7 @@ public class PeriodPaperUserAnswerActionMgr extends AbstractHibernateDAO{
 	private static LogUtils logger = LogUtils.getLogger(PeriodPaperUserAnswer.class);
 
 	@SuppressWarnings("unchecked")
-	public ListContainer list(Collection queryConds, int currentPageInt,
-			int itemsInPage, String action, int jumpPage, String state) throws SystemException,
-			Exception {
+	public ListContainer list(Collection queryConds, int currentPageInt, int itemsInPage, String action, int jumpPage, String state) throws Exception {
 		try {
 			// 在数据准备完成后，获取hiernate会话
 			Session ses = HibernateSessionFactory.openSession();
@@ -35,7 +33,7 @@ public class PeriodPaperUserAnswerActionMgr extends AbstractHibernateDAO{
 			}
 			// 查询对象
 			String hq="select a.*,b.mobile mobile,c.username replyName from dlb_period_paper_user_answer a LEFT JOIN users b ON a.user_id=b.id  LEFT JOIN users c ON c.id= a.reply_user_id WHERE 1=1 "+state_sql+" AND a.is_teacher_evaluate=1 AND  a.question_type in( 3,4)"+ QueryHelper.toAndQuery(queryConds)+"  ORDER BY a.create_date DESC  ";
-			System.err.println(hq);
+			
 			Query qCount = ses .createSQLQuery("select count(1) from dlb_period_paper_user_answer a LEFT JOIN users b ON a.user_id=b.id WHERE 1=1 "+state_sql+" and a.is_teacher_evaluate=1 "+ QueryHelper.toAndQuery(queryConds)+"  ORDER BY a.create_date DESC  ");
 
 			// 新建并设置列表容器
@@ -54,6 +52,61 @@ public class PeriodPaperUserAnswerActionMgr extends AbstractHibernateDAO{
 			query.setFirstResult(lc.calculateNextPageIndex());
 			lc.getList().addAll(query.list());// 装填指定页的列表数据到列表容器
 			return lc;
+		} catch (Exception e) {
+			logger.debug(e);
+			throw new SystemException("查询数据列表出错！", e);
+		} finally {
+			try {
+				HibernateSessionFactory.closeSession();
+			} catch (Exception e) {
+				logger.debug(e);
+			}
+		}
+	}
+	
+	/**
+	 * 到处数据查询
+	 * @param queryConds
+	 * @param state
+	 * @param exportID
+	 * @return
+	 * @throws Exception
+	 */
+	@SuppressWarnings("unchecked")
+	public List exportPageExcel(Collection queryConds,  String state, String exportID) throws Exception {
+		try {
+			// 在数据准备完成后，获取hiernate会话
+			Session ses = HibernateSessionFactory.openSession();
+			String state_sql="";
+			if("1".equals(state)){
+				state_sql="AND a.reply_user_id is NOT NULL";
+			}
+			if("2".equals(state)){
+				state_sql="AND a.reply_user_id is NULL";
+			}
+			// 查询对象
+			String sql="SELECT a.id, a.report_id, a.paper_id, a.user_id,  CASE a.section WHEN '01' THEN '四级' WHEN '02' THEN '六级' ELSE '' END AS section, "
+					+ "CASE a.period WHEN '1' THEN '学前测试' WHEN '2' THEN '学中测试' WHEN '3' THEN '学末测试' ELSE '' END AS period, "
+					+ "CASE a.question_type WHEN '1' THEN '听力' WHEN '2' THEN '阅读' WHEN '3' THEN '翻译' WHEN '4' THEN '写作' ELSE '' END AS questionType, "
+					+ "a.question_no, a.right_answer, CASE a.is_teacher_evaluate WHEN '0' THEN '否' WHEN '1' THEN '是' ELSE '' END AS isTeacherEvaluate, "
+					+ "a.user_answer, a.score, a.reply_content, a.reply_user_id, a.reply_date, a.create_date, b.mobile mobile, c.username replyName "
+					+ "FROM dlb_period_paper_user_answer a LEFT JOIN users b ON a.user_id = b.id LEFT JOIN users c ON c.id = a.reply_user_id "
+					+ "WHERE 1 = 1 "+state_sql+" AND a.is_teacher_evaluate = 1 AND a.question_type IN (3, 4)"+ QueryHelper.toAndQuery(queryConds)+"  ORDER BY a.create_date DESC   LIMIT 0,18";
+			
+			String sqls="SELECT a.id, a.report_id, a.paper_id, a.user_id,  CASE a.section WHEN '01' THEN '四级' WHEN '02' THEN '六级' ELSE '' END AS section, "
+					+ "CASE a.period WHEN '1' THEN '学前测试' WHEN '2' THEN '学中测试' WHEN '3' THEN '学末测试' ELSE '' END AS period, "
+					+ "CASE a.question_type WHEN '1' THEN '听力' WHEN '2' THEN '阅读' WHEN '3' THEN '翻译' WHEN '4' THEN '写作' ELSE '' END AS questionType, "
+					+ "a.question_no, a.right_answer, CASE a.is_teacher_evaluate WHEN '0' THEN '否' WHEN '1' THEN '是' ELSE '' END AS isTeacherEvaluate, "
+					+ "a.user_answer, a.score, a.reply_content, a.reply_user_id, a.reply_date, a.create_date, b.mobile mobile, c.username replyName "
+					+ "FROM dlb_period_paper_user_answer a LEFT JOIN users b ON a.user_id = b.id LEFT JOIN users c ON c.id = a.reply_user_id "
+					+ "WHERE 1 = 1 "+state_sql+" AND a.is_teacher_evaluate = 1 AND a.question_type IN (3, 4)"+ QueryHelper.toAndQuery(queryConds)+"  ORDER BY a.create_date DESC";
+			List list =null;
+			if(exportID.equals("1")){
+				list = super.SQLQuery(sqls);
+			}else if(exportID.equals("0")){
+				list = super.SQLQuery(sql);
+			}
+			return list;
 		} catch (Exception e) {
 			logger.debug(e);
 			throw new SystemException("查询数据列表出错！", e);

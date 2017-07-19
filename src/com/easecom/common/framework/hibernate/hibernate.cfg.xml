@@ -297,5 +297,7 @@
         <mapping resource="com/business/Dlb/PeriodPaperUserAnswer/PeriodPaperUserAnswer.hbm.xml"/>
         <mapping resource="com/business/Dlb/PeriodPaperUserAnswer/PeriodPaperEvaluateRuleDetail.hbm.xml"/>
         <mapping resource="com/business/Dlb/PeriodPaperUserAnswer/PeriodPaperUserAnswerEvaluate.hbm.xml"/>
+        <mapping resource="com/business/Dlb/PeriodVideoQrcode/PeriodVideoDateil.hbm.xml"/>
+        <mapping resource="com/business/Dlb/PeriodVideoQrcode/PeriodVideoQrcode.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

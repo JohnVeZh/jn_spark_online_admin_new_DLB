@@ -114,9 +114,9 @@
                 <table  class="detailTable" mode="list" useCheckbox="true" trClick="false" selectRowButtonOnly="false" id="listTable">
                     <tr >
                         <th height="15" width="1" align="center" class="DataTable_Field" title="序号 ">序号</th>
+                        <th height="15" width="30" align="center" class="DataTable_Field" title="作业名字">作业名字</th>
                         <th height="15" width="20" align="center" class="DataTable_Field" title="网课名称">网课名称</th>
                         <th height="15" width="30" align="center" class="DataTable_Field" title="视频名称">视频名称</th>
-                        <th height="15" width="30" align="center" class="DataTable_Field" title="作业名字">作业名字</th>
                         <th height="15" width="3" align="center" class="DataTable_Field" title="学段">学段</th>
                         <th height="15" width="3" align="center" class="DataTable_Field" title="作业类型 ">作业类型</th>
                         <th height="15" width="1" align="center" class="DataTable_Field" title="排序">排序</th>

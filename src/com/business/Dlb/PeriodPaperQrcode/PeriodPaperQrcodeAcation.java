@@ -158,12 +158,12 @@ public class PeriodPaperQrcodeAcation extends BaseAction{
 			String translate = ParamUtils.getParameter(request, "translate", false);
 			//试卷二维码ID 添加答案
 			String ID=UUID.randomUUID().toString().replace("-", "");
-			System.err.println(vo.toString());
+			/*System.err.println(vo.toString());
 			System.err.println(hearingValues);
 			System.err.println(writing);
-			System.err.println(translate);
+			System.err.println(translate);*/
 			//添加试卷二维码
-			String sql="INSERT INTO dlb_period_paper_qrcode (id,section,period,name,qrcode_content,qrcode_url,user_id,create_date)"
+			String sql="INSERT INTO dlb_period_paper_qrcode (id,section,period,name,qrcode_content,qrcode_url,create_by,create_date)"
 					+ "VALUES('"+ID+"','"+vo.getSection()+"','"+vo.getPeriod()+"','"+vo.getName()+"','"+vo.getQrcodeContent()+"','"+vo.getQrcodeUrl()+"','"+userId+"','"+DateUtils.getCurrDateTimeStr()+"')";
 			boolean b = Tool.execute(sql);
 			if(b){
@@ -223,7 +223,7 @@ public class PeriodPaperQrcodeAcation extends BaseAction{
 	public ActionForward view(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws SystemException, Exception {
 		String id = ParamUtils.getParameter(request, "id", false);
 		//获取二维码信息
-		List<PeriodPaperQrcode> codeList = mgr.findPeriodPaperQrcodeListBySql("SELECT a.id,a.section,period,a.name,a.qrcode_content,qrcode_url,a.create_date,a.del_flag,a.user_id, b.username username FROM dlb_period_paper_qrcode a LEFT JOIN users b on a.user_id=b.id WHERE a.del_flag=0 and a.id ='"+id+"'");
+		List<PeriodPaperQrcode> codeList = mgr.findPeriodPaperQrcodeListBySql("SELECT a.id,a.section,period,a.name,a.qrcode_content,qrcode_url,a.create_date,a.del_flag,a.create_by, b.username username FROM dlb_period_paper_qrcode a LEFT JOIN users b on a.create_by=b.id WHERE a.del_flag=0 and a.id ='"+id+"'");
 		//获取试卷听力全部答案
 		List<PeriodPaperAnswer> answerHearing = Tool.findListByHql("from PeriodPaperAnswer where paperQrcodeId='"+id+"' and questionType=1 ORDER BY questionNo");
 		//获取试卷阅读全部答案

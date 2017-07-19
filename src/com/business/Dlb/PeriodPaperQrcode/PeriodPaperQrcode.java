@@ -29,12 +29,11 @@ public class PeriodPaperQrcode extends BaseForm implements Serializable{
 	private String qrcodeContent;
 	private String qrcodeUrl;
 	private Timestamp createDate;
-	private String userId;
+	private String createBy;
 	private String username;
 	private int delFlag;
 	//图片
 	private FormFile file;
-	
 	public String getId() {
 		return id;
 	}
@@ -77,11 +76,11 @@ public class PeriodPaperQrcode extends BaseForm implements Serializable{
 	public void setCreateDate(Timestamp createDate) {
 		this.createDate = createDate;
 	}
-	public String getUserId() {
-		return userId;
+	public String getCreateBy() {
+		return createBy;
 	}
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setCreateBy(String createBy) {
+		this.createBy = createBy;
 	}
 	public String getUsername() {
 		return username;
@@ -106,7 +105,8 @@ public class PeriodPaperQrcode extends BaseForm implements Serializable{
 		return "PeriodPaperQrcode [id=" + id + ", section=" + section
 				+ ", period=" + period + ", name=" + name + ", qrcodeContent="
 				+ qrcodeContent + ", qrcodeUrl=" + qrcodeUrl + ", createDate="
-				+ createDate + ", userId=" + userId + ", username=" + username
-				+ ", delFlag=" + delFlag + "]";
+				+ createDate + ", createBy=" + createBy + ", username="
+				+ username + ", delFlag=" + delFlag + ", file=" + file + "]";
 	}
+	
 }

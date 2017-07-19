@@ -1,4 +1,4 @@
-package com.business.Dlb.PeriodPaperQrcode;
+package com.business.Dlb.PeriodVideoQrcode;
 
 import java.util.Collection;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import com.business.Dlb.PeriodPaperUserAnswer.PeriodPaperUserAnswer;
 import com.easecom.common.framework.hibernate.AbstractHibernateDAO;
 import com.easecom.common.framework.hibernate.HibernateSessionFactory;
 import com.easecom.common.util.ListContainer;
@@ -14,9 +15,8 @@ import com.easecom.common.util.PageAction;
 import com.easecom.common.util.QueryHelper;
 import com.easecom.system.exception.SystemException;
 
-public class PeriodPaperQrcodeActionMgr extends AbstractHibernateDAO{
-	
-	private static LogUtils logger = LogUtils.getLogger(PeriodPaperQrcode.class);
+public class PeriodVideoQrcodeActionMgr extends AbstractHibernateDAO{
+	private static LogUtils logger = LogUtils.getLogger(PeriodVideoQrcode.class);
 	
 	@SuppressWarnings("unchecked")
 	public ListContainer list(Collection queryConds, int currentPageInt,
@@ -25,13 +25,10 @@ public class PeriodPaperQrcodeActionMgr extends AbstractHibernateDAO{
 		try {
 			// 在数据准备完成后，获取hiernate会话
 			Session ses = HibernateSessionFactory.openSession();
-
 			// 查询对象
-			String hq="SELECT a.id,a.section,period,a.name,a.qrcode_content,qrcode_url,a.create_date,a.create_by,a.del_flag,b.username username FROM dlb_period_paper_qrcode a LEFT JOIN users b on a.create_by=b.id"
-					+ " WHERE a.del_flag =0 AND 1 = 1 "+ QueryHelper.toAndQuery(queryConds)+" ORDER BY a.create_date DESC";
-			
-			Query qCount = ses .createSQLQuery("SELECT count(1) FROM dlb_period_paper_qrcode a LEFT JOIN users b on a.create_by=b.id"
-					+ " WHERE a.del_flag =0 AND 1 = 1 "+ QueryHelper.toAndQuery(queryConds));
+			String hq="SELECT a.*,b.username username FROM dlb_period_video_qrcode a LEFT JOIN users b ON a.create_by=b.id WHERE 1=1 "+ QueryHelper.toAndQuery(queryConds)+"  ORDER BY a.create_date DESC  ";
+			System.err.println(hq);
+			Query qCount = ses .createSQLQuery("SELECT count(1) FROM dlb_period_video_qrcode a LEFT JOIN users b ON a.create_by=b.id WHERE 1=1 "+ QueryHelper.toAndQuery(queryConds)+"  ORDER BY a.create_date DESC  ");
 
 			// 新建并设置列表容器
 			ListContainer lc = new ListContainer();
@@ -43,7 +40,7 @@ public class PeriodPaperQrcodeActionMgr extends AbstractHibernateDAO{
 			int totalItems = Integer.parseInt(L.size() > 0 ? L.get(0).toString()
 					: "0");
 			lc.setTotalItem(totalItems); // 设置记录总数
-			Query query = ses.createSQLQuery(hq.toString()).addEntity(PeriodPaperQrcode.class);
+			Query query = ses.createSQLQuery(hq.toString()).addEntity(PeriodVideoQrcode.class);
 			//Query query = ses.createSQLQuery(hq);
 			query.setMaxResults(lc.getItemsInPage());
 			query.setFirstResult(lc.calculateNextPageIndex());
@@ -60,19 +57,12 @@ public class PeriodPaperQrcodeActionMgr extends AbstractHibernateDAO{
 			}
 		}
 	}
-	/**
-	 * 查询PeriodPaperQrcode对象的列表
-	 * @param sql
-	 * @return
-	 * @throws SystemException
-	 * @throws Exception
-	 */
-	public static List findPeriodPaperQrcodeListBySql (String sql) throws SystemException, Exception {
+	public static List findObjectListBySql (String sql) throws SystemException, Exception {
 		try {
 			// 在数据准备完成后，获取hiernate会话
 			Session ses = HibernateSessionFactory.openSession();
 			// 保存对象
-			Query query = ses.createSQLQuery(sql.toString()).addEntity(PeriodPaperQrcode.class);;
+			Query query = ses.createSQLQuery(sql.toString()).addEntity(PeriodVideoQrcode.class);;
 			return query.list();
 			
 		} catch (Exception e) {

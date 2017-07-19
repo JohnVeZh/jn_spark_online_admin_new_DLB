@@ -201,6 +201,9 @@
 		<form-bean type="com.business.Dlb.ActivationCode.ActivationCode" name="ActivationCode"/>
 		<form-bean type="com.business.Dlb.PeriodPaperQrcode.PeriodPaperQrcode" name="PeriodPaperQrcode"/>
 		<form-bean type="com.business.Dlb.PeriodPaperUserAnswer.PeriodPaperUserAnswer" name="PeriodPaperUserAnswer"/>
+		<form-bean type="com.business.Dlb.PeriodVideoQrcode.PeriodVideoQrcode" name="PeriodVideoQrcode"/>
+		<form-bean type="com.business.Dlb.PeriodVideoQrcode.PeriodVideoDetail" name="PeriodVideoDetail"/>
+
 
 		<form-bean name="TbMessageActionForm" type="com.business.Dlb.Message.TbMessageActionForm"/>
 		<form-bean name="TbPopupActionForm" type="com.business.Dlb.Popup.TbPopupActionForm"/>
@@ -213,6 +216,15 @@
 	</global-forwards>
 	<action-mappings>
 	<!-- 过级大礼包 -->
+	<action path="/business/PeriodVideoDetail" parameter="act" scope="request" type="com.business.Dlb.PeriodVideoQrcode.PeriodVideoDetailAction" name="PeriodVideoDetail">
+		<forward name="list" path="/system/Dlb/PeriodVideoDetail/PeriodVideoDetail_list.jsp" />
+		<forward name="add" path="/system/Dlb/PeriodVideoDetail/PeriodVideoDetail_add.jsp" />
+		<forward name="update" path="/system/Dlb/PeriodVideoDetail/PeriodVideoDetail_update.jsp" />
+	</action>
+	<action path="/business/PeriodVideoQrcode" parameter="act" scope="request" type="com.business.Dlb.PeriodVideoQrcode.PeriodVideoQrcodeAction" name="PeriodVideoQrcode">
+		<forward name="list" path="/system/Dlb/PeriodVideoQrcode/PeriodVideoQrcode_list.jsp" />
+		<forward name="update" path="/system/Dlb/PeriodVideoQrcode/PeriodVideoQrcode_update.jsp" />
+	</action>
 	<action path="/business/PeriodPaperUserAnswer" parameter="act" scope="request" type="com.business.Dlb.PeriodPaperUserAnswer.PeriodPaperUserAnswerAction" name="PeriodPaperUserAnswer">
 		<forward name="list" path="/system/Dlb/PeriodPaperUserAnswer/PeriodPaperUserAnswer_list.jsp" />
 		<forward name="update" path="/system/Dlb/PeriodPaperUserAnswer/PeriodPaperUserAnswer_reply.jsp" />
